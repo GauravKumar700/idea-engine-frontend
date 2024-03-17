@@ -89,10 +89,10 @@ const Footer = () => {
           <div className=' col-lg-2 col-md-6 col-12'>
             <h4>Follow US</h4>
             <ul>
-              <li><Link to={'https://www.linkedin.com/company/the-entrepreneurship-network/'}><FaLinkedin /></Link></li>
-              <li><FaYoutube /></li>
-              <li><FaTwitterSquare /></li>
-              <Link to={'https://www.instagram.com/theentrepreneurshipnetwork?igsh=Nm44M21saGR1am4w'}><li><FaInstagram /></li></Link>
+              <li><Link to={'https://www.linkedin.com/company/the-entrepreneurship-network/'}><FaLinkedin color='white' /></Link></li>
+              <li><FaYoutube color='white' /></li>
+              <li><FaTwitterSquare color='white' /></li>
+              <Link to={'https://www.instagram.com/theentrepreneurshipnetwork?igsh=Nm44M21saGR1am4w'}><li><FaInstagram color='white' /></li></Link>
             </ul>
           </div>
 
