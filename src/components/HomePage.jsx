@@ -61,7 +61,8 @@ export default function HomePage() {
         </h2>
         <div className="link">
           <>
-            <a href="https://www.linkedin.com/in/alankritutkarsh/">Team</a>
+            <Link to={'https://www.linkedin.com/company/the-entrepreneurship-network/'}>Team</Link>
+            {/* <a href="">Team</a> */}
             <a href="#pricings">Pricing</a>
             <Link to="/login">Login</Link>
           </>
