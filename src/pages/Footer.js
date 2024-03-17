@@ -62,10 +62,10 @@ const Footer = () => {
           <div className='col-lg-2 col-md-6 col-12'>
             <h4>Platform</h4>
             <ul >
-              <li>Feature</li>
-              <li>Pricing</li>
-              <li>Login</li>
-              <li>Signup</li>
+              <li><Link to={'/feature'}>Feature</Link></li>
+              <li><Link to={'/pricing'}>Pricing</Link></li>
+              <li><Link to={'/login'}>Login</Link></li>
+              <li><Link to={'/signup'}>Signup</Link></li>
             </ul>
           </div>
           <div className=' col-lg-2 col-md-6 col-12'>
@@ -82,17 +82,17 @@ const Footer = () => {
             <ul>
               <li>Refund policy</li>
               <li>Privacy policy</li>
-              <li>FAQ</li>
+              <li><Link to={'/faq'}>FAQ</Link></li>
               <li>Terms and conditions</li>
             </ul>
           </div>
           <div className=' col-lg-2 col-md-6 col-12'>
             <h4>Follow US</h4>
             <ul>
-              <li><Link to={'https://www.linkedin.com/company/the-entrepreneurship-network/'}><FaLinkedin color='white' /></Link></li>
-              <li><FaYoutube color='white' /></li>
-              <li><FaTwitterSquare color='white' /></li>
-              <Link to={'https://www.instagram.com/theentrepreneurshipnetwork?igsh=Nm44M21saGR1am4w'}><li><FaInstagram color='white' /></li></Link>
+              <li><Link to={'https://www.linkedin.com/company/the-entrepreneurship-network/'}><FaLinkedin /></Link></li>
+              <li><FaYoutube /></li>
+              <li><FaTwitterSquare /></li>
+              <Link to={'https://www.instagram.com/theentrepreneurshipnetwork?igsh=Nm44M21saGR1am4w'}><li><FaInstagram /></li></Link>
             </ul>
           </div>
 

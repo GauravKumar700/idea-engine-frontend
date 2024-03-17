@@ -14,6 +14,9 @@ import { useEffect } from "react";
 import Login from "./components/Login"
 import Welcome_page from "./Mycomponents/Welcome_page"
 import QnA_page from "./Mycomponents/QnA_page"
+import Features from "./pages/Features";
+import Pricing from "./pages/Pricing";
+import Faq from "./pages/FAQ";
 
 
 function App() {
@@ -30,6 +33,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/welcome-page" element={<Welcome_page />} />
         <Route path="/qna-page" element={<QnA_page />} />
+        <Route path="/feature" element={<Features />} />
+        <Route path="/pricing" element={<Pricing />} />
+        
+        <Route path="/faq" element={<Faq />} />
+
       </Routes>
     </Router>
   );

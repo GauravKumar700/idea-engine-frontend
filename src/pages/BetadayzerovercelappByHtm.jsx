@@ -1,4 +1,3 @@
-
 import DivlayOutAuthPage from "../components/DivlayOutAuthPage";
 import "./BetadayzerovercelappByHtm.css";
 const BetadayzerovercelappByHtm = () => {
