@@ -29,27 +29,30 @@ const DivlayoutAuthPage = () => {
 
   const PostData = async (e) => {
     e.preventDefault();
+    try {
+      const { name, email, password } = user;
+      const res = await fetch("https://idea-engine-backend.vercel.app/api/v1/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name, email, password
+        })
+      });
+      // console.log(res);
+      const data = await res.json(); // Error line
 
-    const { name, email, password } = user;
-    const res = await fetch("https://idea-engine-backend.vercel.app/api/v1/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name, email, password
-      })
-    });
-    // console.log(res);
-    const data = await res.json(); // Error line
-
-    if (data.status === 401 || !data) {
-      window.alert("Invalid Registration");
-      // console.log("Invalid Registration");
-    } else {
-      window.alert("Registration Successfull");
-      // console.log("Registration Successfull");
-      navigate('/login');
+      if (data.status === 401 || !data) {
+        window.alert("Invalid Registration");
+        // console.log("Invalid Registration");
+      } else {
+        window.alert("Registration Successfull");
+        // console.log("Registration Successfull");
+        navigate('/login');
+      }
+    } catch (error) {
+      console.log(error)
     }
   }
 
