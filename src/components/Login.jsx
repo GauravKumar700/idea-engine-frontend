@@ -19,7 +19,7 @@ const DivlayoutAuthPage = () => {
 
   const loginUser = async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:5500/api/v1/login', {
+    const res = await fetch('https://idea-engine-backend.vercel.app/api/v1/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
