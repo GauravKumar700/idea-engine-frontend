@@ -10,10 +10,11 @@ import "./Footer.css"
 const Footer = () => {
     return (
       <>
-        <section className="footer-section">
-          <div className="card card-2">
-            <div class="logoo d-flex g-2" >
-              <svg
+      <div className='footer p-5'>
+        <div className='row mt-5'>
+          <div className='col-lg-3 col-md-4 col-12'>
+          <div class="logoo d-flex g-3" >
+          <svg
                 width="46"
                 height="46"
                 fill="none"
@@ -52,13 +53,58 @@ const Footer = () => {
                 </defs>
               </svg>
               <h2 style={{color:'white'}}>IdeaEngine</h2>
-            </div>
-            <p class="tagline">
+              </div>
+            <p class="tagline mt-2">
             <h4 style={{fontSize: '14px', color: "grey"}}>Turning Your Vision into an Actionable Blueprint to Brilliance.</h4>
                 </p>
+          </div>
+          <div className='col-lg-2 col-md-6 col-12'>
+                    <h4>Platform</h4>
+                   <ul >
+                     <li>Feature</li>
+                     <li>Pricing</li>
+                     <li>Login</li>
+                     <li>Signup</li>
+                   </ul>
                  </div>
+                 <div className=' col-lg-2 col-md-6 col-12'>
+                    <h4>Company</h4>
+                   <ul className='list-unstyled'>
+                     <li>About</li>
+                     <li>Career</li>
+                     <li>Blog</li>
+                     <li>Contact us</li>
+                   </ul>
+                 </div>
+                 <div className='col-lg-2 col-md-6 col-12'>
+                    <h4>Legal</h4>
+                   <ul>
+                     <li>Refund policy</li>
+                     <li>Privacy policy</li>
+                     <li>FAQ</li>
+                     <li>Terms and conditions</li>
+                   </ul>
+                 </div>
+                 <div className=' col-lg-2 col-md-6 col-12'>
+                     <h4>Follow US</h4>
+                    <ul>
+                     <li><FaLinkedin /></li>
+                     <li><FaYoutube /></li>
+                     <li><FaTwitterSquare /></li>
+                     <li><FaInstagram /></li>
+                    </ul>
+                    </div>
 
-                 <div className='card'>
+        </div>
+      </div>
+        {/* <section className="footer-section">
+          <div className="cardss cardss-2">
+            <div class="logoo g-2" >
+            <div className='row'>
+             
+                
+
+                 <div className='col-lg-2 col-md-6 col-12 cardss'>
                     <h4>Platform</h4>
                    <ul >
                      <li>Feature</li>
@@ -68,8 +114,8 @@ const Footer = () => {
                    </ul>
                  </div>
 
-                 {/* column2 */}
-                 <div className='card'>
+                 
+                 <div className=' col-lg-2 col-md-6 col-12 cardss'>
                     <h4>Company</h4>
                    <ul className='list-unstyled'>
                      <li>About</li>
@@ -79,8 +125,8 @@ const Footer = () => {
                    </ul>
                  </div>
 
-                 {/* column3 */}
-                 <div className='card'>
+                 
+                 <div className='col-lg-2 col-md-6 col-12 cardss'>
                     <h4>Legal</h4>
                    <ul>
                      <li>Refund policy</li>
@@ -89,7 +135,7 @@ const Footer = () => {
                      <li>Terms and conditions</li>
                    </ul>
                  </div>
-          <div className='card'>
+          <div className=' col-lg-2 col-md-6 col-12 cardss'>
                      <h4>Follow US</h4>
                     <ul>
                      <li><FaLinkedin /></li>
@@ -97,8 +143,8 @@ const Footer = () => {
                      <li><FaTwitterSquare /></li>
                      <li><FaInstagram /></li>
                     </ul>
-                    </div> 
-        </section>
+                    </div> </div></div></div>
+        </section> */}
       </>
     );
   };

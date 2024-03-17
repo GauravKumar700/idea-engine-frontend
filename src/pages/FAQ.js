@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import faqData from "./Faqs";
 import "./faq.css";
-import {Link} from "react-router-dom"
- 
+import { Link } from "react-router-dom"
+
 function Faq() {
   const [expanded, setExpanded] = useState({});
 
@@ -41,18 +41,18 @@ function Faq() {
         </div>
       </div>
 
-      <div className="about-section">
+      <div className="about-section mt-5">
         <h1 className="about-title">let's turn potential into growth...</h1>
-        <p className="about-description" style={{color: "black"}}>
+        <p className="about-description" style={{ color: "black" }}>
           Experience the awe-inspiring magic of our blueprint as your thoughts
           unfold into a structured roadmap, guiding you effortlessly towards
           extraordinary achievement.
         </p>
         <a href="/">
           <Link to="/login">
-          <button className="login-btn">
-            Login
-          </button>
+            <button className="login-btn">
+              Login
+            </button>
           </Link>
         </a>
       </div>

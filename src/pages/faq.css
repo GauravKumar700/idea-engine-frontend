@@ -8,10 +8,15 @@ body {
 .div-top {
   /* background-color: #000; */
   border-radius: 1px solid #222;
-  height: 1100px;
+  height: 900px;
   width: 65%;
   margin: auto;
   align-items: center;
+}
+@media screen and (max-width:420px){
+  .div-top{
+    width: auto;
+  }
 }
 
 .top-page {

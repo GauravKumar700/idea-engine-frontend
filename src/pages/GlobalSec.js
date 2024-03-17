@@ -5,14 +5,18 @@ const GlobalSec = () => {
   return (
     <>
       <section className='stats-section' style={{backgroundColor: '#000000'}}>
+        <div className='container'>
+        <div className='row'>
+          <div className='col-lg-7 col-md-6 col-12'>
         <div className='left-side'>
           <h3>globally serving and building in public</h3>
-        </div>
+        </div></div>
+        <div className='col-lg-5 col-md-6 col-12'>
         <div className='stats-data-grid'>
 
           <div class="item">
             <div class="logo">
-              <img src="https://beta.dayzero.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fusers.d37bf9b8.png&w=64&q=75" alt="" style={{ color: 'transparent' }} />
+              
             </div>
             <div class="count">3896</div>
             <div class="label">Users</div>
@@ -20,7 +24,7 @@ const GlobalSec = () => {
 
           <div class="item">
             <div class="logo">
-              <img src="https://beta.dayzero.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fusers.d37bf9b8.png&w=64&q=75" alt="" style={{ color: 'transparent' }} />
+              
             </div>
             <div class="count">5800 </div>
             <div class="label">Blueprints</div>
@@ -28,7 +32,7 @@ const GlobalSec = () => {
 
           <div class="item">
             <div class="logo">
-              <img src="https://beta.dayzero.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fupgrade.fe85e326.png&w=64&q=75" alt="" style={{ color: 'transparent' }} />
+             
             </div>
             <div class="count">158 </div>
             <div class="label">Upgrades</div>
@@ -36,12 +40,12 @@ const GlobalSec = () => {
 
           <div class="item">
             <div class="logo">
-              <img src="https://beta.dayzero.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmap.7f09a278.png&w=64&q=75" alt="" />
+              
             </div>
             <div class="count">24 </div>
             <div class="label">Countries</div>
           </div>
-        </div>
+        </div></div></div></div>
       </section>
     </>
   )
