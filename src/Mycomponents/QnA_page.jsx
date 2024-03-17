@@ -88,7 +88,7 @@ function QnA_page() {
         const cookies = Cookies.get('token')
         try {
             // Send a request to your backend to generate and download the PDF
-            const response = await fetch('http://localhost:5500/api/v1/generatepdf', {
+            const response = await fetch('https://idea-engine-backend.vercel.app/api/v1/generatepdf', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

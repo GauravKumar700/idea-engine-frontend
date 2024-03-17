@@ -1,18 +1,18 @@
-import {Link, useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./DivlayoutAuthPage.css";
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 
 const DivlayoutAuthPage = () => {
-  
-  function validate(){
+
+  function validate() {
     const mail = document.getElementById("email").value;
-    const regExp =  /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+    const regExp = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
     regExp.test(mail) ? alert("You have entered a valid email") : alert("You have entered wrong email");
   }
 
   // Connecting Backend to frontend of Signup page
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [user, setUser] = useState({
     name: "", email: "", password: ""
@@ -24,18 +24,17 @@ const DivlayoutAuthPage = () => {
     name = e.target.name;
     value = e.target.value;
 
-    setUser({...user, [name]:value});
+    setUser({ ...user, [name]: value });
   }
 
   const PostData = async (e) => {
     e.preventDefault();
 
-    const {name, email, password} = user;
-
-    const res = await fetch("http://localhost:5500/api/v1/register", {
+    const { name, email, password } = user;
+    const res = await fetch("https://idea-engine-backend.vercel.app/api/v1/register", {
       method: "POST",
       headers: {
-        "Content-Type" : "application/json"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         name, email, password
@@ -44,10 +43,10 @@ const DivlayoutAuthPage = () => {
     // console.log(res);
     const data = await res.json(); // Error line
 
-    if(data.status === 401 || !data){
+    if (data.status === 401 || !data) {
       window.alert("Invalid Registration");
       // console.log("Invalid Registration");
-    }else{
+    } else {
       window.alert("Registration Successfull");
       // console.log("Registration Successfull");
       navigate('/login');
@@ -57,25 +56,25 @@ const DivlayoutAuthPage = () => {
 
   // const navigate = useNavigate();
 
-//   const getUser = async () => {
-//     try {
-//         const response = await axios.get("http://localhost:8080/login/sucess", { withCredentials: true });
+  //   const getUser = async () => {
+  //     try {
+  //         const response = await axios.get("http://localhost:8080/login/sucess", { withCredentials: true });
 
-//         console.log("response",response)
-//     } catch (error) {
-//       navigate("/")
-//     }
-// }
-
-
-// useEffect(() => {
-//   getUser()
-// }, [])
+  //         console.log("response",response)
+  //     } catch (error) {
+  //       navigate("/")
+  //     }
+  // }
 
 
-  const loginwithgoogle = ()=>{
-    window.open("http://localhost:8080/auth/google/callback","_self")
-} 
+  // useEffect(() => {
+  //   getUser()
+  // }, [])
+
+
+  const loginwithgoogle = () => {
+    window.open("http://localhost:8080/auth/google/callback", "_self")
+  }
 
 
   return (
@@ -127,12 +126,12 @@ const DivlayoutAuthPage = () => {
           </div>
           <div className="form">
 
-            <input className="input" type="text" 
-              name='name' id='name' autoComplete='off' 
+            <input className="input" type="text"
+              name='name' id='name' autoComplete='off'
               value={user.name} onChange={handleInputs} placeholder="Enter Your Name">
             </input>
 
-            <input className="input" type="email" 
+            <input className="input" type="email"
               name='email' id='email' autoComplete='off' value={user.email} onChange={handleInputs}
               placeholder="Enter Your Email" >
             </input>
