@@ -43,7 +43,7 @@ const DivlayoutAuthPage = () => {
       // console.log(res);
       const data = await res.json(); // Error line
 
-      if (data.status === 401 || !data) {
+      if (res.status === 400 || res.status === 401 || !data) {
         window.alert("Invalid Registration");
         // console.log("Invalid Registration");
       } else {
