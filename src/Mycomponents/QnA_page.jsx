@@ -1940,7 +1940,7 @@ function QnA_page() {
 
     ];
 
-    const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
+    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
     const answer = async (question) => {
         // For text-only input, use the gemini-pro model
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
