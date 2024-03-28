@@ -6,7 +6,6 @@ import { useRef } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-import { config } from 'dotenv';
 //import Left_part from './Left_part';
 //import Right_part from './Right_part';
 //import axios from "axios";
