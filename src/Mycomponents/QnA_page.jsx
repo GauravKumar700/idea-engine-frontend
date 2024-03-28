@@ -1941,7 +1941,7 @@ function QnA_page() {
 
     ];
 
-    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+    const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
     const answer = async (question) => {
         // For text-only input, use the gemini-pro model
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -2014,110 +2014,105 @@ function QnA_page() {
                 </div>
             </div>
 
-            {/* Idea / Vision */}
-            {idea && (
-                <div className='row  mt-2'>
-                    <div className='bussiness' >
-                        <div className='logo'>
-                            <img src='./images/logo.png' alt=''></img>
-                        </div>
-                        <span> <TypeAnimation
-                            sequence={[
-                                // Same substring at the start will only be typed out once, initially
-                                'What are you looking for (choose ONLY one)?',
-                                1000,
-                            ]}
-                            wrapper="span"
-                            speed={70}
-                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
-                        /></span>
+            <div className='row  mt-2'>
+                <div className='bussiness' >
+                    <div className='logo'>
+                        <img src='./images/logo.png' alt=''></img>
                     </div>
-                    <div className='row qna-box'>
-                        <div className='col-lg-4 col-md-6 col-12' onClick={digitalHandler}>
-                            <div className='qna-border' style={{ border: buttondigital }} >
-                                <img src='./images/digital.png' alt=''></img>
-                                <div className='mydivider mt-4'></div>
-                                <p className='qna-text mt-4'>Digital Marketing</p>
-                            </div>
-                        </div>
-                        <div className='col-lg-4 col-md-6 col-12' onClick={technologyHandler}>
-                            <div className='qna-border' style={{ border: buttontechnology }}>
-                                <img src='./images/technology.png' alt=''></img>
-                                <div className='mydivider mt-4'></div>
-                                <p className='qna-text'>Technology & Innovation</p>
-                            </div>
-                        </div>
-                        <div className='col-lg-4 col-md-6 col-12' onClick={brandingHandler}>
-                            <div className='qna-border' style={{ border: buttonbranding }}>
-                                <img src='./images/branding.png' alt=''></img>
-                                <div className='mydivider mt-4'></div>
-                                <p className='qna-text mt-4'>Branding & Design</p>
-                            </div>
+                    <span> <TypeAnimation
+                        sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            'What are you looking for (choose ONLY one)?',
+                            1000,
+                        ]}
+                        wrapper="span"
+                        speed={70}
+                        style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                    /></span>
+                </div>
+                <div className='row qna-box'>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={digitalHandler}>
+                        <div className='qna-border' style={{ border: buttondigital }} >
+                            <img src='./images/digital.png' alt=''></img>
+                            <div className='mydivider mt-4'></div>
+                            <p className='qna-text mt-4'>Digital Marketing</p>
                         </div>
                     </div>
-                    <div className='row qna-box'>
-                        <div className='col-lg-4 col-md-6 col-12' onClick={public_relationsHandler}>
-                            <div className='qna-border' style={{ border: buttonpublic }}>
-                                <img src='./images/public_relations.png' alt=''></img>
-                                <div className='mydivider mt-4'></div>
-                                <p className='qna-text'>Public Realations</p>
-                            </div>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={technologyHandler}>
+                        <div className='qna-border' style={{ border: buttontechnology }}>
+                            <img src='./images/technology.png' alt=''></img>
+                            <div className='mydivider mt-4'></div>
+                            <p className='qna-text'>Technology & Innovation</p>
                         </div>
-                        <div className='col-lg-4 col-md-6 col-12' onClick={influencerHandler}>
-                            <div className='qna-border' style={{ border: buttoninfluencer }}>
-                                <img src='./images/influencer_marketing.png' alt=''></img>
-                                <div className='mydivider mt-4'></div>
-                                <p className='qna-text'>Influencer Marketing</p>
-                            </div>
-
-                        </div>
-                        <div className='col-lg-4 col-md-6 col-12' onClick={contentHandler}>
-                            <div className='qna-border' style={{ border: buttoncontent }}>
-                                <img src='./images/content.png' alt=''></img>
-                                <div className='mydivider mt-4'></div>
-                                <p className='qna-text'>Content Production</p>
-                            </div>
+                    </div>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={brandingHandler}>
+                        <div className='qna-border' style={{ border: buttonbranding }}>
+                            <img src='./images/branding.png' alt=''></img>
+                            <div className='mydivider mt-4'></div>
+                            <p className='qna-text mt-4'>Branding & Design</p>
                         </div>
                     </div>
                 </div>
-            )}
+                <div className='row qna-box'>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={public_relationsHandler}>
+                        <div className='qna-border' style={{ border: buttonpublic }}>
+                            <img src='./images/public_relations.png' alt=''></img>
+                            <div className='mydivider mt-4'></div>
+                            <p className='qna-text'>Public Realations</p>
+                        </div>
+                    </div>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={influencerHandler}>
+                        <div className='qna-border' style={{ border: buttoninfluencer }}>
+                            <img src='./images/influencer_marketing.png' alt=''></img>
+                            <div className='mydivider mt-4'></div>
+                            <p className='qna-text'>Influencer Marketing</p>
+                        </div>
 
-            {influencer && (
-                <div className='row'>
-                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                            {/* <p>{influencer_ques[currentQuestionIndex]}</p> */}
+                    </div>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={contentHandler}>
+                        <div className='qna-border' style={{ border: buttoncontent }}>
+                            <img src='./images/content.png' alt=''></img>
+                            <div className='mydivider mt-4'></div>
+                            <p className='qna-text'>Content Production</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            {userResponses.questions1.map((question1, index) => (
-                                <div key={index} style={{ marginBottom: '25px' }}>
-                                    <div className='res'>
-                                        <p>
-                                            <strong>Question:</strong> {question1}
-                                        </p>
-                                        <p>
-                                            <strong>Answer:</strong> {userResponses.answers1[index]}
-                                        </p>
-                                    </div>
+            <div className='row'>
+                <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                    <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                        {/* <p>{influencer_ques[currentQuestionIndex]}</p> */}
+
+                        {userResponses.questions1.map((question1, index) => (
+                            <div key={index} style={{ marginBottom: '25px' }}>
+                                <div className='res'>
+                                    <p>
+                                        <strong>Question:</strong> {question1}
+                                    </p>
+                                    <p>
+                                        <strong>Answer:</strong> {userResponses.answers1[index]}
+                                    </p>
                                 </div>
-                            ))}
-                            <div className='row'>
-                                <input type="text" className='input-field p-2' placeholder='Ask Your Questins Here...'
-                                    onKeyPress={(event) => {
-                                        if (event.key === "Enter") {
-                                            handleResponseSubmit(event.target.value);
-                                            event.target.value = ""; // Clear input field
-                                        }
-                                    }}
-                                />
                             </div>
-                        </div>
-                        <div className='res'>
-                            {/* <p>Questionnaire complete! Thank you for your responses.</p> */}
-                            <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                        ))}
+                        <div className='row'>
+                            <input type="text" className='input-field p-2' placeholder='Ask Your Questins Here...'
+                                onKeyPress={(event) => {
+                                    if (event.key === "Enter") {
+                                        handleResponseSubmit(event.target.value);
+                                        event.target.value = ""; // Clear input field
+                                    }
+                                }}
+                            />
                         </div>
                     </div>
+                    <div className='res'>
+                        {/* <p>Questionnaire complete! Thank you for your responses.</p> */}
+                        <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                    </div>
                 </div>
-            )}
+            </div>
         </div>
     );
 }
