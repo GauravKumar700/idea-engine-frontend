@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import Loader from '../components/Loader';
 //import Left_part from './Left_part';
 //import Right_part from './Right_part';
 //import axios from "axios";
@@ -81,12 +82,14 @@ function QnA_page() {
     // const[generatepdf, setgeneratepdf]=useState("");
     const [questions, setQuestions] = useState([])
     const [answers, setAnswers] = useState([])
+    const [loader, setLoader] = useState(false)
 
     const messages = { questions, answers }
 
     const handleDownloadPdf = async () => {
-        const cookies = Cookies.get('token')
         try {
+            setLoader(true)
+            const cookies = Cookies.get('token')
             // Send a request to your backend to generate and download the PDF
             const response = await fetch('https://idea-engine-backend.vercel.app/api/v1/generatepdf', {
                 method: 'POST',
@@ -101,6 +104,7 @@ function QnA_page() {
                 throw new Error('Failed to generate or download PDF');
             }
             else {
+                setLoader(false)
                 // Convert the response body to a blob
                 const blob = await response.blob();
                 // Create a URL for the blob
@@ -1944,9 +1948,9 @@ function QnA_page() {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         addAnswers(response)
     };
-    return (
-        <div className='container'>
-            {/* <Left_part data={{clownCounter}}/> */}
+
+    return (<>
+        {loader ? (<div><Loader /></div>) : (<div className='container'>
             <div className='row mt-2'>
                 <div className='col-lg-9 col-md-8 col-12'>
                     <div className="blue">
@@ -3327,7 +3331,8 @@ function QnA_page() {
                 </div>
             )}
             {/* <Right_part/> */}
-        </div>
+        </div>)}
+    </>
     );
 }
 export default QnA_page;
