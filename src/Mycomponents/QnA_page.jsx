@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useRef } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-const { GoogleGenerativeAI } = require("@google/generative-ai");
 //import Left_part from './Left_part';
 //import Right_part from './Right_part';
 //import axios from "axios";
@@ -507,7 +506,7 @@ function QnA_page() {
 
     // For Question and Answer
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [userResponses, setUserResponses] = useState({ questions1: [], answers1: [] });
+    const [userResponses, setUserResponses] = useState([]);
 
     const youtube_ques = [
         <div className='row'>
@@ -1940,32 +1939,10 @@ function QnA_page() {
 
     ];
 
-    const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
-    const answer = async (question) => {
-        // For text-only input, use the gemini-pro model
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-
-        const prompt = question
-
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text = response.text();
-        console.log(text);
-        return text
-    }
-
-    const handleResponseSubmit = async (response) => {
-        addQuestions(response)
-        const ans = await answer(response)
-        addAnswers(ans)
-        setUserResponses(prevResponses => ({
-            ...prevResponses,
-            questions1: [...prevResponses.questions1, response],
-            answers1: [...prevResponses.answers1, ans]
-        }));
-        // setUserResponses([...userResponses, response]);
+    const handleResponseSubmit = (response) => {
+        setUserResponses([...userResponses, response]);
         setCurrentQuestionIndex(currentQuestionIndex + 1);
-        return ans
+        addAnswers(response)
     };
     return (
         <div className='container'>
@@ -2010,108 +1987,1346 @@ function QnA_page() {
                             <p className='qna-text'>Idea / Vision</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className='row  mt-2'>
-                <div className='bussiness' >
-                    <div className='logo'>
-                        <img src='./images/logo.png' alt=''></img>
-                    </div>
-                    <span> <TypeAnimation
-                        sequence={[
-                            // Same substring at the start will only be typed out once, initially
-                            'What are you looking for (choose ONLY one)?',
-                            1000,
-                        ]}
-                        wrapper="span"
-                        speed={70}
-                        style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
-                    /></span>
-                </div>
-                <div className='row qna-box'>
-                    <div className='col-lg-4 col-md-6 col-12' onClick={digitalHandler}>
-                        <div className='qna-border' style={{ border: buttondigital }} >
-                            <img src='./images/digital.png' alt=''></img>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={startupHandler}>
+                        <div className='qna-border' style={{ border: buttonstartup }}>
+                            <img src='./images/stage_startup.png' alt=''></img>
                             <div className='mydivider mt-4'></div>
-                            <p className='qna-text mt-4'>Digital Marketing</p>
-                        </div>
-                    </div>
-                    <div className='col-lg-4 col-md-6 col-12' onClick={technologyHandler}>
-                        <div className='qna-border' style={{ border: buttontechnology }}>
-                            <img src='./images/technology.png' alt=''></img>
-                            <div className='mydivider mt-4'></div>
-                            <p className='qna-text'>Technology & Innovation</p>
-                        </div>
-                    </div>
-                    <div className='col-lg-4 col-md-6 col-12' onClick={brandingHandler}>
-                        <div className='qna-border' style={{ border: buttonbranding }}>
-                            <img src='./images/branding.png' alt=''></img>
-                            <div className='mydivider mt-4'></div>
-                            <p className='qna-text mt-4'>Branding & Design</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='row qna-box'>
-                    <div className='col-lg-4 col-md-6 col-12' onClick={public_relationsHandler}>
-                        <div className='qna-border' style={{ border: buttonpublic }}>
-                            <img src='./images/public_relations.png' alt=''></img>
-                            <div className='mydivider mt-4'></div>
-                            <p className='qna-text'>Public Realations</p>
-                        </div>
-                    </div>
-                    <div className='col-lg-4 col-md-6 col-12' onClick={influencerHandler}>
-                        <div className='qna-border' style={{ border: buttoninfluencer }}>
-                            <img src='./images/influencer_marketing.png' alt=''></img>
-                            <div className='mydivider mt-4'></div>
-                            <p className='qna-text'>Influencer Marketing</p>
+                            <p className='qna-text'>Startup / Growth</p>
                         </div>
 
                     </div>
-                    <div className='col-lg-4 col-md-6 col-12' onClick={contentHandler}>
-                        <div className='qna-border' style={{ border: buttoncontent }}>
-                            <img src='./images/content.png' alt=''></img>
+                    <div className='col-lg-4 col-md-6 col-12' onClick={brandHandler}>
+                        <div className='qna-border' style={{ border: buttonbrand }}>
+                            <img src='./images/stage_brand.png' alt=''></img>
                             <div className='mydivider mt-4'></div>
-                            <p className='qna-text'>Content Production</p>
+                            <p className='qna-text'>Brand / Enterprise</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className='row'>
-                <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                    <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                        {/* <p>{influencer_ques[currentQuestionIndex]}</p> */}
+            {/* Idea / Vision */}
+            {idea && (
+                <div className='row  mt-2'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'What are you looking for (choose ONLY one)?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
 
-                        {userResponses.questions1.map((question1, index) => (
-                            <div key={index} style={{ marginBottom: '25px' }}>
-                                <div className='res'>
-                                    <p>
-                                        <strong>Question:</strong> {question1}
-                                    </p>
-                                    <p>
-                                        <strong>Answer:</strong> {userResponses.answers1[index]}
-                                    </p>
+
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={digitalHandler}>
+                            <div className='qna-border' style={{ border: buttondigital }} >
+                                <img src='./images/digital.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text mt-4'>Digital Marketing</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={technologyHandler}>
+                            <div className='qna-border' style={{ border: buttontechnology }}>
+                                <img src='./images/technology.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Technology & Innovation</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={brandingHandler}>
+                            <div className='qna-border' style={{ border: buttonbranding }}>
+                                <img src='./images/branding.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text mt-4'>Branding & Design</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={public_relationsHandler}>
+                            <div className='qna-border' style={{ border: buttonpublic }}>
+                                <img src='./images/public_relations.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Public Realations</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={influencerHandler}>
+                            <div className='qna-border' style={{ border: buttoninfluencer }}>
+                                <img src='./images/influencer_marketing.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Influencer Marketing</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={contentHandler}>
+                            <div className='qna-border' style={{ border: buttoncontent }}>
+                                <img src='./images/content.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Content Production</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Startup / Growth */}
+            {startup && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'What are you looking for (choose ONLY one)?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={digitalHandler}>
+                            <div className='qna-border' style={{ border: buttondigital }}>
+                                <img src='./images/digital.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text mt-4'>Digital Marketing</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={technologyHandler}>
+                            <div className='qna-border' style={{ border: buttontechnology }}>
+                                <img src='./images/technology.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Technology & Innovation</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={brandingHandler}>
+                            <div className='qna-border' style={{ border: buttonbranding }}>
+                                <img src='./images/branding.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text mt-4'>Branding & Design</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={public_relationsHandler}>
+                            <div className='qna-border' style={{ border: buttonpublic }}>
+                                <img src='./images/public_relations.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Public Realations</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={influencerHandler}>
+                            <div className='qna-border' style={{ border: buttoninfluencer }} onClick={inputFunction}>
+                                <img src='./images/influencer_marketing.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Influencer Marketing</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={contentHandler}>
+                            <div className='qna-border' style={{ border: buttoncontent }}>
+                                <img src='./images/content.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Content Production</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Brand / Enterprise */}
+            {brand && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'What are you looking for (choose ONLY one)?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={digitalHandler}>
+                            <div className='qna-border' style={{ border: buttondigital }}>
+                                <img src='./images/digital.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text mt-4'>Digital Marketing</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={technologyHandler}>
+                            <div className='qna-border' style={{ border: buttontechnology }}>
+                                <img src='./images/technology.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Technology & Innovation</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={brandingHandler}>
+                            <div className='qna-border' style={{ border: buttonbranding }}>
+                                <img src='./images/branding.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text mt-4'>Branding & Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={public_relationsHandler}>
+                            <div className='qna-border' style={{ border: buttonpublic }}>
+                                <img src='./images/public_relations.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Public Realations</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={influencerHandler}>
+                            <div className='qna-border' style={{ border: buttoninfluencer }}>
+                                <img src='./images/influencer_marketing.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Influencer Marketing</p>
+                            </div>
+
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={contentHandler}>
+                            <div className='qna-border' style={{ border: buttoncontent }}>
+                                <img src='./images/content.png' alt=''></img>
+                                <div className='mydivider mt-4'></div>
+                                <p className='qna-text'>Content Production</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Digital Marketing */}
+            {digital && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Anything specific in the digital marketing?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={socialHandler}>
+                            <div className='digital-text' style={{ backgroundColor: buttonsocial }}>
+                                <p>Social Media Marketing</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12' onClick={performanceHandler}>
+                            <div className='digital-text' style={{ backgroundColor: buttonperformance }}>
+                                <p>Performance marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Technology and innovation */}
+            {technology && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Anything specific in the technology and innovation?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={websiteHandler} style={{ backgroundColor: buttonwebsite }}>
+                                <p onClick={inputFunction}>Website Development</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={appHandler} style={{ backgroundColor: buttonapp }}>
+                                <p onClick={inputFunction}>App development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Branding & Design */}
+            {branding && (
+                <>
+                    <div className='row'>
+                        <div className='bussiness'>
+                            <div className='logo'>
+                                <img src='./images/logo.png' alt=''></img>
+                            </div>
+                            <span> <TypeAnimation
+                                sequence={[
+                                    // Same substring at the start will only be typed out once, initially
+                                    'Anything specific in the branding and Designing?',
+                                    1000,
+                                ]}
+                                wrapper="span"
+                                speed={70}
+                                style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }} /></span>
+                        </div></div>
+                    <div className='row'>
+                        <div className='row qna-box'>
+                            <div className='col-lg-4 col-md-6 col-12'>
+                                <div className='digital-text' onClick={productHandler} style={{ backgroundColor: buttonproduct }}>
+                                    <p>Product Branding</p>
                                 </div>
                             </div>
-                        ))}
-                        <div className='row'>
-                            <input type="text" className='input-field p-2' placeholder='Ask Your Questins Here...'
-                                onKeyPress={(event) => {
-                                    if (event.key === "Enter") {
-                                        handleResponseSubmit(event.target.value);
-                                        event.target.value = ""; // Clear input field
-                                    }
-                                }}
-                            />
+                            <div className='col-lg-4 col-md-6 col-12'>
+                                <div className='digital-text' onClick={serviceHandler} style={{ backgroundColor: buttonservice }}>
+                                    <p onClick={inputFunction}>Service Branding</p>
+                                </div>
+                            </div>
+                            <div className='col-lg-4 col-md-6 col-12'>
+                                <div className='digital-text' onClick={companyHandler} style={{ backgroundColor: buttoncompany }}>
+                                    <p onClick={inputFunction}>Company branding</p>
+                                </div>
+                            </div>
+                        </div></div>
+                    <div className='row'>
+                        <div className=' qna-box mt-0'>
+                            <div className='col-lg-4 col-md-6 col-12'>
+                                <div className='digital-text' onClick={personalHandler} style={{ backgroundColor: buttonpersonal }}>
+                                    <p onClick={inputFunction}>Personal branding</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className='res'>
-                        {/* <p>Questionnaire complete! Thank you for your responses.</p> */}
-                        <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                    </div></>
+
+            )}
+
+            {/* influencer */}
+            {influencer && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < influencer_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p>
+                                                <strong>Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < influencer_ques.length - 1 && (
+
+                                            <p>
+                                                <strong></strong> {influencer_ques[index + 1]}
+                                            </p>
+
+                                        )}
+                                    </div>
+                                ))}
+                                <div className='row'>
+                                    <input type="text" className='input-field p-2' placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} /></div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
                     </div>
                 </div>
-            </div>
+            )}
+
+            {/* public relation */}
+            {public_relations && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Anything specific in the public relations?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={pressHandler} style={{ backgroundColor: buttonpress }}>
+                                <p onClick={inputFunction} >Press Release</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={tvHandler} style={{ backgroundColor: buttontv }}>
+                                <p onClick={inputFunction}>TV & Radio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Content */}
+            {content && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Anything specific in the content production?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={videoHandler} style={{ backgroundColor: buttonvideo }}>
+                                <p onClick={inputFunction}>Video shoot</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={photoHandler} style={{ backgroundColor: buttonphoto }}>
+                                <p onClick={inputFunction}>Photo shoot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Social Media Marketing  */}
+            {social && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Do you have a particular social media channel in mind?. If not, just click on “Generate Now”)',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12' >
+                            <div className='digital-text' onClick={youtubeHandler} style={{ backgroundColor: buttonyoutube }}>
+                                <p>Youtube</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={facebookHandler} style={{ backgroundColor: buttonfacebook }}>
+                                <p onClick={inputFunction}>Facebook</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={instagramHandler} style={{ backgroundColor: buttoninstagram }}>
+                                <p onClick={inputFunction}>Instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Performance marketing  */}
+            {performance && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Do you have a particular social media channel in mind?. If not, just click on “Generate Now”)',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={youtubeadsHandler} style={{ backgroundColor: buttonyoutubeads }}>
+                                <p onClick={inputFunction}>Youtube Ads</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={googleHandler} style={{ backgroundColor: buttongoogle }}>
+                                <p onClick={inputFunction}>Google Ads</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={instagramadsHandler} style={{ backgroundColor: buttoninstagramads }}>
+                                <p onClick={inputFunction}>Instagram Ads</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Youtube */}
+            {youtube && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < youtube_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{youtube_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < youtube_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {youtube_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )
+            }
+
+            {/* facebook */}
+            {facebook && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < facebook_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{facebook_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < facebook_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {facebook_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* instagram */}
+            {instagram && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < instagram_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{instagram_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < instagram_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {instagram_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* Website */}
+            {website && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < website_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{website_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < website_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {website_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+
+            )}
+
+            {/* app */}
+            {app && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < app_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{app_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < app_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {app_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* Youtube ads */}
+            {youtubeads && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < youtubeads_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{youtubeads_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < youtubeads_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {youtubeads_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* Google */}
+            {google && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < googleques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{googleques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < googleques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {googleques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* instagram ads */}
+            {instagramads && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < instagramads_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{instagramads_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < instagramads_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {instagramads_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* Product branding */}
+            {product && (
+                <div className='row'>
+                    <div className='bussiness' >
+                        <div className='logo'>
+                            <img src='./images/logo.png' alt=''></img>
+                        </div>
+                        <span> <TypeAnimation
+                            sequence={[
+                                // Same substring at the start will only be typed out once, initially
+                                'Anything specific in the product branding?',
+                                1000,
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+                        /></span>
+                    </div>
+
+                    <div className='row qna-box'>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={digitalprodHandler} style={{ backgroundColor: buttondigitalprod }}>
+                                <p> Digital Product</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 col-md-6 col-12'>
+                            <div className='digital-text' onClick={physicalHandler} style={{ backgroundColor: buttonphysical }} >
+                                <p onClick={inputFunction}>Physical Product</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Service */}
+            {service && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < service_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{service_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < service_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {service_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* company */}
+            {company && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < company_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{company_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < company_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {company_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* personal */}
+            {personal && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < personal_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{personal_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < personal_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {personal_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* digital product */}
+            {digitalprod && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < digitalprod_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{digitalprod_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < digitalprod_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {digitalprod_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* physical */}
+            {physical && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < physical_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{physical_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < physical_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {physical_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/*press */}
+            {press && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < press_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{press_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < press_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {press_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/* TV */}
+            {tv && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < tv_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{tv_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < tv_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {tv_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+            )}
+
+            {/*video */}
+            {video && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < video_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{video_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < video_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {video_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* photo */}
+            {photo && (
+                <div className='row'>
+                    <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
+                        {currentQuestionIndex < photo_ques.length ? (
+                            <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                <p>{photo_ques[currentQuestionIndex]}</p>
+                                {userResponses.map((response, index) => (
+                                    <div key={index}>
+                                        <div className='res'>
+                                            <p style={{ justifyContent: 'center' }}>
+                                                <strong >Response:</strong> {response}
+                                            </p></div>
+                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                        {index < photo_ques.length - 1 && (
+                                            <p>
+                                                <strong></strong> {photo_ques[index + 1]}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                ))}
+                                <div className='row'>
+                                    <input
+                                        type="text" className='input-field  p-2'
+                                        placeholder='Enter the text here'
+                                        onKeyPress={(event) => {
+                                            if (event.key === "Enter") {
+                                                handleResponseSubmit(event.target.value);
+                                                event.target.value = ""; // Clear input field
+                                            }
+                                        }} />
+                                </div>
+                            </div>
+                        ) : (
+                            <div className='res'>
+                                <p>Questionnaire complete! Thank you for your responses.</p>
+                                <button type='button' className='btn btn-primary' onClick={handleDownloadPdf}>Generate PDF</button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+            {/* <Right_part/> */}
         </div>
     );
 }
