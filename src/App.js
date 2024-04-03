@@ -8,7 +8,7 @@ import {
 } from "react-router-dom"
 import './App.css';
 import HomePage from "./components/HomePage";
-// import BetadayzerovercelappByHtm from "./pages/BetadayzerovercelappByHtm";
+// import BetadayzerovercelappByHtm from "./pages/BetadayzerovercelappByHtm"; 
 import DivlayOutAuthPage from "./components/DivlayOutAuthPage";
 import { useEffect } from "react";
 import Login from "./components/Login"

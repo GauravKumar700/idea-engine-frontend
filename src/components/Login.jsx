@@ -110,7 +110,7 @@ const DivlayoutAuthPage = () => {
               </div>
             </div>
           </div>
-          <div style={{ width: '100%', height: '800px' }}>
+          <div style={{ width: '100%', height: '' }}>
             <div className="section1">
               <div className="pform-title">
                 <div className="welcome-back">Welcome Back</div>

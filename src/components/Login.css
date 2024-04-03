@@ -4,7 +4,8 @@
   font-weight: 500;
   font-size: 60px;
   text-align: center;
-  color: lightgrey
+  color: lightgrey;
+  margin-top: -10px;
 }
 
 .divlayout-auth-page {
@@ -38,18 +39,12 @@
 
 .a-blueprint-engine-container {
   width: 95%;
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center;
+  margin-left: 10px;
   color: rgb(208, 202, 202);
   font-size: 20px;
 }
-/* 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-} */
 
 .section1 {
   display: flex;
@@ -57,13 +52,12 @@
   align-items: center;
   background-color: rgb(21, 21, 21);
   border-radius: 10px;
-  /* height: 400px; */
   height: fit-content !important;
   margin-top: 50px;
   width: 500px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
 }
 
 .create-your-account {
@@ -77,6 +71,7 @@
 
 .pform-title {
   margin-top: 30px;
+  color: grey;
 }
 
 .pform-subtitle {
@@ -97,8 +92,7 @@
   flex-direction: row;
   cursor: pointer;
   border-radius: 5px;
-  /* box-sizing: border-box; */
-  width: 380px;
+  width: 270px;
   height: 52px;
   flex-direction: row;
   padding: var(--padding-sm) 99.41000366210938px var(--padding-sm) 99.94999694824219px;
@@ -140,14 +134,13 @@
 .input {
   height: 52px;
   font-size: 15px;
-  /* color: var(--light-2); */
   background: transparent;
   padding: 0 var(--space-4);
   border: 1px solid #32343a;
   background-color: black !important;
   color: white !important;
   border-radius: 5px;
-  width: 380px;
+  width: 270px;
   margin: 0 auto;
   padding-left: 15px;
 }
@@ -167,7 +160,7 @@
   height: 52px;
   display: flex;
   flex-direction: column;
-  padding: 13.75px 124.9000015258789px 15.25px 125.0999984741211px;
+  padding: 10px 20px;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
@@ -190,4 +183,51 @@
 
 .login:hover {
   text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+  .divlayout-auth-page {
+    height: auto;
+  }
+
+  .section1 {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-to-dayzero {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .ppage-tagmargin {
+    font-size: 16px;
+    letter-spacing: 10px;
+    line-height: 20px;
+  }
+
+  .a-blueprint-engine-container {
+    font-size: 16px;
+  }
+
+  .create-your-account {
+    font-size: 20px;
+  }
+
+  .button1 {
+    width: 100%;
+    max-width: unset;
+    padding: 10px 45px;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .button2 {
+    padding: 10px 20px;
+  }
 }
