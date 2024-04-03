@@ -85,6 +85,11 @@ function QnA_page() {
     const [loader, setLoader] = useState(false)
 
     const messages = { questions, answers }
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const handleOptionChange = (event) => {
+      setSelectedOption(event.target.value);
+    };
 
     const handleDownloadPdf = async () => {
         try {
@@ -625,16 +630,53 @@ function QnA_page() {
                 </div>
                 <span> <TypeAnimation
                     sequence={[
-                        // Influencer start
-                        'What are your goals for influencer marketing?(For example, increasing brand awareness, driving product sales, expanding reach)',
+                        // question start
+                        'Your business name',
                         1000,
-                        () => { addQuestions('What are your goals for influencer marketing?(For example, increasing brand awareness, driving product sales, expanding reach)') }
+                        () => { addQuestions('Your business name') }
                     ]}
                     wrapper="span"
                     speed={70}
                     style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
-                /></span>
-            </div></div>,
+                />
+                </span>
+                
+                
+            </div>
+            <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter bussiness name'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+            {/* <div className='d-grid row'>
+      <label className='radio_bor'>
+        <input type="radio" value="option1" style={{margin:"5px"}} checked={selectedOption === "option1"} onChange={handleOptionChange}/>
+        Option 1
+      </label>
+      <label>
+        <input type="radio" value="option2" checked={selectedOption === "option2"} onChange={handleOptionChange}/>
+        Option 2
+      </label>
+      <label>
+        <input type="radio" value="option3" checked={selectedOption === "option3"} onChange={handleOptionChange}/>
+        Option 3
+      </label>
+    </div> */}
+    {/* <div className='row'>
+      <input type="text" className='input-field p-2' placeholder='Enter bussiness name'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                }
+            }} />
+            </div>*/}
+            </div>, 
         <div className='row'>
             <div className='bussiness' >
                 <div className='logo'>
@@ -643,15 +685,29 @@ function QnA_page() {
                 <span> <TypeAnimation
                     sequence={[
                         // Influencer q1
-                        'What type of content and messaging will resonate with your audience (For example, product reviews, sponsored content, giveaways)',
+                        'Your business description',
                         1000,
-                        () => { addQuestions('What type of content and messaging will resonate with your audience (For example, product reviews, sponsored content, giveaways)') }
+                        () => { addQuestions('Your business description') }
                     ]}
                     wrapper="span"
                     speed={70}
                     style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
-                /></span>
-            </div></div>,
+                />
+                </span>
+                
+            </div>
+            <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='eg: Hotel/restaurant/online clothing store'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+            
+            </div>,
         <div className='row'>
             <div className='bussiness' >
                 <div className='logo'>
@@ -660,14 +716,25 @@ function QnA_page() {
                 <span> <TypeAnimation
                     sequence={[
                         // Influencer q2
-                        'What do you want your viewers to FEEL after looking at your influencer posts (For Eg. Fomo, Desire etc) ?',
+                        'Number of employees',
                         1000,
-                        () => { addQuestions('What do you want your viewers to FEEL after looking at your influencer posts (For Eg. Fomo, Desire etc) ?') }
+                        () => { addQuestions('Number of employees') }
                     ]}
                     wrapper="span"
                     speed={70}
                     style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
-                /></span>
+                />
+                </span>
+            </div>
+            <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter number of employee'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
             </div></div>,
         <div className='row'>
             <div className='bussiness' >
@@ -676,16 +743,28 @@ function QnA_page() {
                 </div>
                 <span> <TypeAnimation
                     sequence={[
-                        // Influencer q3
-                        'What do you want your viewers to DOccc (For eg. Buy Now, Visit store, Like etc)?',
+                        // Influencer q3(radio)
+                        'Do you offer a product or service?',
                         1000,
-                        () => { addQuestions('What do you want your viewers to DOccc (For eg. Buy Now, Visit store, Like etc)?') }
+                        () => { addQuestions('Do you offer a product or service?') }
                     ]}
                     wrapper="span"
                     speed={70}
                     style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
-                /></span>
-            </div></div>,
+                />
+                </span>
+            </div>
+            <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter product / services'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+            </div>,
         <div className='row'>
             <div className='bussiness' >
                 <div className='logo'>
@@ -693,15 +772,25 @@ function QnA_page() {
                 </div>
                 <span> <TypeAnimation
                     sequence={[
-                        // Influencer q4
-                        'What is the total timeline for executing the campaign (For Eg. 2 Weeks, 3 months etc)',
+                        // Influencer q4(radio)
+                        'How can customer get your product or service?',
                         1000,
-                        () => { addQuestions('What is the total timeline for executing the campaign (For Eg. 2 Weeks, 3 months etc)') }
+                        () => { addQuestions('How can customer get your product or service?') }
                     ]}
                     wrapper="span"
                     speed={70}
                     style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
                 /></span>
+            </div>
+            <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Online/ offline/ both'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
             </div></div>,
         <div className='row'>
             <div className='bussiness' >
@@ -711,15 +800,307 @@ function QnA_page() {
                 <span> <TypeAnimation
                     sequence={[
                         // Influencer q5
-                        'What is the total budget (Please be realistic here) ?',
+                        'Where do you serve your customers?',
                         1000,
-                        () => { addQuestions('What is the total budget (Please be realistic here) ?') }
+                        () => { addQuestions('Where do you serve your customers?') }
                     ]}
                     wrapper="span"
                     speed={70}
                     style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
                 /></span>
-            </div></div>
+            </div>
+            <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Eg: India/ New york/London/Europe'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+            </div>,
+         <div className='row'>
+         <div className='bussiness' >
+             <div className='logo'>
+                 <img src='./images/logo.png' alt=''></img>
+             </div>
+             <span> <TypeAnimation
+                 sequence={[
+                     // Influencer q6
+                     'Customer Group  Description',
+                     1000,
+                     () => { addQuestions('Customer Group  Description') }
+                 ]}
+                 wrapper="span"
+                 speed={70}
+                 style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+             /></span>
+         </div>
+         <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter some text'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+         </div>,
+          <div className='row'>
+          <div className='bussiness' >
+              <div className='logo'>
+                  <img src='./images/logo.png' alt=''></img>
+              </div>
+              <span> <TypeAnimation
+                  sequence={[
+                      // Influencer q7 radio
+                      'Customer Group  Income Level',
+                      1000,
+                      () => { addQuestions('Customer Group  Income Level') }
+                  ]}
+                  wrapper="span"
+                  speed={70}
+                  style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+              /></span>
+          </div>
+          <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Low/Medium/High'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+          </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q8
+                       'Product or Service Name',
+                       1000,
+                       () => { addQuestions('Product or Service Name') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter some text here'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q9
+                       'Product or Service Description',
+                       1000,
+                       () => { addQuestions('Product or Service Description') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter some text here'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q10
+                       'Success Driver ',
+                       1000,
+                       () => { addQuestions('Success Driver ') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Eg: our product is high quality'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q11
+                       'Weakness',
+                       1000,
+                       () => { addQuestions('Weakness') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Eg: our budget is low'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q12
+                       'Total Initial Investment',
+                       1000,
+                       () => { addQuestions('Total Initial Investment') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter amount'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q13
+                       'Expected First Year Revenue',
+                       1000,
+                       () => { addQuestions('Expected First Year Revenue') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter the business revenue '
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+           <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q14
+                       'How much do you expect your revenue to grow each year?',
+                       1000,
+                       () => { addQuestions('How much do you expect your revenue to grow each year?') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter expected revenue'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>,
+            <div className='row'>
+           <div className='bussiness' >
+               <div className='logo'>
+                   <img src='./images/logo.png' alt=''></img>
+               </div>
+               <span> <TypeAnimation
+                   sequence={[
+                       // Influencer q15
+                       'Enter Yearly Business Operations Cost',
+                       1000,
+                       () => { addQuestions('Enter Yearly Business Operations Cost') }
+                   ]}
+                   wrapper="span"
+                   speed={70}
+                   style={{ fontSize: '1rem', color: '#ececf1', flex: '1', textAlign: 'center', gap: '10px' }}
+               /></span>
+           </div>
+           <div className='row' id="inputRow">
+      <input type="text" className='input-field p-2' placeholder='Enter bussiness operations cost'
+         onKeyPress={(event) => {
+            if (event.key === "Enter") {
+                handleResponseSubmit(event.target.value);
+                event.target.value = ""; // Clear input field
+                event.target.style.display = "none"; // Hide input field
+                }
+            }} />
+            </div>
+           </div>
+
 
     ];
 
@@ -1945,11 +2326,12 @@ function QnA_page() {
 
     const handleResponseSubmit = (response) => {
         setUserResponses([...userResponses, response]);
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
+        setCurrentQuestionIndex(currentQuestionIndex + 1 );
         addAnswers(response)
     };
 
     return (<>
+    
         {loader ? (<div><Loader /></div>) : (<div className='container'>
             <div className='row mt-2'>
                 <div className='col-lg-9 col-md-8 col-12'>
@@ -2352,6 +2734,7 @@ function QnA_page() {
             {/* influencer */}
             {influencer && (
                 <div className='row'>
+                     
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
                         {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
@@ -2362,7 +2745,7 @@ function QnA_page() {
                                             <p>
                                                 <strong>Response:</strong> {response}
                                             </p></div>
-                                        {/* {index === currentQuestionIndex - 1 &&  */}
+                                       
                                         {index < influencer_ques.length - 1 && (
 
                                             <p>
@@ -2372,14 +2755,7 @@ function QnA_page() {
                                         )}
                                     </div>
                                 ))}
-                                <div className='row'>
-                                    <input type="text" className='input-field p-2' placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} /></div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2541,9 +2917,9 @@ function QnA_page() {
             {youtube && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < youtube_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{youtube_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2551,25 +2927,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < youtube_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {youtube_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2586,9 +2952,9 @@ function QnA_page() {
             {facebook && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < facebook_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{facebook_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2596,25 +2962,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < facebook_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {facebook_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                               
                             </div>
                         ) : (
                             <div className='res'>
@@ -2630,9 +2986,9 @@ function QnA_page() {
             {instagram && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < instagram_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{instagram_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2640,25 +2996,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < instagram_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {instagram_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2674,9 +3020,9 @@ function QnA_page() {
             {website && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < website_ques.length ? (
+                        {currentQuestionIndex <influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{website_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2684,25 +3030,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < website_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {website_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2720,9 +3056,9 @@ function QnA_page() {
             {app && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < app_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{app_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2730,25 +3066,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < app_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {app_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2765,9 +3091,9 @@ function QnA_page() {
             {youtubeads && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < youtubeads_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{youtubeads_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2775,25 +3101,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < youtubeads_ques.length - 1 && (
+                                        {index <influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {youtubeads_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2810,9 +3126,9 @@ function QnA_page() {
             {google && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < googleques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{googleques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2820,25 +3136,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < googleques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {googleques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2855,9 +3161,9 @@ function QnA_page() {
             {instagramads && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < instagramads_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{instagramads_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2865,25 +3171,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < instagramads_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {instagramads_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2934,9 +3230,9 @@ function QnA_page() {
             {service && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < service_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{service_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2944,25 +3240,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < service_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {service_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -2979,9 +3265,9 @@ function QnA_page() {
             {company && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < company_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{company_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -2989,25 +3275,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < company_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {company_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3023,9 +3299,9 @@ function QnA_page() {
             {personal && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < personal_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{personal_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3033,25 +3309,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < personal_ques.length - 1 && (
+                                        {index <influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {personal_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3068,9 +3334,9 @@ function QnA_page() {
             {digitalprod && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < digitalprod_ques.length ? (
+                        {currentQuestionIndex <influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{digitalprod_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3078,25 +3344,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < digitalprod_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {digitalprod_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3113,9 +3369,9 @@ function QnA_page() {
             {physical && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < physical_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{physical_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3123,25 +3379,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < physical_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {physical_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3157,9 +3403,9 @@ function QnA_page() {
             {press && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < press_ques.length ? (
+                        {currentQuestionIndex <influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{press_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3167,25 +3413,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < press_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {press_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3202,9 +3438,9 @@ function QnA_page() {
             {tv && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < tv_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{tv_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3212,25 +3448,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < tv_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {tv_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3247,9 +3473,9 @@ function QnA_page() {
             {video && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < video_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{video_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3257,25 +3483,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < video_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {video_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
@@ -3291,9 +3507,9 @@ function QnA_page() {
             {photo && (
                 <div className='row'>
                     <div className=' input--field p-3' style={{ color: "white", textAlign: "initial" }}>
-                        {currentQuestionIndex < photo_ques.length ? (
+                        {currentQuestionIndex < influencer_ques.length ? (
                             <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                                <p>{photo_ques[currentQuestionIndex]}</p>
+                                <p>{influencer_ques[currentQuestionIndex]}</p>
                                 {userResponses.map((response, index) => (
                                     <div key={index}>
                                         <div className='res'>
@@ -3301,25 +3517,15 @@ function QnA_page() {
                                                 <strong >Response:</strong> {response}
                                             </p></div>
                                         {/* {index === currentQuestionIndex - 1 &&  */}
-                                        {index < photo_ques.length - 1 && (
+                                        {index < influencer_ques.length - 1 && (
                                             <p>
-                                                <strong></strong> {photo_ques[index + 1]}
+                                                <strong></strong> {influencer_ques[index + 1]}
                                             </p>
                                         )}
                                     </div>
 
                                 ))}
-                                <div className='row'>
-                                    <input
-                                        type="text" className='input-field  p-2'
-                                        placeholder='Enter the text here'
-                                        onKeyPress={(event) => {
-                                            if (event.key === "Enter") {
-                                                handleResponseSubmit(event.target.value);
-                                                event.target.value = ""; // Clear input field
-                                            }
-                                        }} />
-                                </div>
+                                
                             </div>
                         ) : (
                             <div className='res'>
