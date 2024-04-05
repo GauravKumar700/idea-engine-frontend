@@ -7,14 +7,15 @@
     text-align: center;
     color: lightgrey
   }
-  .divlayout-auth-page {
-    height: 900px;
+  .divlayout-auth-page-signup {
+    height: 0px;
   }
-  .section {
+  .section-signup {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
+    margin-top: -20px;
   }
   .space {
     margin-top: 75px;
@@ -31,9 +32,9 @@
     margin-left: 20px;
     color: white;
   }
-  .a-blueprint-engine-container {
+  .a-blueprint-engine-container-signup {
     width: 95%;
-    padding-top: 30px;
+    padding-top: 15px;
     text-align: center;
     color: rgb(208, 202, 202);
     font-size: 20px;
@@ -55,13 +56,21 @@
   width: 500px;
   height: 600px;
   }
-  .create-your-account {
+  .create-your-account-signup {
     color: white;
     font-size: 27px;
+    margin-top: -20px;
   }
   .fill-your-details {
     color: grey;
   }
+  .form-signup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
   .pform-title {
     margin-top: 30px;
   }
@@ -96,13 +105,14 @@
     display: flex;
     justify-content: center;
   }
-  .divline {
+  .divline-signup {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #32343a;
     position: relative;
-    margin-top: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
   .name {
     display: flex;
@@ -142,8 +152,9 @@
     text-align: center;
     color: white
   }
-  .do-you-already-container {
+  .do-you-already-container-signup {
     color: rgb(157, 154, 154);
+    margin-top: -10px;
   }
   .pswitch-link {
     display: flex;
