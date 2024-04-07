@@ -66,6 +66,7 @@ const DivlayoutAuthPage = () => {
   }
 
   const googleAuth = async (e) => {
+    setLogin(true)
     e.preventDefault();
     try {
       const res = await fetch('http://localhost:5500/auth/google', {
@@ -73,11 +74,13 @@ const DivlayoutAuthPage = () => {
       });
 
       if (!res.ok) {
+        setLogin(false)
         throw new Error('Failed to authenticate with Google');
       }
 
       const data = await res.json();
       if (!data.token) {
+        setLogin(false)
         throw new Error('Token not found in response');
       }
 
