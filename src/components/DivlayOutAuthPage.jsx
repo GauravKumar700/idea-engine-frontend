@@ -76,7 +76,7 @@ const DivlayoutAuthPage = () => {
 
 
   const loginwithgoogle = () => {
-    window.open("http://localhost:8080/auth/google/callback", "_self")
+    window.open("https://idea-engine-backend.vercel.app/auth/google/callback", "_self")
   }
 
 

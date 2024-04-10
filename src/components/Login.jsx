@@ -69,8 +69,9 @@ const DivlayoutAuthPage = () => {
     setLogin(true)
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5500/auth/google', {
+      const res = await fetch('https://idea-engine-backend.vercel.app/auth/google', {
         method: "GET",
+        mode: "no-cors"
       });
 
       if (!res.ok) {
