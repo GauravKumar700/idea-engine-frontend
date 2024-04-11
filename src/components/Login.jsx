@@ -104,7 +104,7 @@ const DivlayoutAuthPage = () => {
             <div className="divpage-fg">
               <div className="section">
                 <div className="heading-1">
-                  <div className="welcome-to-dayzero-login">Welcome to DayZero</div>
+                  <div className="welcome-to-dayzero-login">Welcome To IdeaEngine!</div>
                 </div>
                 <div className="ppage-tagmargin">
                   <div className="blueprint-to-brilliance">
