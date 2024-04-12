@@ -22,7 +22,7 @@ const DivlayoutAuthPage = () => {
   const loginUser = async (e) => {
     setLogin(true)
     e.preventDefault();
-    const res = await fetch('https://idea-engine-backend.vercel.app/api/v1/login', {
+    const res = await fetch('https://idea-engine-backend-4gyo.vercel.app/api/v1/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -69,7 +69,7 @@ const DivlayoutAuthPage = () => {
     setLogin(true)
     e.preventDefault();
     try {
-      const res = await fetch('https://idea-engine-backend.vercel.app/auth/google', {
+      const res = await fetch('https://idea-engine-backend-4gyo.vercel.app/auth/google/callback', {
         method: "GET",
         mode: "no-cors"
       });
