@@ -18,6 +18,10 @@ function QnA_page() {
     const [count, setCount] = useState(["Blueprint 1"]);
     const [print, setPrint] = useState(1);
 
+    // For Question and Answer
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [userResponses, setUserResponses] = useState([]);
+
     const [idea, setIdea] = useState("");
     const [startup, setStartup] = useState(false);
     const [brand, setBrand] = useState(false);
@@ -94,6 +98,7 @@ function QnA_page() {
     const handleDownloadPdf = async () => {
         try {
             setLoader(true)
+            console.log(messages)
             const cookies = Cookies.get('token')
             // Send a request to your backend to generate and download the PDF
             const response = await fetch('https://idea-engine-backend.vercel.app/api/v1/generatepdf', {
@@ -186,6 +191,7 @@ function QnA_page() {
     const digitalHandler = () => {
         addQuestions('What are you looking for (choose ONLY one)?')
         addAnswers('Digital Marketing')
+
         setDigital(true);
         setTechnology(false);
         setBranding(false);
@@ -198,11 +204,33 @@ function QnA_page() {
         setButtonPublic(false);
         setButtonInfluencer(false);
         setButtonContent(false);
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+        
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
     };
 
     const technologyHandler = () => {
         addQuestions('What are you looking for (choose ONLY one)?')
         addAnswers('Technology & Innovation')
+
         setDigital(false);
         setTechnology(true);
         setBranding(false);
@@ -216,11 +244,34 @@ function QnA_page() {
         setButtonPublic(false);
         setButtonInfluencer(false);
         setButtonContent(false);
+
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
     };
 
     const brandingHandler = () => {
         addQuestions('What are you looking for (choose ONLY one)?')
         addAnswers('Branding & Design')
+
         setDigital(false);
         setTechnology(false);
         setBranding(true);
@@ -228,12 +279,33 @@ function QnA_page() {
         setPublic_relation(false);
         setContent(false);
 
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
         setButtonDigital(false);
         setButtonTechnology(false);
         setButtonBranding("1px solid #0060d0");
         setButtonPublic(false);
         setButtonInfluencer(false);
         setButtonContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
     };
 
     const influencerHandler = () => {
@@ -246,12 +318,33 @@ function QnA_page() {
         setPublic_relation(false);
         setContent(false);
 
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
         setButtonDigital(false);
         setButtonTechnology(false);
         setButtonBranding(false);
         setButtonPublic(false);
         setButtonInfluencer("1px solid #0060d0");
         setButtonContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
     };
 
     const public_relationsHandler = () => {
@@ -264,17 +357,39 @@ function QnA_page() {
         setPublic_relation(true);
         setContent(false);
 
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
         setButtonDigital(false);
         setButtonTechnology(false);
         setButtonBranding(false);
         setButtonPublic("1px solid #0060d0");
         setButtonInfluencer(false);
         setButtonContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
     };
 
     const contentHandler = () => {
         addQuestions('What are you looking for (choose ONLY one)?')
         addAnswers('Content Production')
+
         setDigital(false);
         setTechnology(false);
         setBranding(false);
@@ -282,12 +397,32 @@ function QnA_page() {
         setPublic_relation(false);
         setContent(true);
 
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
         setButtonDigital(false);
         setButtonTechnology(false);
         setButtonBranding(false);
         setButtonPublic(false);
         setButtonInfluencer(false);
         setButtonContent("1px solid #0060d0");
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
     };
 
     const socialHandler = () => {
@@ -512,10 +647,6 @@ function QnA_page() {
         //     //inputRef.current.focus();
         //   }
     };
-
-    // For Question and Answer
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [userResponses, setUserResponses] = useState([]);
 
     const youtube_ques = [
         <div className='row'>
@@ -2945,8 +3076,7 @@ function QnA_page() {
                         )}
                     </div>
                 </div>
-            )
-            }
+            )}
 
             {/* facebook */}
             {facebook && (
