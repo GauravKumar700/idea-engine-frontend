@@ -563,9 +563,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -594,9 +594,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -625,9 +625,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -656,9 +656,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -687,9 +687,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -716,9 +716,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
 
   const influencer_ques = [
     <div className="row">
@@ -857,6 +857,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -900,6 +901,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -943,6 +945,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -986,6 +989,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1029,6 +1033,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1072,6 +1077,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1115,6 +1121,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1158,6 +1165,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1201,6 +1209,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1244,6 +1253,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1287,6 +1297,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1330,6 +1341,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1375,6 +1387,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1418,6 +1431,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
       <div className="row" id="inputRow">
         <input
@@ -1466,6 +1480,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1497,6 +1512,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1528,6 +1544,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1559,6 +1576,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1588,6 +1606,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
   ];
@@ -1622,6 +1641,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1653,6 +1673,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1684,6 +1705,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1715,6 +1737,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
     <div className="row">
@@ -1744,6 +1767,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
   ];
@@ -1777,6 +1801,7 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
     </div>,
   ];
@@ -1809,9 +1834,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const instagramads_ques = [
     <div className="row">
       <div className="bussiness">
@@ -1841,9 +1866,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const website_ques = [
     <div className="row">
       <div className="bussiness">
@@ -1874,9 +1899,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -1905,9 +1930,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -1936,9 +1961,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -1967,9 +1992,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -1998,9 +2023,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
 
   const app_ques = [
     <div className="row">
@@ -2032,9 +2057,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2063,9 +2088,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2094,9 +2119,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2125,9 +2150,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2156,9 +2181,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const digitalprod_ques = [
     <div className="row">
       <div className="bussiness">
@@ -2189,9 +2214,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2220,9 +2245,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2251,9 +2276,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2282,9 +2307,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2313,9 +2338,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const physical_ques = [
     <div className="row">
       <div className="bussiness">
@@ -2346,9 +2371,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2377,9 +2402,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2408,9 +2433,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2439,9 +2464,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2470,9 +2495,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const service_ques = [
     <div className="row">
       <div className="bussiness">
@@ -2503,9 +2528,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2534,9 +2559,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2565,9 +2590,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
 
   const company_ques = [
     <div className="row">
@@ -2599,9 +2624,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2630,9 +2655,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2661,9 +2686,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const personal_ques = [
     <div className="row">
       <div className="bussiness">
@@ -2694,9 +2719,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2725,9 +2750,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2756,9 +2781,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2787,9 +2812,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const press_ques = [
     <div className="row">
       <div className="bussiness">
@@ -2820,9 +2845,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2851,9 +2876,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2882,9 +2907,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2913,9 +2938,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2944,9 +2969,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -2975,9 +3000,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3006,9 +3031,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3037,9 +3062,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
 
   const tv_ques = [
     <div className="row">
@@ -3071,9 +3096,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3102,9 +3127,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3133,9 +3158,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3164,9 +3189,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3195,9 +3220,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3226,9 +3251,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3257,9 +3282,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const photo_ques = [
     <div className="row">
       <div className="bussiness">
@@ -3290,9 +3315,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3321,9 +3346,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3352,9 +3377,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3383,9 +3408,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3414,9 +3439,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
   const video_ques = [
     <div className="row">
       <div className="bussiness">
@@ -3447,9 +3472,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3478,9 +3503,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3509,9 +3534,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3540,9 +3565,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3571,9 +3596,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-    <div className="row">
+    </div>,    <div className="row">
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -3602,9 +3627,9 @@ function QnA_page() {
             }}
           />
         </span>
+        <div ref={answersEndRef} />
       </div>
-    </div>,
-  ];
+    </div>,  ];
 
   const handleResponseSubmit = (response) => {
     setUserResponses([...userResponses, response]);
