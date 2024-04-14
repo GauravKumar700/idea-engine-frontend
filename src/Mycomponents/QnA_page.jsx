@@ -189,112 +189,242 @@ function QnA_page() {
     setButtonidea(false);
   };
 
-  const digitalHandler = () => {
-    addQuestions("What are you looking for (choose ONLY one)?");
-    addAnswers("Digital Marketing");
-    setDigital(true);
-    setTechnology(false);
-    setBranding(false);
-    setInfluencer(false);
-    setPublic_relation(false);
-    setContent(false);
-    setButtonDigital("1px solid #0060d0");
-    setButtonTechnology(false);
-    setButtonBranding(false);
-    setButtonPublic(false);
-    setButtonInfluencer(false);
-    setButtonContent(false);
-  };
+    const digitalHandler = () => {
+        addQuestions('What are you looking for (choose ONLY one)?')
+        addAnswers('Digital Marketing')
 
-  const technologyHandler = () => {
-    addQuestions("What are you looking for (choose ONLY one)?");
-    addAnswers("Technology & Innovation");
-    setDigital(false);
-    setTechnology(true);
-    setBranding(false);
-    setInfluencer(false);
-    setPublic_relation(false);
-    setContent(false);
+        setDigital(true);
+        setTechnology(false);
+        setBranding(false);
+        setInfluencer(false);
+        setPublic_relation(false);
+        setContent(false);
+        setButtonDigital("1px solid #0060d0");
+        setButtonTechnology(false);
+        setButtonBranding(false);
+        setButtonPublic(false);
+        setButtonInfluencer(false);
+        setButtonContent(false);
 
-    setButtonDigital(false);
-    setButtonTechnology("1px solid #0060d0");
-    setButtonBranding(false);
-    setButtonPublic(false);
-    setButtonInfluencer(false);
-    setButtonContent(false);
-  };
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
 
-  const brandingHandler = () => {
-    addQuestions("What are you looking for (choose ONLY one)?");
-    addAnswers("Branding & Design");
-    setDigital(false);
-    setTechnology(false);
-    setBranding(true);
-    setInfluencer(false);
-    setPublic_relation(false);
-    setContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
+    };
 
-    setButtonDigital(false);
-    setButtonTechnology(false);
-    setButtonBranding("1px solid #0060d0");
-    setButtonPublic(false);
-    setButtonInfluencer(false);
-    setButtonContent(false);
-  };
+    const technologyHandler = () => {
+        addQuestions('What are you looking for (choose ONLY one)?')
+        addAnswers('Technology & Innovation')
 
-  const influencerHandler = () => {
-    addQuestions("What are you looking for (choose ONLY one)?");
-    addAnswers("Influencer Marketing");
-    setDigital(false);
-    setTechnology(false);
-    setBranding(false);
-    setInfluencer(true);
-    setPublic_relation(false);
-    setContent(false);
+        setDigital(false);
+        setTechnology(true);
+        setBranding(false);
+        setInfluencer(false);
+        setPublic_relation(false);
+        setContent(false);
 
-    setButtonDigital(false);
-    setButtonTechnology(false);
-    setButtonBranding(false);
-    setButtonPublic(false);
-    setButtonInfluencer("1px solid #0060d0");
-    setButtonContent(false);
-  };
+        setButtonDigital(false);
+        setButtonTechnology("1px solid #0060d0");
+        setButtonBranding(false);
+        setButtonPublic(false);
+        setButtonInfluencer(false);
+        setButtonContent(false);
 
-  const public_relationsHandler = () => {
-    addQuestions("What are you looking for (choose ONLY one)?");
-    addAnswers("Public Realations");
-    setDigital(false);
-    setTechnology(false);
-    setBranding(false);
-    setInfluencer(false);
-    setPublic_relation(true);
-    setContent(false);
 
-    setButtonDigital(false);
-    setButtonTechnology(false);
-    setButtonBranding(false);
-    setButtonPublic("1px solid #0060d0");
-    setButtonInfluencer(false);
-    setButtonContent(false);
-  };
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
 
-  const contentHandler = () => {
-    addQuestions("What are you looking for (choose ONLY one)?");
-    addAnswers("Content Production");
-    setDigital(false);
-    setTechnology(false);
-    setBranding(false);
-    setInfluencer(false);
-    setPublic_relation(false);
-    setContent(true);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
+    };
 
-    setButtonDigital(false);
-    setButtonTechnology(false);
-    setButtonBranding(false);
-    setButtonPublic(false);
-    setButtonInfluencer(false);
-    setButtonContent("1px solid #0060d0");
-  };
+    const brandingHandler = () => {
+        addQuestions('What are you looking for (choose ONLY one)?')
+        addAnswers('Branding & Design')
+
+        setDigital(false);
+        setTechnology(false);
+        setBranding(true);
+        setInfluencer(false);
+        setPublic_relation(false);
+        setContent(false);
+
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
+        setButtonDigital(false);
+        setButtonTechnology(false);
+        setButtonBranding("1px solid #0060d0");
+        setButtonPublic(false);
+        setButtonInfluencer(false);
+        setButtonContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
+    };
+
+    const influencerHandler = () => {
+        addQuestions('What are you looking for (choose ONLY one)?')
+        addAnswers('Influencer Marketing')
+        setDigital(false);
+        setTechnology(false);
+        setBranding(false);
+        setInfluencer(true);
+        setPublic_relation(false);
+        setContent(false);
+
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
+        setButtonDigital(false);
+        setButtonTechnology(false);
+        setButtonBranding(false);
+        setButtonPublic(false);
+        setButtonInfluencer("1px solid #0060d0");
+        setButtonContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
+    };
+
+    const public_relationsHandler = () => {
+        addQuestions('What are you looking for (choose ONLY one)?')
+        addAnswers('Public Realations')
+        setDigital(false);
+        setTechnology(false);
+        setBranding(false);
+        setInfluencer(false);
+        setPublic_relation(true);
+        setContent(false);
+
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
+        setButtonDigital(false);
+        setButtonTechnology(false);
+        setButtonBranding(false);
+        setButtonPublic("1px solid #0060d0");
+        setButtonInfluencer(false);
+        setButtonContent(false);
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
+    };
+
+    const contentHandler = () => {
+        addQuestions('What are you looking for (choose ONLY one)?')
+        addAnswers('Content Production')
+
+        setDigital(false);
+        setTechnology(false);
+        setBranding(false);
+        setInfluencer(false);
+        setPublic_relation(false);
+        setContent(true);
+
+        setPhoto(false)
+        setvideo(false)
+        setTV(false)
+        setPress(false)
+        setPhysical(false)
+        setDigitalprod(false)
+        setPersonal(false)
+        setCompany(false)
+        setService(false)
+        setInstagramads(false)
+        setGoogle(false)
+        setYoutubeads(false)
+        setApp(false)
+        setWebsite(false)
+        setInstagram(false)
+        setFacebook(false)
+        setYoutube(false)
+
+        setButtonDigital(false);
+        setButtonTechnology(false);
+        setButtonBranding(false);
+        setButtonPublic(false);
+        setButtonInfluencer(false);
+        setButtonContent("1px solid #0060d0");
+        setUserResponses([])
+        setCurrentQuestionIndex(0)
+    };
 
   const socialHandler = () => {
     addQuestions("Anything specific in the digital marketing ?");
