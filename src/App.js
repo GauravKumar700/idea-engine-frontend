@@ -17,6 +17,8 @@ import QnA_page from "./Mycomponents/QnA_page"
 import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
 import Faq from "./pages/FAQ";
+import Question1 from "./components/question1";
+import Question2 from "./components/question2";
 
 
 function App() {
@@ -37,6 +39,9 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         
         <Route path="/faq" element={<Faq />} />
+
+        <Route path="/question1" element={<Question1 />} />
+        <Route path="/question2" element={<Question2/>} />
 
       </Routes>
     </Router>
