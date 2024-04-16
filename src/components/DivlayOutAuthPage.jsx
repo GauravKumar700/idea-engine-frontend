@@ -31,7 +31,7 @@ const DivlayoutAuthPage = () => {
     e.preventDefault();
     try {
       const { name, email, password } = user;
-      const res = await fetch("https://idea-engine-backend.vercel.app/api/v1/register", {
+      const res = await fetch("https://idea-engine-backend-4gyo.vercel.app/api/v1/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -76,7 +76,7 @@ const DivlayoutAuthPage = () => {
 
 
   const loginwithgoogle = () => {
-    window.open("http://localhost:8080/auth/google/callback", "_self")
+    window.open("https://idea-engine-backend-4gyo.vercel.app/auth/google/callback", "_self")
   }
 
 
@@ -88,7 +88,7 @@ const DivlayoutAuthPage = () => {
       <div className="divpage-fg">
         <div className="section-signup">
           <div className="heading-1">
-            <div className="welcome-to-dayzero">Welcome to DayZero</div>
+            <div className="welcome-to-dayzero">Welcome To IdeaEngine!</div>
           </div>
           <div className="ppage-tagmargin">
             <div className="blueprint-to-brilliance">

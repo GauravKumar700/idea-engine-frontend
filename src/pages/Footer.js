@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <div className='footer p-5'>
         <div className='row mt-5'>
-          <div className='col-lg-3 col-md-4 col-12'>
+          <div className='col-lg-3 col-12'>
             <div class="logoo d-flex g-3" >
               <svg
                 width="46"

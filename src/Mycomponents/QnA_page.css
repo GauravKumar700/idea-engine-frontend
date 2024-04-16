@@ -348,8 +348,9 @@ input:focus{
 }
 .bottom-text{
     
-    font-size: smaller;
-    color: #777;
+    font-size:large;
+   
+    color:red;
     /* margin: 12px; */
     justify-content: center;
     position: fixed;

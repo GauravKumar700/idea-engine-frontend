@@ -1,5 +1,6 @@
 body {
-  font-family: 'Inter', sans-serif;}
+  font-family: 'Inter', sans-serif;
+}
 
 .first-faq {
   background-color: #000;
@@ -13,8 +14,9 @@ body {
   margin: auto;
   align-items: center;
 }
-@media screen and (max-width:420px){
-  .div-top{
+
+@media screen and (max-width:420px) {
+  .div-top {
     width: auto;
   }
 }
@@ -49,10 +51,12 @@ body {
   border-radius: 8px;
   justify-content: space-between;
 }
+
 .faq-item h3 {
   font-size: 16px;
   align-items: center;
 }
+
 .on-click {
   display: flex;
   flex-direction: column;
@@ -64,6 +68,7 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .faq-item p {
   background-color: #121212;
   color: #968a8a;
@@ -75,14 +80,14 @@ body {
 }
 
 /* About section  */
-  .about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    background-color: #fff;
-    color: #000;
-    padding: 60px 10px;
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 60px 10px;
 }
 
 .about-section .about-title {
@@ -101,8 +106,8 @@ body {
   width: 65vw;
 }
 
-a{
-color: #000;
+a {
+  color: #000;
 }
 
 .about-section .login-btn {
