@@ -9,10 +9,11 @@ export default function ThirdPage() {
         <h2>Ai+ Human Expert</h2>
       </div>
       <div className="ai-para">
-        <p>Got a low Blueprint score? No worries. Schedule a call with our
-          expert Blueprint writers, refine your strategy, and elevate your
-          Blueprint's impact. Your success is just a conversation away with
-          IdeaEngine.</p>
+        <p>
+          Got a low Blueprint score? No worries. Schedule a call with our expert
+          Blueprint writers, refine your strategy, and elevate your Blueprint's
+          impact. Your success is just a conversation away with Ten-IdeaEngine.
+        </p>
       </div>
       <div className="ai-bg">
         <img src="ai-banner.png" alt="" />

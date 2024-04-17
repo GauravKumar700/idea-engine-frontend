@@ -95,16 +95,20 @@ const DivlayoutAuthPage = () => {
 
   return (
     <>
-      {login ? (<Loader />) : (
+      {login ? (
+        <Loader />
+      ) : (
         <div>
           <div className="divlayout-auth-mypage mx-auto">
             <div className="svg">
               <img className="vector-icon" alt="" src="/vector.svg" />
-            </div >
+            </div>
             <div className="divpage-fg">
               <div className="section">
                 <div className="heading-1">
-                  <div className="welcome-to-dayzero-login">Welcome To IdeaEngine!</div>
+                  <div className="welcome-to-dayzero-login">
+                    Welcome To Ten-IdeaEngine!
+                  </div>
                 </div>
                 <div className="ppage-tagmargin">
                   <div className="blueprint-to-brilliance">
@@ -121,7 +125,7 @@ const DivlayoutAuthPage = () => {
                   </div>
                 </div>
               </div>
-              <div style={{ width: '100%', height: '' }}>
+              <div style={{ width: "100%", height: "" }}>
                 <div className="section1">
                   <div className="pform-title">
                     <div className="welcome-back">Welcome Back</div>
@@ -135,7 +139,12 @@ const DivlayoutAuthPage = () => {
                     <button className="button1">
                       <img className="svg-icon" alt="" src="/svg.svg" />
                       <div className="span1">
-                        <div className="continue-with-google" onClick={googleAuth}>Continue With Google</div>
+                        <div
+                          className="continue-with-google"
+                          onClick={googleAuth}
+                        >
+                          Continue With Google
+                        </div>
                       </div>
                     </button>
                     <div className="divline">
@@ -145,36 +154,52 @@ const DivlayoutAuthPage = () => {
                     </div>
                   </div>
                   <div className="form">
-                    <input className="input"
+                    <input
+                      className="input"
                       type="email"
-                      name='email' id='email' autoComplete='off'
+                      name="email"
+                      id="email"
+                      autoComplete="off"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter Your Email" >
-                    </input>
+                      placeholder="Enter Your Email"
+                    ></input>
 
-                    <input className="input"
-                      type="password" name='password' id='password' autoComplete='off'
+                    <input
+                      className="input"
+                      type="password"
+                      name="password"
+                      id="password"
+                      autoComplete="off"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Enter Unique Password">
-                    </input>
+                      placeholder="Enter Unique Password"
+                    ></input>
 
-                    <button className="button2" type='submit' name='signin' id='signin' value='Log In' onClick={loginUser}>
+                    <button
+                      className="button2"
+                      type="submit"
+                      name="signin"
+                      id="signin"
+                      value="Log In"
+                      onClick={loginUser}
+                    >
                       <div className="create-an-account">Let's Login</div>
                     </button>
                     <div className="pswitch-link">
                       <div className="do-you-already-container">
                         <span>{`Don't have an account? `}</span>
-                        <Link to="/signUp"><span className="login">Register</span></Link>
+                        <Link to="/signUp">
+                          <span className="login">Register</span>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div >
-        </div >
+          </div>
+        </div>
       )}
     </>
   );

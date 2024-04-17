@@ -3714,7 +3714,7 @@ function QnA_page() {
               <div className="blue">
                 <section className="logo1">
                   <img src="./images/logo.png" alt=""></img>
-                  <p>TenMarket</p>
+                  <p>Ten-IdeaEngine</p>
                 </section>
                 {/* <h3>Blueprint {clownCounter}</h3> */}
                 {/* <div className='pro-algin'>

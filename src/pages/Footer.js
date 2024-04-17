@@ -1,20 +1,18 @@
-import React from 'react'
+import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import "./Footer.css"
-import { Link } from 'react-router-dom';
-
-
+import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <div className='footer p-5'>
-        <div className='row mt-5'>
-          <div className='col-lg-3 col-12'>
-            <div class="logoo d-flex g-3" >
+      <div className="footer p-3">
+        <div className="row mt-5 mb-5">
+          <div className="col-lg-5 col-12">
+            <div class="logoo d-flex g-3">
               <svg
                 width="46"
                 height="46"
@@ -53,49 +51,72 @@ const Footer = () => {
                   </linearGradient>
                 </defs>
               </svg>
-              <h2 style={{ color: 'white' }}>IdeaEngine</h2>
+              <h2 style={{ color: "white" }}>Ten-IdeaEngine</h2>
             </div>
             <p class="tagline mt-2">
-              <h4 style={{ fontSize: '14px', color: "grey" }}>Turning Your Vision into an Actionable Blueprint to Brilliance.</h4>
+              <h4 style={{ fontSize: "14px", color: "grey" }}>
+                Turning Your Vision into an Actionable Blueprint to Brilliance.
+              </h4>
             </p>
           </div>
-          <div className='col-lg-2 col-md-6 col-12'>
-            <h4>Platform</h4>
-            <ul >
-              <li><Link to={'/feature'}>Feature</Link></li>
-              <li><Link to={'/pricing'}>Pricing</Link></li>
-              <li><Link to={'/login'}>Login</Link></li>
-              <li><Link to={'/signup'}>Signup</Link></li>
-            </ul>
-          </div>
-          <div className=' col-lg-2 col-md-6 col-12'>
-            <h4>Company</h4>
-            <ul className='list-unstyled'>
-              <li>About</li>
-              <li>Career</li>
-              <li>Blog</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div className='col-lg-2 col-md-6 col-12'>
-            <h4>Legal</h4>
-            <ul>
-              <li>Refund policy</li>
-              <li>Privacy policy</li>
-              <li><Link to={'/faq'}>FAQ</Link></li>
-              <li>Terms and conditions</li>
-            </ul>
-          </div>
-          <div className=' col-lg-2 col-md-6 col-12'>
-            <h4>Follow US</h4>
-            <ul>
-              <li><Link to={'https://www.linkedin.com/company/the-entrepreneurship-network/'}><FaLinkedin /></Link></li>
-              <li><FaYoutube /></li>
-              <li><FaTwitterSquare /></li>
-              <Link to={'https://www.instagram.com/theentrepreneurshipnetwork?igsh=Nm44M21saGR1am4w'}><li><FaInstagram /></li></Link>
+          <div className=" col-lg-3 col-md-6 col-12">
+            <h3>Platform</h3>
+            <ul style={{ fontSize: "1.1rem", marginTop: "10px" }}>
+              <li>
+                <Link to={"/feature"}>Feature</Link>
+              </li>
+              <li>
+                <Link to={"/pricing"}>Pricing</Link>
+              </li>
+              <li>
+                <Link to={"/login"}>Login</Link>
+              </li>
+              <li>
+                <Link to={"/signup"}>Signup</Link>
+              </li>
+              <li>
+                <Link to={"/faq"}>FAQ</Link>
+              </li>
             </ul>
           </div>
 
+          <div className="col-lg-3 col-md-6 col-12">
+            <h3>Follow Us</h3>
+            <ul
+              style={{
+                fontSize: "1.5rem",
+                display: "flex",
+                listStyle: "none",
+                padding: 0,
+                marginTop: "10px",
+              }}
+            >
+              <li style={{ marginRight: "10px" }}>
+                <Link
+                  to={
+                    "https://www.linkedin.com/company/the-entrepreneurship-network/"
+                  }
+                >
+                  <FaLinkedin />
+                </Link>
+              </li>
+              <li style={{ marginRight: "10px" }}>
+                <FaYoutube />
+              </li>
+              <li style={{ marginRight: "10px" }}>
+                <FaTwitterSquare />
+              </li>
+              <li>
+                <Link
+                  to={
+                    "https://www.instagram.com/theentrepreneurshipnetwork?igsh=Nm44M21saGR1am4w"
+                  }
+                >
+                  <FaInstagram />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       {/* <section className="footer-section">
@@ -151,4 +172,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

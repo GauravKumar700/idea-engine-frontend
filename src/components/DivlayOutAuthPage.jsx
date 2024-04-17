@@ -88,7 +88,9 @@ const DivlayoutAuthPage = () => {
       <div className="divpage-fg">
         <div className="section-signup">
           <div className="heading-1">
-            <div className="welcome-to-dayzero">Welcome To IdeaEngine!</div>
+            <div className="welcome-to-dayzero">
+              Welcome To Ten-IdeaEngine!
+            </div>
           </div>
           <div className="ppage-tagmargin">
             <div className="blueprint-to-brilliance">
@@ -107,7 +109,9 @@ const DivlayoutAuthPage = () => {
         </div>
         <div className="section1">
           <div className="pform-title">
-            <div className="create-your-account-signup">Create your account</div>
+            <div className="create-your-account-signup">
+              Create your account
+            </div>
           </div>
           <div className="pform-subtitle">
             <div className="fill-your-details">
@@ -118,7 +122,9 @@ const DivlayoutAuthPage = () => {
             <button className="button1">
               <img className="svg-icon" alt="" src="/svg.svg" />
               <div className="span1">
-                <div className="continue-with-google" onClick={loginwithgoogle} >Continue With Google</div>
+                <div className="continue-with-google" onClick={loginwithgoogle}>
+                  Continue With Google
+                </div>
               </div>
             </button>
             <div className="divline-signup">
@@ -128,29 +134,55 @@ const DivlayoutAuthPage = () => {
             </div>
           </div>
           <div className="form-signup">
+            <input
+              className="input"
+              type="text"
+              name="name"
+              id="name"
+              autoComplete="off"
+              value={user.name}
+              onChange={handleInputs}
+              placeholder="Enter Your Name"
+            ></input>
 
-            <input className="input" type="text"
-              name='name' id='name' autoComplete='off'
-              value={user.name} onChange={handleInputs} placeholder="Enter Your Name">
-            </input>
+            <input
+              className="input"
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="off"
+              value={user.email}
+              onChange={handleInputs}
+              placeholder="Enter Your Email"
+            ></input>
 
-            <input className="input" type="email"
-              name='email' id='email' autoComplete='off' value={user.email} onChange={handleInputs}
-              placeholder="Enter Your Email" >
-            </input>
+            <input
+              className="input"
+              type="password"
+              name="password"
+              id="password"
+              autoComplete="off"
+              value={user.password}
+              onChange={handleInputs}
+              placeholder="Enter Unique Password"
+            ></input>
 
-            <input className="input" type="password"
-              name='password' id='password' autoComplete='off' value={user.password} onChange={handleInputs}
-              placeholder="Enter Unique Password">
-            </input>
-
-            <button className="button2" type='submit' name='signup' id='signup' value='Register' onClick={PostData}>
+            <button
+              className="button2"
+              type="submit"
+              name="signup"
+              id="signup"
+              value="Register"
+              onClick={PostData}
+            >
               <div className="create-an-account">Create an account</div>
             </button>
             <div className="pswitch-link">
               <div className="do-you-already-container-signup">
                 <span>{`Do you already have an account? `}</span>
-                <Link to="/login"><span className="login">Login</span></Link>
+                <Link to="/login">
+                  <span className="login">Login</span>
+                </Link>
               </div>
             </div>
           </div>
