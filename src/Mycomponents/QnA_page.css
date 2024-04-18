@@ -276,8 +276,16 @@
 
 .blue{
     display: flex;
-    color: #fff;
+    color: #fff;width: 100vw;
+    background-color: black;
+    height: 61px;
+    top: 0px;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
+
+
 
 @media only screen and (min-width: 576px) {
     ::-webkit-scrollbar {

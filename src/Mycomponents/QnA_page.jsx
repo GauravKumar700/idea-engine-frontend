@@ -1398,6 +1398,7 @@ function QnA_page() {
     ];
 
 
+<<<<<<< HEAD
     const handleResponseSubmit = (response) => {
         setUserResponses([...userResponses, response]);
         setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -1479,6 +1480,1688 @@ function QnA_page() {
                                 </section>
                                 {/* <h3>Blueprint {clownCounter}</h3> */}
                                 {/* <div className='pro-algin'>
+=======
+  
+
+  const app_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // app start
+              "What is the name of the app (For Eg. Dunzo, Zomato etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the name of the app (For Eg. Dunzo, Zomato etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // app q1
+              "What will be the key features or functions of the app?",
+              1000,
+              () => {
+                addQuestions(
+                  "What will be the key features or functions of the app?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // app q2
+              "What do you want your users to do on the app (For Eg. Order Food, Buy Clothes etc) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your users to do on the app (For Eg. Order Food, Buy Clothes etc) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // app q3
+              "What will be your business model for the app (For Eg. Single Purchases, Subscriptions, Bulk Orders etc) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What will be your business model for the app (For Eg. Single Purchases, Subscriptions, Bulk Orders etc) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // app q4
+              "What is the budget & timeline (For eg. $15000 & 4 weeks) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the budget & timeline (For eg. $15000 & 4 weeks) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const digitalprod_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // digital product start
+              "What is the core purpose and value proposition of your tech product?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the core purpose and value proposition of your tech product?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // digital product q1
+              "How do you want your tech product brand to be perceived in the market?",
+              1000,
+              () => {
+                addQuestions(
+                  "How do you want your tech product brand to be perceived in the market?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // digital product q2
+              "What key brand attributes and messaging will resonate with your target audience? (For Eg. Speed, security etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What key brand attributes and messaging will resonate with your target audience? (For Eg. Speed, security etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // digital product q4
+              "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // digital product q4
+              "What is the total budget for executing the branding exercise?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total budget for executing the branding exercise?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const physical_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // physical product start
+              "What is the unique selling point or key feature of your physical product?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the unique selling point or key feature of your physical product?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // physical product q1
+              "How do you want your physical product brand to be perceived in the market?",
+              1000,
+              () => {
+                addQuestions(
+                  "How do you want your physical product brand to be perceived in the market?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // physical product q2
+              "What key brand attributes and messaging will resonate with your target audience? (For Eg. Speed, security etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What key brand attributes and messaging will resonate with your target audience? (For Eg. Speed, security etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // physical product q3
+              "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // physical product q4
+              "What is the total budget for executing the branding exercise?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total budget for executing the branding exercise?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const service_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // service  start
+              "What are the core values and personality traits that you want your brand to embody?",
+              1000,
+              () => {
+                addQuestions(
+                  "What are the core values and personality traits that you want your brand to embody?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // service q2
+              "What is the desired perception and emotional connection you want to establish with your target audience?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the desired perception and emotional connection you want to establish with your target audience?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // service q3
+              "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+
+  const company_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // company start
+              "What is the unique value proposition or core message of your company?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the unique value proposition or core message of your company?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // company q1
+              "What are the key personality traits and qualities you want your brand to convey?",
+              1000,
+              () => {
+                addQuestions(
+                  "What are the key personality traits and qualities you want your brand to convey?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // company q2
+              "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is your total timeline for executing the branding exercise (For Eg. 2 weeks, 1 Month etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const personal_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // personal start
+              "What is the desired perception or emotional response you want to evoke in your target audience?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the desired perception or emotional response you want to evoke in your target audience?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // personal q1
+              "What channels and platforms will you use to showcase your personal brand and engage with your target audience?",
+              1000,
+              () => {
+                addQuestions(
+                  "What channels and platforms will you use to showcase your personal brand and engage with your target audience?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // personal q2
+              "What is your budget for the entire branding exercise?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is your budget for the entire branding exercise?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // personal q3
+              "What is the total timeline for performing this exercise?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total timeline for performing this exercise?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const press_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // personal start
+              "What is the core purpose and value proposition of your tech product?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the core purpose and value proposition of your tech product?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q1
+              "What are the specific goals and objectives of your marketing campaign? (For example, to increase brand awareness, and generate leads etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What are the specific goals and objectives of your marketing campaign? (For example, to increase brand awareness, and generate leads etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q2
+              "What is the desired reputation or perception you want to build through PR efforts?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the desired reputation or perception you want to build through PR efforts?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q3
+              "What key messages and stories do you want to convey to the public and media?",
+              1000,
+              () => {
+                addQuestions(
+                  "What key messages and stories do you want to convey to the public and media?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q4
+              "What type of media channels do you wish to focus on most for reaching your target audience (For Eg. Fashion Magazines, Finance Articles etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What type of media channels do you wish to focus on most for reaching your target audience (For Eg. Fashion Magazines, Finance Articles etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q5
+              "What do you want your viewers to DO (For eg. Buy Now, Visit store, Like etc)?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your viewers to DO (For eg. Buy Now, Visit store, Like etc)?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q6
+              "What is the total timeline for executing the campaign (For Eg. 2 Weeks, 3 months etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total timeline for executing the campaign (For Eg. 2 Weeks, 3 months etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // press q7
+              "What is the total budget (Please be realistic here) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total budget (Please be realistic here) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+
+  const tv_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv start
+              "What specific product/service/event etc do you wish to do PR for (For Eg. Product Launch, Event Release etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What specific product/service/event etc do you wish to do PR for (For Eg. Product Launch, Event Release etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv q1
+              "What specific goals and objectives do you want to achieve? (For example, increase brand visibility and credibility, drive website traffic)",
+              1000,
+              () => {
+                addQuestions(
+                  "What specific goals and objectives do you want to achieve? (For example, increase brand visibility and credibility, drive website traffic)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv q2
+              "Which TV and radio channels or stations are most relevant ? (For example, national broadcast networks, popular local radio stations)",
+              1000,
+              () => {
+                addQuestions(
+                  "Which TV and radio channels or stations are most relevant ? (For example, national broadcast networks, popular local radio stations)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv q3
+              "What key messages and stories do you want to convey? (For example, highlighting the features and benefits of your product, sharing customer testimonials etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What key messages and stories do you want to convey? (For example, highlighting the features and benefits of your product, sharing customer testimonials etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv q4
+              "What do you want your viewers to DO (For eg. Buy Now, Search Name, Like etc)?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your viewers to DO (For eg. Buy Now, Search Name, Like etc)?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv q5
+              "What key messages and stories do you want to convey? (For example, highlighting the features and benefits of your product, sharing customer testimonials etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What key messages and stories do you want to convey? (For example, highlighting the features and benefits of your product, sharing customer testimonials etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // tv q6
+              "What is the total budget (Please be realistic here) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total budget (Please be realistic here) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const photo_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // photo start
+              "Which type of images do you wish to get shot (For Eg. Model, Food Photography, Product Usage etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "Which type of images do you wish to get shot (For Eg. Model, Food Photography, Product Usage etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // photo q1
+              "What key message do you want to convey through the photo (For Eg. Zara - New fashion line launch) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What key message do you want to convey through the photo (For Eg. Zara - New fashion line launch) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // photo q2
+              "What do you want your viewers to feel after looking at the images (For Eg. Fomo, Desire etc) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your viewers to feel after looking at the images (For Eg. Fomo, Desire etc) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // photo q3
+              "What do you want your viewers to do after looking at the image (For eg. Buy Now, Visit store, Like etc)?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your viewers to do after looking at the image (For eg. Buy Now, Visit store, Like etc)?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // photo q5
+              "What is the total budget (Please be realistic here) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total budget (Please be realistic here) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+  const video_ques = [
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // video start
+              "Which type of video do you wish to shoot (For Eg. Music Video, Ad Film, Social Media Content etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "Which type of video do you wish to shoot (For Eg. Music Video, Ad Film, Social Media Content etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // video q1
+              "What key messages or story do you want to convey through the video?",
+              1000,
+              () => {
+                addQuestions(
+                  "What key messages or story do you want to convey through the video?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // video q2
+              "What do you want your viewers to feel after watching the video (For Eg. Fomo, Empathy etc) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your viewers to feel after watching the video (For Eg. Fomo, Empathy etc) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // video q3
+              "What do you want your viewers to do after watching the video (For eg. Buy Now, Visit store, Like etc)?",
+              1000,
+              () => {
+                addQuestions(
+                  "What do you want your viewers to do after watching the video (For eg. Buy Now, Visit store, Like etc)?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // video q4
+              "What is the total timeline for executing the video (For Eg. 2 Weeks, 3 months etc)",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total timeline for executing the video (For Eg. 2 Weeks, 3 months etc)"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+    <div className="row">
+      <div className="bussiness">
+        <div className="logo">
+          <img src="./images/logo.png" alt=""></img>
+        </div>
+        <span>
+          {" "}
+          <TypeAnimation
+            sequence={[
+              // video q5
+              "What is the total budget (Please be realistic here) ?",
+              1000,
+              () => {
+                addQuestions(
+                  "What is the total budget (Please be realistic here) ?"
+                );
+              },
+            ]}
+            wrapper="span"
+            speed={70}
+            style={{
+              fontSize: "1rem",
+              color: "#ececf1",
+              flex: "1",
+              textAlign: "center",
+              gap: "10px",
+            }}
+          />
+        </span>
+        <div ref={answersEndRef} />
+      </div>
+    </div>,
+  ];
+
+  const handleResponseSubmit = (response) => {
+    setUserResponses([...userResponses, response]);
+    setCurrentQuestionIndex(currentQuestionIndex + 1);
+    addAnswers(response);
+  };
+
+  return (
+    <>
+      {loader ? (
+        <div>
+          <Loader />
+        </div>
+      ) : (
+        <div className="container">
+          <div className="row mt-2">
+            <div className="col-lg-9 col-md-8 col-12">
+              <div className="blue">
+                <section className="logo1">
+                  <img src="./images/logo.png" alt=""></img>
+                  <p>Ten-IdeaEngine</p>
+                </section>
+                {/* <h3>Blueprint {clownCounter}</h3> */}
+                {/* <div className='pro-algin'>
+>>>>>>> 019b19fef4c27a87f1b4f5307cd34e32abde7ba4
                             <span className='qna-free'>Free</span>
                             <span className='qna-pro'>Pro</span>
                             <span className='qna-pro'>Premium</span>
