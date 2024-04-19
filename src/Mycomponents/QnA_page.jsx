@@ -1398,7 +1398,7 @@ function QnA_page() {
     ];
 
 
-<<<<<<< HEAD
+
     const handleResponseSubmit = (response) => {
         setUserResponses([...userResponses, response]);
         setCurrentQuestionIndex(currentQuestionIndex + 1);
