@@ -4,9 +4,7 @@ import { Button } from "react-bootstrap";
 //import "./question2.css"
 
 function DigitalMarketing() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
   return (
     <div className="container-fluid">
       <div className="row">
@@ -526,13 +524,13 @@ function DigitalMarketing() {
             </div>
           </form>
 
-          <div className="d-flex align-items-center justify-content-center">
+          {/* <div className="d-flex align-items-center justify-content-center">
             <Link to="/Technology&Innovation">
               <Button variant="primary" type="next">
                 Next
               </Button>
             </Link>
-          </div>
+          </div> */}
           <br></br>
         </div>
       </div>

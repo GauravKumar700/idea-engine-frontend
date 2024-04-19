@@ -663,7 +663,9 @@ function QnA_page() {
   const [userResponses, setUserResponses] = useState([]);
 
   const influencer_ques = [
+    
     <div className="row">
+     
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -730,6 +732,7 @@ function QnA_page() {
             }} />
             </div>*/}
     </div>,
+
     <div className="row">
       <div className="bussiness">
         <div className="logo">
@@ -3242,6 +3245,10 @@ function QnA_page() {
               </div>
             </div>
             <div ref={answersEndRef} />
+            <p style={{ color: "gray", textAlign: "center" }}>
+              A PDF will be generated once all the questions have been
+              completed.
+            </p>
           </div>
 
           {/* Idea / Vision */}
@@ -4643,14 +4650,14 @@ function QnA_page() {
             </div>
           )}
           {/* <Right_part/> */}
-          <footer className="container mt-5">
+          {/* <footer className="container mt-5">
             <div className="bottom-position">
               <p className="bottom-text">
                 **A PDF will be generated once all the questions has been
                 completed.
               </p>
             </div>
-          </footer>
+          </footer> */}
         </div>
       )}
     </>

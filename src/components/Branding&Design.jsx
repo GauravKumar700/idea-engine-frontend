@@ -595,7 +595,7 @@ function BrandingDesign() {
             </div>
           </form>
 
-          <div className="d-flex align-items-center justify-content-center gap-3">
+          {/* <div className="d-flex align-items-center justify-content-center gap-3">
             <Link to="/Technology&Innovation">
               <Button variant="outline-primary">Back</Button>
             </Link>
@@ -604,7 +604,7 @@ function BrandingDesign() {
                 Next
               </Button>
             </Link>
-          </div>
+          </div> */}
           <br></br>
          
         </div>

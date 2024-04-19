@@ -595,13 +595,13 @@ function TechnologyInnovation() {
             </div>
           </form>
 
-          <div className="d-flex align-items-center justify-content-center">
+          {/* <div className="d-flex align-items-center justify-content-center">
             <Link to="/">
               <Button variant="primary" type="next">
                 Next
               </Button>
             </Link>
-          </div>
+          </div> */}
           <br></br>
         </div>
       </div>
