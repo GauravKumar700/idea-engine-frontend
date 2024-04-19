@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Stepper from './Stepper';
+import DigitalMarketing from '../components/DigitalMarketing';
 
 
 function Mobilestepper() {
 
     const steps = [
-        <p style={{color:'white'}}>Step 1 content</p>,
+  <div><DigitalMarketing /></div>,
   <p style={{color:'white'}}>Step 2 content</p>,
    <p style={{color:'white'}}>Step 3 content</p>,
       ];
