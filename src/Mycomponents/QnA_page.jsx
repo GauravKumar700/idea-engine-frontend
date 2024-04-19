@@ -1410,39 +1410,27 @@ function QnA_page() {
     addAnswers(response);
   };
 
-<<<<<<< HEAD
   // function Mobilestepper({ steps }) {
   //     const [activeStep, setActiveStep] = useState(0);
-=======
 
-    const handleResponseSubmit = (response) => {
-        setUserResponses([...userResponses, response]);
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-        addAnswers(response);
-    };
-    
-// function Mobilestepper({ steps }) {
-//     const [activeStep, setActiveStep] = useState(0);
-  
-//     const handleNext = () => {
-//       setActiveStep((prevStep) => prevStep + 1);
-//     };
-  
-//     const handleBack = () => {
-//       setActiveStep((prevStep) => prevStep - 1);
-//     };
-//     return (
-//         <div>
-//           <div>
-//             Step {activeStep + 1} of {steps.length}
-//           </div>
-//           <Stepper steps={steps}/>
-//           <button disabled={activeStep === 0} onClick={handleBack}>Back</button>
-//           <button disabled={activeStep === steps.length - 1} onClick={handleNext}>Next</button>
-//         </div>
-//       );
-// }
->>>>>>> ecb869d189a42d55c5ed07d9e2ad53b65bac499d
+  //     const handleNext = () => {
+  //       setActiveStep((prevStep) => prevStep + 1);
+  //     };
+
+  //     const handleBack = () => {
+  //       setActiveStep((prevStep) => prevStep - 1);
+  //     };
+  //     return (
+  //         <div>
+  //           <div>
+  //             Step {activeStep + 1} of {steps.length}
+  //           </div>
+  //           <Stepper steps={steps}/>
+  //           <button disabled={activeStep === 0} onClick={handleBack}>Back</button>
+  //           <button disabled={activeStep === steps.length - 1} onClick={handleNext}>Next</button>
+  //         </div>
+  //       );
+  // }
 
   //     const handleNext = () => {
   //       setActiveStep((prevStep) => prevStep + 1);

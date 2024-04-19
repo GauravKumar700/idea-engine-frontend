@@ -1,28 +1,49 @@
-import React, { useState } from 'react';
-import Stepper from './Stepper';
-import DigitalMarketing from '../components/DigitalMarketing';
-
+import React, { useState } from "react";
+import Stepper from "./Stepper";
+import DigitalMarketing from "../components/DigitalMarketing";
+import TechnologyInnovation from "../components/Technology&Innovation";
+import InfluencerMarketing from "../components/InfluencerMarketing";
+import ContentProduction from "../components/ContentProduction";
+import PublicRelations from "../components/PublicRelations";
+import BrandingDesign from "../components/Branding&Design";
 
 function Mobilestepper() {
+  const steps = [
+    <div>
+      <DigitalMarketing />
+    </div>,
+    <div>
+      <TechnologyInnovation />
+    </div>,
+    <div>
+      <InfluencerMarketing />
+    </div>,
+    <div>
+      <ContentProduction />
+    </div>,
+    <div>
+      <PublicRelations />
+    </div>,
+    <div>
+      <BrandingDesign />
+    </div>,
+    
+    <p style={{ color: "white" }}>Step 2 content</p>,
 
-    const steps = [
-  <div><DigitalMarketing /></div>,
-  <p style={{color:'white'}}>Step 2 content</p>,
-   <p style={{color:'white'}}>Step 3 content</p>,
-      ];
-//   const [activeStep, setActiveStep] = useState(0);
+    <p style={{ color: "white" }}>Step 3 content</p>,
+  ];
+  //   const [activeStep, setActiveStep] = useState(0);
 
-//   const handleNext = () => {
-//     setActiveStep((prevStep) => prevStep + 1);
-//   };
+  //   const handleNext = () => {
+  //     setActiveStep((prevStep) => prevStep + 1);
+  //   };
 
-//   const handleBack = () => {
-//     setActiveStep((prevStep) => prevStep - 1);
-//   };
+  //   const handleBack = () => {
+  //     setActiveStep((prevStep) => prevStep - 1);
+  //   };
 
   return (
     <div>
-     
       <Stepper steps={steps} />
     </div>
     // <div>
