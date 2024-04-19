@@ -6,6 +6,8 @@ import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Loader from "../components/Loader";
+import Mobilestepper from './Mobilestepper';
+import Stepper from "./Stepper";
 //import Left_part from './Left_part';
 //import Right_part from './Right_part';
 //import axios from "axios";
@@ -676,7 +678,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // question start
-                            "Your business name",
+                            "What is your business name?",
                             1000,
                             () => {
                                 addQuestions("Your business name");
@@ -685,7 +687,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -742,7 +744,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q1
-                            "Your business description",
+                            "What is Your business description ?",
                             1000,
                             () => {
                                 addQuestions("Your business description");
@@ -751,7 +753,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -785,7 +787,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q2
-                            "Number of employees",
+                            "Total Number of employees you have?",
                             1000,
                             () => {
                                 addQuestions("Number of employees");
@@ -794,7 +796,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -829,7 +831,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q3(radio)
-                            "Do you offer a product or service?",
+                            "What do you offer a product or service?",
                             1000,
                             () => {
                                 addQuestions("Do you offer a product or service?");
@@ -838,7 +840,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -882,7 +884,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -926,7 +928,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -951,94 +953,94 @@ function QnA_page() {
                 />
             </div>
         </div>,
-        <div className="row">
-            <div className="bussiness">
-                <div className="logo">
-                    <img src="./images/logo.png" alt=""></img>
-                </div>
-                <span>
-                    {" "}
-                    <TypeAnimation
-                        sequence={[
-                            // Influencer q6
-                            "Customer Group  Description",
-                            1000,
-                            () => {
-                                addQuestions("Customer Group  Description");
-                            },
-                        ]}
-                        wrapper="span" cursor={false}
-                        speed={70}
-                        style={{
-                            fontSize: "1rem",
-                            color: "#ececf1",
-                            flex: "1",
-                            textAlign: "center",
-                            gap: "10px",
-                        }}
-                    />
-                </span>
-                <div ref={answersEndRef} />
-            </div>
-            <div className="row" id="inputRow">
-                <input
-                    type="text"
-                    className="input-field p-2"
-                    placeholder="Enter some text"
-                    onKeyPress={(event) => {
-                        if (event.key === "Enter") {
-                            handleResponseSubmit(event.target.value);
-                            event.target.value = ""; // Clear input field
-                            event.target.style.display = "none"; // Hide input field
-                        }
-                    }}
-                />
-            </div>
-        </div>,
-        <div className="row">
-            <div className="bussiness">
-                <div className="logo">
-                    <img src="./images/logo.png" alt=""></img>
-                </div>
-                <span>
-                    {" "}
-                    <TypeAnimation
-                        sequence={[
-                            // Influencer q7 radio
-                            "Customer Group  Income Level",
-                            1000,
-                            () => {
-                                addQuestions("Customer Group  Income Level");
-                            },
-                        ]}
-                        wrapper="span" cursor={false}
-                        speed={70}
-                        style={{
-                            fontSize: "1rem",
-                            color: "#ececf1",
-                            flex: "1",
-                            textAlign: "center",
-                            gap: "10px",
-                        }}
-                    />
-                </span>
-                <div ref={answersEndRef} />
-            </div>
-            <div className="row" id="inputRow">
-                <input
-                    type="text"
-                    className="input-field p-2"
-                    placeholder="Low/Medium/High"
-                    onKeyPress={(event) => {
-                        if (event.key === "Enter") {
-                            handleResponseSubmit(event.target.value);
-                            event.target.value = ""; // Clear input field
-                            event.target.style.display = "none"; // Hide input field
-                        }
-                    }}
-                />
-            </div>
-        </div>,
+        // <div className="row">
+        //     <div className="bussiness">
+        //         <div className="logo">
+        //             <img src="./images/logo.png" alt=""></img>
+        //         </div>
+        //         <span>
+        //             {" "}
+        //             <TypeAnimation
+        //                 sequence={[
+        //                     // Influencer q6
+        //                     "Customer Group  Description",
+        //                     1000,
+        //                     () => {
+        //                         addQuestions("Customer Group  Description");
+        //                     },
+        //                 ]}
+        //                 wrapper="span" cursor={false}
+        //                 speed={70}
+        //                 style={{
+        //                     fontSize: "1.3rem",
+        //                     color: "#ececf1",
+        //                     flex: "1",
+        //                     textAlign: "center",
+        //                     gap: "10px",
+        //                 }}
+        //             />
+        //         </span>
+        //         <div ref={answersEndRef} />
+        //     </div>
+        //     <div className="row" id="inputRow">
+        //         <input
+        //             type="text"
+        //             className="input-field p-2"
+        //             placeholder="Enter some text"
+        //             onKeyPress={(event) => {
+        //                 if (event.key === "Enter") {
+        //                     handleResponseSubmit(event.target.value);
+        //                     event.target.value = ""; // Clear input field
+        //                     event.target.style.display = "none"; // Hide input field
+        //                 }
+        //             }}
+        //         />
+        //     </div>
+        // </div>,
+        // <div className="row">
+        //     <div className="bussiness">
+        //         <div className="logo">
+        //             <img src="./images/logo.png" alt=""></img>
+        //         </div>
+        //         <span>
+        //             {" "}
+        //             <TypeAnimation
+        //                 sequence={[
+        //                     // Influencer q7 radio
+        //                     "Customer Group  Income Level",
+        //                     1000,
+        //                     () => {
+        //                         addQuestions("Customer Group  Income Level");
+        //                     },
+        //                 ]}
+        //                 wrapper="span" cursor={false}
+        //                 speed={70}
+        //                 style={{
+        //                     fontSize: "1.3rem",
+        //                     color: "#ececf1",
+        //                     flex: "1",
+        //                     textAlign: "center",
+        //                     gap: "10px",
+        //                 }}
+        //             />
+        //         </span>
+        //         <div ref={answersEndRef} />
+        //     </div>
+        //     <div className="row" id="inputRow">
+        //         <input
+        //             type="text"
+        //             className="input-field p-2"
+        //             placeholder="Low/Medium/High"
+        //             onKeyPress={(event) => {
+        //                 if (event.key === "Enter") {
+        //                     handleResponseSubmit(event.target.value);
+        //                     event.target.value = ""; // Clear input field
+        //                     event.target.style.display = "none"; // Hide input field
+        //                 }
+        //             }}
+        //         />
+        //     </div>
+        // </div>,
         <div className="row">
             <div className="bussiness">
                 <div className="logo">
@@ -1049,7 +1051,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q8
-                            "Product or Service Name",
+                            "What is your Product or Service Name?",
                             1000,
                             () => {
                                 addQuestions("Product or Service Name");
@@ -1058,7 +1060,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -1093,7 +1095,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q9
-                            "Product or Service Description",
+                            "Describe your Product or Service Description",
                             1000,
                             () => {
                                 addQuestions("Product or Service Description");
@@ -1102,7 +1104,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -1127,94 +1129,94 @@ function QnA_page() {
                 />
             </div>
         </div>,
-        <div className="row">
-            <div className="bussiness">
-                <div className="logo">
-                    <img src="./images/logo.png" alt=""></img>
-                </div>
-                <span>
-                    {" "}
-                    <TypeAnimation
-                        sequence={[
-                            // Influencer q10
-                            "Success Driver ",
-                            1000,
-                            () => {
-                                addQuestions("Success Driver ");
-                            },
-                        ]}
-                        wrapper="span" cursor={false}
-                        speed={70}
-                        style={{
-                            fontSize: "1rem",
-                            color: "#ececf1",
-                            flex: "1",
-                            textAlign: "center",
-                            gap: "10px",
-                        }}
-                    />
-                </span>
-                <div ref={answersEndRef} />
-            </div>
-            <div className="row" id="inputRow">
-                <input
-                    type="text"
-                    className="input-field p-2"
-                    placeholder="Eg: our product is high quality"
-                    onKeyPress={(event) => {
-                        if (event.key === "Enter") {
-                            handleResponseSubmit(event.target.value);
-                            event.target.value = ""; // Clear input field
-                            event.target.style.display = "none"; // Hide input field
-                        }
-                    }}
-                />
-            </div>
-        </div>,
-        <div className="row">
-            <div className="bussiness">
-                <div className="logo">
-                    <img src="./images/logo.png" alt=""></img>
-                </div>
-                <span>
-                    {" "}
-                    <TypeAnimation
-                        sequence={[
-                            // Influencer q11
-                            "Weakness",
-                            1000,
-                            () => {
-                                addQuestions("Weakness");
-                            },
-                        ]}
-                        wrapper="span" cursor={false}
-                        speed={70}
-                        style={{
-                            fontSize: "1rem",
-                            color: "#ececf1",
-                            flex: "1",
-                            textAlign: "center",
-                            gap: "10px",
-                        }}
-                    />
-                </span>
-                <div ref={answersEndRef} />
-            </div>
-            <div className="row" id="inputRow">
-                <input
-                    type="text"
-                    className="input-field p-2"
-                    placeholder="Eg: our budget is low"
-                    onKeyPress={(event) => {
-                        if (event.key === "Enter") {
-                            handleResponseSubmit(event.target.value);
-                            event.target.value = ""; // Clear input field
-                            event.target.style.display = "none"; // Hide input field
-                        }
-                    }}
-                />
-            </div>
-        </div>,
+        // <div className="row">
+        //     <div className="bussiness">
+        //         <div className="logo">
+        //             <img src="./images/logo.png" alt=""></img>
+        //         </div>
+        //         <span>
+        //             {" "}
+        //             <TypeAnimation
+        //                 sequence={[
+        //                     // Influencer q10
+        //                     "Success Driver ",
+        //                     1000,
+        //                     () => {
+        //                         addQuestions("Success Driver ");
+        //                     },
+        //                 ]}
+        //                 wrapper="span" cursor={false}
+        //                 speed={70}
+        //                 style={{
+        //                     fontSize: "1.3rem",
+        //                     color: "#ececf1",
+        //                     flex: "1",
+        //                     textAlign: "center",
+        //                     gap: "10px",
+        //                 }}
+        //             />
+        //         </span>
+        //         <div ref={answersEndRef} />
+        //     </div>
+        //     <div className="row" id="inputRow">
+        //         <input
+        //             type="text"
+        //             className="input-field p-2"
+        //             placeholder="Eg: our product is high quality"
+        //             onKeyPress={(event) => {
+        //                 if (event.key === "Enter") {
+        //                     handleResponseSubmit(event.target.value);
+        //                     event.target.value = ""; // Clear input field
+        //                     event.target.style.display = "none"; // Hide input field
+        //                 }
+        //             }}
+        //         />
+        //     </div>
+        // </div>,
+        // <div className="row">
+        //     <div className="bussiness">
+        //         <div className="logo">
+        //             <img src="./images/logo.png" alt=""></img>
+        //         </div>
+        //         <span>
+        //             {" "}
+        //             <TypeAnimation
+        //                 sequence={[
+        //                     // Influencer q11
+        //                     "Weakness",
+        //                     1000,
+        //                     () => {
+        //                         addQuestions("Weakness");
+        //                     },
+        //                 ]}
+        //                 wrapper="span" cursor={false}
+        //                 speed={70}
+        //                 style={{
+        //                     fontSize: "1.3rem",
+        //                     color: "#ececf1",
+        //                     flex: "1",
+        //                     textAlign: "center",
+        //                     gap: "10px",
+        //                 }}
+        //             />
+        //         </span>
+        //         <div ref={answersEndRef} />
+        //     </div>
+        //     <div className="row" id="inputRow">
+        //         <input
+        //             type="text"
+        //             className="input-field p-2"
+        //             placeholder="Eg: our budget is low"
+        //             onKeyPress={(event) => {
+        //                 if (event.key === "Enter") {
+        //                     handleResponseSubmit(event.target.value);
+        //                     event.target.value = ""; // Clear input field
+        //                     event.target.style.display = "none"; // Hide input field
+        //                 }
+        //             }}
+        //         />
+        //     </div>
+        // </div>,
         <div className="row">
             <div className="bussiness">
                 <div className="logo">
@@ -1225,7 +1227,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q12
-                            "Total Initial Investment",
+                            "What is your total Initial Investment",
                             1000,
                             () => {
                                 addQuestions("Total Initial Investment");
@@ -1234,7 +1236,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -1269,7 +1271,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q13
-                            "Expected First Year Revenue",
+                            "What is your expected revenue for first year?",
                             1000,
                             () => {
                                 addQuestions("Expected First Year Revenue");
@@ -1278,7 +1280,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -1324,7 +1326,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -1359,7 +1361,7 @@ function QnA_page() {
                     <TypeAnimation
                         sequence={[
                             // Influencer q15
-                            "Enter Yearly Business Operations Cost",
+                            "what is your yearly business operations cost?",
                             1000,
                             () => {
                                 addQuestions("Enter Yearly Business Operations Cost");
@@ -1368,7 +1370,7 @@ function QnA_page() {
                         wrapper="span" cursor={false}
                         speed={70}
                         style={{
-                            fontSize: "1rem",
+                            fontSize: "1.3rem",
                             color: "#ececf1",
                             flex: "1",
                             textAlign: "center",
@@ -1396,6 +1398,89 @@ function QnA_page() {
     ];
 
 
+<<<<<<< HEAD
+    const handleResponseSubmit = (response) => {
+        setUserResponses([...userResponses, response]);
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+        addAnswers(response);
+    };
+    
+// function Mobilestepper({ steps }) {
+//     const [activeStep, setActiveStep] = useState(0);
+  
+//     const handleNext = () => {
+//       setActiveStep((prevStep) => prevStep + 1);
+//     };
+  
+//     const handleBack = () => {
+//       setActiveStep((prevStep) => prevStep - 1);
+//     };
+//     return (
+//         <div>
+//           <div>
+//             Step {activeStep + 1} of {steps.length}
+//           </div>
+//           <Stepper steps={steps}/>
+//           <button disabled={activeStep === 0} onClick={handleBack}>Back</button>
+//           <button disabled={activeStep === steps.length - 1} onClick={handleNext}>Next</button>
+//         </div>
+//       );
+// }
+
+  
+//     function MobileStepper({ steps }) {
+//         const [activeStep, setActiveStep] = useState(0);
+      
+//         const handleNext = () => {
+//           setActiveStep((prevStep) => prevStep + 1);
+//         };
+      
+//         const handleBack = () => {
+//           setActiveStep((prevStep) => prevStep - 1);
+//         };
+      
+//         return (
+//           <div>
+//             <div style={{color:'white'}}>
+//               Step {activeStep + 1} of {steps.length}
+//             </div>
+//             <div>{steps[activeStep]}</div>
+//             <button disabled={activeStep === 0} onClick={handleBack}>Back</button>
+//             <button disabled={activeStep === steps.length - 1} onClick={handleNext}>Next</button>
+//           </div>
+//         );
+//       }
+
+//  const steps = [
+//     <p style={{color:'white'}}>Step 1 content</p>,
+//     <p style={{color:'white'}}>Step 2 content</p>,
+//     <p style={{color:'white'}}>Step 3 content</p>,
+//   ];
+    return (
+        <>
+            {loader ? (
+                <div>
+                    <Loader />
+                </div>
+            ) : (
+                <div className="container">
+                     {/* <div>
+      
+      <MobileStepper steps={steps} />
+    </div>  */}
+      
+    
+
+                    <div className="row mt-2">
+                        <div className="col-lg-9 col-md-8 col-12">
+                            <div className="blue">
+                                <section className="logo1">
+                                    <img src="./images/logo.png" alt=""></img>
+                                    <p>TenMarket</p>
+                                </section>
+                                {/* <h3>Blueprint {clownCounter}</h3> */}
+                                {/* <div className='pro-algin'>
+=======
   
 
   const app_ques = [
@@ -3076,6 +3161,7 @@ function QnA_page() {
                 </section>
                 {/* <h3>Blueprint {clownCounter}</h3> */}
                 {/* <div className='pro-algin'>
+>>>>>>> 019b19fef4c27a87f1b4f5307cd34e32abde7ba4
                             <span className='qna-free'>Free</span>
                             <span className='qna-pro'>Pro</span>
                             <span className='qna-pro'>Premium</span>
@@ -3096,7 +3182,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
@@ -3138,319 +3224,139 @@ function QnA_page() {
 
                     {/* Idea / Vision */}
                     {idea && (
-                        <div className="row  mt-2">
-                            <div className="bussiness">
-                                <div className="logo">
-                                    <img src="./images/logo.png" alt=""></img>
-                                </div>
-                                <span>
-                                    {" "}
-                                    <TypeAnimation
-                                        sequence={[
-                                            // Same substring at the start will only be typed out once, initially
-                                            "What are you looking for (choose ONLY one)?",
-                                            1000,
-                                        ]}
-                                        wrapper="span" cursor={false}
-                                        speed={70}
-                                        style={{
-                                            fontSize: "1rem",
-                                            color: "#ececf1",
-                                            flex: "1",
-                                            textAlign: "center",
-                                            gap: "10px",
-                                        }}
-                                    />
-                                </span>
-                                <div ref={answersEndRef} />
-                            </div>
+                        <div className="row">
+                        <div
+                            className=" input--field p-3"
+                            style={{ color: "white", textAlign: "initial" }}
+                        >
+                            {currentQuestionIndex < influencer_ques.length ? (
+                                <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                    <p>{influencer_ques[currentQuestionIndex]}</p>
+                                    {userResponses.map((response, index) => (
+                                        <div key={index}>
+                                            <div className="res">
+                                                <p>
+                                                    <strong>Response:</strong> {response}
+                                                </p>
+                                                <div ref={answersEndRef} />
+                                            </div>
 
-                            <div className="row qna-box">
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={digitalHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttondigital }}>
-                                        <img src="./images/digital.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text mt-4">Digital Marketing</p>
-                                    </div>
+                                            {index < influencer_ques.length - 1 && (
+                                                <p>
+                                                    <strong></strong> {influencer_ques[index + 1]}
+                                                </p>
+                                            )}
+                                        </div>
+                                    ))}
                                 </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={technologyHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttontechnology }}
+                            ) : (
+                                <div className="res">
+                                    <p>Questionnaire complete! Thank you for your responses.</p>
+                                    {/* <button
+                                        type="button"
+                                        className="btn btn-primary"
+                                        onClick={handleDownloadPdf}
                                     >
-                                        <img src="./images/technology.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Technology & Innovation</p>
-                                    </div>
+                                        Generate PDF
+                                    </button> */}
+
+<div>
+     
+     <Mobilestepper  />
+   </div> 
                                 </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={brandingHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttonbranding }}
-                                    >
-                                        <img src="./images/branding.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text mt-4">Branding & Design</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row qna-box">
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={public_relationsHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttonpublic }}>
-                                        <img src="./images/public_relations.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Public Realations</p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={influencerHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttoninfluencer }}
-                                    >
-                                        <img src="./images/influencer_marketing.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Influencer Marketing</p>
-                                    </div>
-                                    <div ref={answersEndRef} />
-                                </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={contentHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttoncontent }}>
-                                        <img src="./images/content.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Content Production</p>
-                                    </div>
-                                </div>
-                            </div>
+                            )}
                         </div>
+                        <div ref={answersEndRef} />
+                    </div>
                     )}
 
                     {/* Startup / Growth */}
                     {startup && (
                         <div className="row">
-                            <div className="bussiness">
-                                <div className="logo">
-                                    <img src="./images/logo.png" alt=""></img>
-                                </div>
-                                <span>
-                                    {" "}
-                                    <TypeAnimation
-                                        sequence={[
-                                            // Same substring at the start will only be typed out once, initially
-                                            "What are you looking for (choose ONLY one)?",
-                                            1000,
-                                        ]}
-                                        wrapper="span" cursor={false}
-                                        speed={70}
-                                        style={{
-                                            fontSize: "1rem",
-                                            color: "#ececf1",
-                                            flex: "1",
-                                            textAlign: "center",
-                                            gap: "10px",
-                                        }}
-                                    />
-                                </span>
-                                <div ref={answersEndRef} />
-                            </div>
+                        <div
+                            className=" input--field p-3"
+                            style={{ color: "white", textAlign: "initial" }}
+                        >
+                            {currentQuestionIndex < influencer_ques.length ? (
+                                <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                    <p>{influencer_ques[currentQuestionIndex]}</p>
+                                    {userResponses.map((response, index) => (
+                                        <div key={index}>
+                                            <div className="res">
+                                                <p>
+                                                    <strong>Response:</strong> {response}
+                                                </p>
+                                                <div ref={answersEndRef} />
+                                            </div>
 
-                            <div className="row qna-box">
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={digitalHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttondigital }}>
-                                        <img src="./images/digital.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text mt-4">Digital Marketing</p>
-                                    </div>
+                                            {index < influencer_ques.length - 1 && (
+                                                <p>
+                                                    <strong></strong> {influencer_ques[index + 1]}
+                                                </p>
+                                            )}
+                                        </div>
+                                    ))}
                                 </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={technologyHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttontechnology }}
+                            ) : (
+                                <div className="res">
+                                    <p>Questionnaire complete! Thank you for your responses.</p>
+                                    <button
+                                        type="button"
+                                        className="btn btn-primary"
+                                        onClick={handleDownloadPdf}
                                     >
-                                        <img src="./images/technology.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Technology & Innovation</p>
-                                    </div>
+                                        Generate PDF
+                                    </button>
                                 </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={brandingHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttonbranding }}
-                                    >
-                                        <img src="./images/branding.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text mt-4">Branding & Design</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row qna-box">
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={public_relationsHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttonpublic }}>
-                                        <img src="./images/public_relations.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Public Realations</p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={influencerHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttoninfluencer }}
-                                        onClick={inputFunction}
-                                    >
-                                        <img src="./images/influencer_marketing.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Influencer Marketing</p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={contentHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttoncontent }}>
-                                        <img src="./images/content.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Content Production</p>
-                                    </div>
-                                </div>
-                            </div>
+                            )}
                         </div>
+                        <div ref={answersEndRef} />
+                    </div>
                     )}
 
                     {/* Brand / Enterprise */}
                     {brand && (
                         <div className="row">
-                            <div className="bussiness">
-                                <div className="logo">
-                                    <img src="./images/logo.png" alt=""></img>
-                                </div>
-                                <span>
-                                    {" "}
-                                    <TypeAnimation
-                                        sequence={[
-                                            // Same substring at the start will only be typed out once, initially
-                                            "What are you looking for (choose ONLY one)?",
-                                            1000,
-                                        ]}
-                                        wrapper="span" cursor={false}
-                                        speed={70}
-                                        style={{
-                                            fontSize: "1rem",
-                                            color: "#ececf1",
-                                            flex: "1",
-                                            textAlign: "center",
-                                            gap: "10px",
-                                        }}
-                                    />
-                                </span>
-                                <div ref={answersEndRef} />
-                            </div>
+                        <div
+                            className=" input--field p-3"
+                            style={{ color: "white", textAlign: "initial" }}
+                        >
+                            {currentQuestionIndex < influencer_ques.length ? (
+                                <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
+                                    <p>{influencer_ques[currentQuestionIndex]}</p>
+                                    {userResponses.map((response, index) => (
+                                        <div key={index}>
+                                            <div className="res">
+                                                <p>
+                                                    <strong>Response:</strong> {response}
+                                                </p>
+                                                <div ref={answersEndRef} />
+                                            </div>
 
-                            <div className="row qna-box">
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={digitalHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttondigital }}>
-                                        <img src="./images/digital.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text mt-4">Digital Marketing</p>
-                                    </div>
+                                            {index < influencer_ques.length - 1 && (
+                                                <p>
+                                                    <strong></strong> {influencer_ques[index + 1]}
+                                                </p>
+                                            )}
+                                        </div>
+                                    ))}
                                 </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={technologyHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttontechnology }}
+                            ) : (
+                                <div className="res">
+                                    <p>Questionnaire complete! Thank you for your responses.</p>
+                                    <button
+                                        type="button"
+                                        className="btn btn-primary"
+                                        onClick={handleDownloadPdf}
                                     >
-                                        <img src="./images/technology.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Technology & Innovation</p>
-                                    </div>
+                                        Generate PDF
+                                    </button>
                                 </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={brandingHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttonbranding }}
-                                    >
-                                        <img src="./images/branding.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text mt-4">Branding & Design</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row qna-box">
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={public_relationsHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttonpublic }}>
-                                        <img src="./images/public_relations.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Public Realations</p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={influencerHandler}
-                                >
-                                    <div
-                                        className="qna-border"
-                                        style={{ border: buttoninfluencer }}
-                                    >
-                                        <img src="./images/influencer_marketing.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Influencer Marketing</p>
-                                    </div>
-                                </div>
-                                <div
-                                    className="col-lg-4 col-md-6 col-12"
-                                    onClick={contentHandler}
-                                >
-                                    <div className="qna-border" style={{ border: buttoncontent }}>
-                                        <img src="./images/content.png" alt=""></img>
-                                        <div className="mydivider mt-4"></div>
-                                        <p className="qna-text">Content Production</p>
-                                    </div>
-                                </div>
-                            </div>
+                            )}
                         </div>
+                        <div ref={answersEndRef} />
+                    </div>
                     )}
 
                     {/* Digital Marketing */}
@@ -3470,7 +3376,7 @@ function QnA_page() {
                                         ]}
                                         wrapper="span" cursor={false}
                                         speed={70}
-                                        style={{ fontSize: "1rem", color: "#ececf1", gap: "10px" }}
+                                        style={{ fontSize: "1.3rem", color: "#ececf1", gap: "10px" }}
                                     />
                                 </span>
                                 <div ref={answersEndRef} />
@@ -3521,7 +3427,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
@@ -3574,7 +3480,7 @@ function QnA_page() {
                                             wrapper="span" cursor={false}
                                             speed={70}
                                             style={{
-                                                fontSize: "1rem",
+                                                fontSize: "1.3rem",
                                                 color: "#ececf1",
                                                 flex: "1",
                                                 textAlign: "center",
@@ -3694,7 +3600,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
@@ -3747,7 +3653,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
@@ -3799,7 +3705,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
@@ -3860,7 +3766,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
@@ -4274,7 +4180,7 @@ function QnA_page() {
                                         wrapper="span" cursor={false}
                                         speed={70}
                                         style={{
-                                            fontSize: "1rem",
+                                            fontSize: "1.3rem",
                                             color: "#ececf1",
                                             flex: "1",
                                             textAlign: "center",
