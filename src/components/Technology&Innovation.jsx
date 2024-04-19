@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-//import "./question2.css"
 
-function DigitalMarketing() {
+function TechnologyInnovation() {
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-12">
-          <h1 className="title text-center mb-3">Digital Marketing</h1>
+          <h1 className="title text-center mb-3">Technology & Innovation</h1>
           <form>
             <div className="card w-100 max-w-lg">
               <div className="card-header">
                 <br></br>
-                <h4 className="card-title text-center">STEP 1 OF 6</h4>
+                <h4 className="card-title text-center">STEP 2 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
                 <p className="card-text">Which one do you like the most?</p>
@@ -529,7 +528,7 @@ function DigitalMarketing() {
                   </div>
                 </div>
               </div>
-              <br></br> 
+              <br></br>
               <br></br>
 
               <div className="card w-100 max-w-lg">
@@ -590,12 +589,14 @@ function DigitalMarketing() {
               </div>
               <br></br>
               <br></br>
-
             </div>
           </form>
 
-          <div className="d-flex align-items-center justify-content-center">
-            <Link to="/Technology&Innovation">
+          <div className="d-flex align-items-center justify-content-center gap-3">
+            <Link to="/DigitalMarketing">
+              <Button variant="outline-primary">Back</Button>
+            </Link>
+            <Link to="/Branding&Design">
               <Button variant="primary" type="next">
                 Next
               </Button>
@@ -608,4 +609,4 @@ function DigitalMarketing() {
   );
 }
 
-export default DigitalMarketing;
+export default TechnologyInnovation;

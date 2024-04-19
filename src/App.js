@@ -19,6 +19,11 @@ import Pricing from "./pages/Pricing";
 import Faq from "./pages/FAQ";
 import Question1 from "./components/question1";
 import DigitalMarketing from "./components/DigitalMarketing";
+import TechnologyInnovation from "./components/Technology&Innovation";
+import BrandingDesign from "./components/Branding&Design";
+import PublicRelations from "./components/PublicRelations";
+import InfluencerMarketing from "./components/InfluencerMarketing";
+import ContentProduction from "./components/ContentProduction";
 
 
 function App() {
@@ -42,6 +47,13 @@ function App() {
 
         <Route path="/DigitalMarketing" element={<DigitalMarketing />} />
         <Route path="/question1" element={<Question1/>} />
+        <Route path="/Technology&Innovation" element={<TechnologyInnovation/>} />
+        <Route path="/Branding&Design" element={<BrandingDesign/>} />
+        <Route path="/PublicRelations" element={<PublicRelations/>} />
+        <Route path="/InfluencerMarketing" element={<InfluencerMarketing/>} />
+        <Route path="/ContentProduction" element={<ContentProduction/>} />
+        
+
 
       </Routes>
     </Router>
