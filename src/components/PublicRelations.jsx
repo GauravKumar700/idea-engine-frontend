@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 function PublicRelations() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="container-fluid">
       <div className="row">
