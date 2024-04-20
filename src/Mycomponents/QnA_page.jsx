@@ -663,9 +663,9 @@ function QnA_page() {
   const [userResponses, setUserResponses] = useState([]);
 
   const influencer_ques = [
-    
+
     <div className="row">
-     
+
       <div className="bussiness">
         <div className="logo">
           <img src="./images/logo.png" alt=""></img>
@@ -1504,8 +1504,6 @@ function QnA_page() {
                 </section>
                 {/* <h3>Blueprint {clownCounter}</h3> */}
                 {/* <div className='pro-algin'>
-=======
-  
 
   const app_ques = [
     <div className="row">
@@ -3185,7 +3183,6 @@ function QnA_page() {
                 </section>
                 {/* <h3>Blueprint {clownCounter}</h3> */}
                 {/* <div className='pro-algin'>
->>>>>>> 019b19fef4c27a87f1b4f5307cd34e32abde7ba4
                             <span className='qna-free'>Free</span>
                             <span className='qna-pro'>Pro</span>
                             <span className='qna-pro'>Premium</span>
