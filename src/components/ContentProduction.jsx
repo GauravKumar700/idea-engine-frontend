@@ -651,6 +651,20 @@ function ContentProduction() {
               <br></br>
             </div>
           </form>
+<<<<<<< HEAD
+
+          <div className="d-flex align-items-center justify-content-center gap-3">
+            <Link to="/InfluencerMarketing">
+              <Button variant="outline-primary">Back</Button>
+            </Link>
+            <Link to="/">
+              <Button variant="primary" type="next">
+                Generate PDF
+              </Button>
+            </Link>
+          </div>
+=======
+>>>>>>> 81343bd5de5f3cfeda81f95b1ed1b1076ce5f74b
           <br></br>
         </div>
       </div>
