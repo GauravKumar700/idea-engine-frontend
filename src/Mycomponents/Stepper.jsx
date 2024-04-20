@@ -24,7 +24,6 @@ function Stepper({ steps }) {
     <div>
       <div style={{ color: 'white' }}>
         {/* Step {activeStep + 1} of {steps.length} */}
-        {step}
       </div>
       {steps[activeStep]}
       <div className='d-flex justify-content-center'>
