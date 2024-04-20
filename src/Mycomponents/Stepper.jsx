@@ -20,13 +20,11 @@ function Stepper({ steps }) {
   return (
     <div>
       <div style={{ color: 'white' }}>
-        Step {activeStep + 1} of {steps.length}
+        {/* Step {activeStep + 1} of {steps.length} */}
       </div>
       {steps[activeStep]}
       <div className='d-flex justify-content-center'>
-        {/* <button disabled={activeStep === 0} onClick={handleBack}>Back</button> */}
         <Button disabled={activeStep === 0} onClick={handleBack} variant="outline-primary" className=' mx-2'>Back</Button>
-        {/* <button disabled={activeStep === steps.length - 1} onClick={handleNext}>Next</button> */}
         <Button disabled={activeStep === steps.length - 1} onClick={handleNext} variant="outline-primary" className=' mx-2'>Next</Button>
       </div>
     </div>

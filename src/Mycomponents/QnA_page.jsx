@@ -3276,8 +3276,8 @@ function QnA_page() {
                     ))}
                   </div>
                 ) : (
-                  <div className="res">
-                    <p>Questionnaire complete! Thank you for your responses.</p>
+                  <div>
+                    {/* <p className="res">Questionnaire complete! Thank you for your responses.</p> */}
                     {/* <button
                                         type="button"
                                         className="btn btn-primary"
