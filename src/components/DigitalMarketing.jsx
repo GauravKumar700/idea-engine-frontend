@@ -4,9 +4,9 @@ import { Button } from "react-bootstrap";
 //import "./question2.css"
 
 function DigitalMarketing() {
- useEffect(() => {
-   window.scrollTo(0, 0);
- }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="container-fluid">
       <div className="row">
@@ -28,11 +28,11 @@ function DigitalMarketing() {
               <div className="card-body">
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a1"
-                    value="0"
+                    value="Integrate both equally"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
                     Integrate both equally
@@ -40,11 +40,11 @@ function DigitalMarketing() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a2"
-                    value="1"
+                    value="Focus more on social media"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
                     Focus more on social media
@@ -52,11 +52,11 @@ function DigitalMarketing() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a3"
-                    value="2"
+                    value="Prioritize performance marketing"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
                     Prioritize performance marketing
@@ -77,37 +77,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q2"
+                      id="q2a1"
+                      value="Small businesses"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q2a1">
                       Small businesses
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q2"
+                      id="q2a2"
+                      value="E-commerce companies"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q2a2">
                       E-commerce companies
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q2"
+                      id="q2a3"
+                      value="Enterprises"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q2a3">
                       Enterprises
                     </label>
                   </div>
@@ -127,37 +127,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q3"
+                      id="q3a1"
+                      value="Comprehensive services for both"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q3a1">
                       Comprehensive services for both
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q3"
+                      id="q3a2"
+                      value="Specialize in one area"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q3a2">
                       Specialize in one area
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q3"
+                      id="q3a3"
+                      value="Customized offerings for each client"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q3a3">
                       Customized offerings for each client
                     </label>
                   </div>
@@ -177,37 +177,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q4"
+                      id="q4a1"
+                      value="Extensive expertise in all platforms"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q4a1">
                       Extensive expertise in all platforms
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q4"
+                      id="q4a2"
+                      value="Specialized knowledge in select platforms"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q4a2">
                       Specialized knowledge in select platforms
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q4"
+                      id="q4a3"
+                      value="Willingness to learn and adapt"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q4a3">
                       Willingness to learn and adapt
                     </label>
                   </div>
@@ -228,37 +228,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q5"
+                      id="q5a1"
+                      value="Seamless integration across all platforms"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q5a1">
                       Seamless integration across all platforms
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q5"
+                      id="q5a2"
+                      value="Separate strategies for each platform"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q5a2">
                       Separate strategies for each platform
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q5"
+                      id="q5a3"
+                      value="Flexible approach based on client needs"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q5a3">
                       Flexible approach based on client needs
                     </label>
                   </div>
@@ -279,37 +279,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q6"
+                      id="q6a1"
+                      value="Detailed audience segmentation"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q6a1">
                       Detailed audience segmentation
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q6"
+                      id="q6a2"
+                      value="Tailored messaging for each platform"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q6a2">
                       Tailored messaging for each platform
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q6"
+                      id="q6a3"
+                      value="Continuous optimization based on analytics"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q6a3">
                       Continuous optimization based on analytics
                     </label>
                   </div>
@@ -330,37 +330,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q7"
+                      id="q7a1"
+                      value="Balanced allocation across both"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q7a1">
                       Balanced allocation across both
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q7"
+                      id="q7a2"
+                      value="Adjust based on campaign performance1"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q7a2">
                       Adjust based on campaign performance
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q7"
+                      id="q7a3"
+                      value="Client-driven budget allocation"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q7a3">
                       Client-driven budget allocation
                     </label>
                   </div>
@@ -381,37 +381,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q8"
+                      id="q8a1"
+                      value="Comprehensive reporting with KPIs"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q8a1">
                       Comprehensive reporting with KPIs
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q8"
+                      id="q8a2"
+                      value="Comprehensive reporting with KPIs"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q8a2">
                       Comprehensive reporting with KPIs
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q8"
+                      id="q8a3"
+                      value="Emphasis on conversion tracking"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q8a3">
                       Emphasis on conversion tracking
                     </label>
                   </div>
@@ -433,37 +433,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q9"
+                      id="q9a1"
+                      value="Creative storytelling approach"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q9a1">
                       Creative storytelling approach
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q9"
+                      id="q9a2"
+                      value="A/B testing for ad variations"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q9a2">
                       A/B testing for ad variations
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q9"
+                      id="q9a3"
+                      value="Collaborative process with clients"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q9a3">
                       Collaborative process with clients
                     </label>
                   </div>
@@ -485,37 +485,37 @@ function DigitalMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q10"
+                      id="q10a1"
+                      value="Diversifying services"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q10a1">
                       Diversifying services
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q10"
+                      id="q10a2"
+                      value="Expanding clientele"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q10a2">
                       Expanding clientele
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q10"
+                      id="q10a3"
+                      value="Embracing emergin trends"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q10a3">
                       Embracing emergin trends
                     </label>
                   </div>

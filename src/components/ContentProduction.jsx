@@ -25,11 +25,12 @@ function ContentProduction() {
               <div className="card-body">
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a1"
-                    value="0"
+                    value="Engaging blog posts offering valuable insights and
+                    information"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
                     Engaging blog posts offering valuable insights and
@@ -38,11 +39,12 @@ function ContentProduction() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a2"
-                    value="1"
+                    value="Interactive videos showcasing product demonstrations and
+                    tutorials"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
                     Interactive videos showcasing product demonstrations and
@@ -51,11 +53,12 @@ function ContentProduction() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a3"
-                    value="2"
+                    value="Entertaining podcasts featuring industry experts and thought
+                    leaders"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
                     Entertaining podcasts featuring industry experts and thought
@@ -64,11 +67,12 @@ function ContentProduction() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a4"
-                    value="3"
+                    value="Visual infographics summarizing complex information in a
+                    digestible format"
                   />
                   <label className="form-check-label" htmlFor="q1a4">
                     Visual infographics summarizing complex information in a
@@ -87,52 +91,56 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q2"
+                      id="q2a1"
+                      value="Millennials interested in socially conscious content and
+                      trends"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q2a2">
                       Millennials interested in socially conscious content and
                       trends
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q2"
+                      id="q2a2"
+                      value="Gen Z consumers seeking authentic and relatable content
+                      experiences"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q2a2">
                       Gen Z consumers seeking authentic and relatable content
                       experiences
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q2"
+                      id="q2a3"
+                      value="Professionals looking for actionable insights and career
+                      advice"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q2a3">
                       Professionals looking for actionable insights and career
                       advice
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q2"
+                      id="q2a4"
+                      value="Parents seeking educational and entertaining content for
+                      their children"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q2a4">
                       Parents seeking educational and entertaining content for
                       their children
                     </label>
@@ -151,52 +159,56 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q3"
+                      id="q3a1"
+                      value="Conducting in-depth research to identify content gaps and
+                      opportunities"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q3a1">
                       Conducting in-depth research to identify content gaps and
                       opportunities
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q3"
+                      id="q3a2"
+                      value=" Investing in high-quality production equipment and editing
+                      software"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q3a2">
                       Investing in high-quality production equipment and editing
                       software
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q3"
+                      id="q3a3"
+                      value="Collaborating with industry influencers and experts to
+                      lend credibility"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q3a3">
                       Collaborating with industry influencers and experts to
                       lend credibility
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q3"
+                      id="q3a4"
+                      value="Implementing SEO best practices to increase
+                      discoverability and reach"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q3a4">
                       Implementing SEO best practices to increase
                       discoverability and reach
                     </label>
@@ -214,51 +226,54 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q4"
+                      id="q4a1"
+                      value="Content writers creating compelling copy and storytelling"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q4a1">
                       Content writers creating compelling copy and storytelling
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q4"
+                      id="q4a2"
+                      value="Graphic designers crafting visually appealing images and
+                      infographics"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q4a2">
                       Graphic designers crafting visually appealing images and
                       infographics
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q4"
+                      id="q4a3"
+                      value="Video producers shooting and editing engaging video
+                      content"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q4a3">
                       Video producers shooting and editing engaging video
                       content
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q4"
+                      id="q4a4"
+                      value="Audio engineers recording and editing professional-grade
+                      podcasts and audio clips"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q4a4">
                       Audio engineers recording and editing professional-grade
                       podcasts and audio clips
                     </label>
@@ -277,50 +292,51 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q5"
+                      id="q5a1"
+                      value="Adobe Creative Suite for graphic design and video editing"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q5a1">
                       Adobe Creative Suite for graphic design and video editing
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q5"
+                      id="q5a2"
+                      value="Canva for easy-to-use graphic design templates and layouts"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q5a2">
                       Canva for easy-to-use graphic design templates and layouts
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q5"
+                      id="q5a3"
+                      value="Final Cut Pro or Adobe Premiere Pro for professional video
+                      editing"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q5a3">
                       Final Cut Pro or Adobe Premiere Pro for professional video
                       editing
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q5"
+                      id="q5a4"
+                      value="Audacity or Adobe Audition for audio recording and editing"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q5a4">
                       Audacity or Adobe Audition for audio recording and editing
                     </label>
                   </div>
@@ -338,52 +354,56 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q6"
+                      id="q6a1"
+                      value="Implement a rigorous editorial review process to maintain
+                      high standards"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q6a1">
                       Implement a rigorous editorial review process to maintain
                       high standards
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q6"
+                      id="q6a2"
+                      value="Utilize content calendars and scheduling tools to plan and
+                      organize content production"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q6a2">
                       Utilize content calendars and scheduling tools to plan and
                       organize content production
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q6"
+                      id="q6a3"
+                      value="Conduct regular content audits to identify areas for
+                      improvement and optimization"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q6a3">
                       Conduct regular content audits to identify areas for
                       improvement and optimization
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q6"
+                      id="q6a4"
+                      value=" Collaborate closely with clients to align content with
+                      their brand voice and objectives"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q6a4">
                       Collaborate closely with clients to align content with
                       their brand voice and objectives
                     </label>
@@ -403,52 +423,56 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q7"
+                      id="q7a1"
+                      value=" Monitor key performance indicators (KPIs) such as
+                      engagement metrics and website traffic"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q7a1">
                       Monitor key performance indicators (KPIs) such as
                       engagement metrics and website traffic
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q7"
+                      id="q7a2"
+                      value=" Conduct audience surveys and feedback forms to gather
+                      insights"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q7a2">
                       Conduct audience surveys and feedback forms to gather
                       insights
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q7"
+                      id="q7a3"
+                      value=" Analyze social media analytics and sentiment analysis to
+                      gauge audience response"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q7a3">
                       Analyze social media analytics and sentiment analysis to
                       gauge audience response
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q7"
+                      id="q7a4"
+                      value=" Iterate and optimize content based on performance data and
+                      audience feedback"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q7a4">
                       Iterate and optimize content based on performance data and
                       audience feedback
                     </label>
@@ -467,52 +491,56 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q8"
+                      id="q8a1"
+                      value=" Launching content production within the next month with
+                      the goal of increasing brand visibility"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q8a1">
                       Launching content production within the next month with
                       the goal of increasing brand visibility
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q8"
+                      id="q8a2"
+                      value="Setting specific milestones and targets for content
+                      engagement and audience growth"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q8a2">
                       Setting specific milestones and targets for content
                       engagement and audience growth
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q8"
+                      id="q8a3"
+                      value="Aligning content production with upcoming product launches
+                      or marketing campaigns"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q8a3">
                       Aligning content production with upcoming product launches
                       or marketing campaigns
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q8"
+                      id="q8a4"
+                      value="Establishing a content calendar with regular publishing
+                      schedules and themes"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q8a4">
                       Establishing a content calendar with regular publishing
                       schedules and themes
                     </label>
@@ -532,52 +560,56 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q9"
+                      id="q9a1"
+                      value="Celebrate key milestones and achievements with the team
+                      and stakeholders"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q9a1">
                       Celebrate key milestones and achievements with the team
                       and stakeholders
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q9"
+                      id="q9a2"
+                      value="Conduct regular performance reviews and assessments to
+                      track progress"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q9a2">
                       Conduct regular performance reviews and assessments to
                       track progress
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q9"
+                      id="q9a3"
+                      value=" Solicit feedback from internal and external stakeholders
+                      to identify areas for improvement"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q9a3">
                       Solicit feedback from internal and external stakeholders
                       to identify areas for improvement
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q9"
+                      id="q9a4"
+                      value="  Develop a long-term content strategy with evolving goals
+                      and objectives"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q9a4">
                       Develop a long-term content strategy with evolving goals
                       and objectives
                     </label>
@@ -597,50 +629,52 @@ function ContentProduction() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q10"
+                      id="q10a1"
+                      value="Increase in website traffic and organic search rankings"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q10a1">
                       Increase in website traffic and organic search rankings
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q10"
+                      id="q10a2"
+                      value="Growth in social media followers and engagement rates"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q10a2">
                       Growth in social media followers and engagement rates
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q10"
+                      id="q10a3"
+                      value=" Higher conversion rates and lead generation from content
+                      marketing efforts"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q10a3">
                       Higher conversion rates and lead generation from content
                       marketing efforts
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q10"
+                      id="q10a4"
+                      value=" Positive brand sentiment and increased brand awareness
+                      measured through surveys and sentiment analysis"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q10a4">
                       Positive brand sentiment and increased brand awareness
                       measured through surveys and sentiment analysis
                     </label>

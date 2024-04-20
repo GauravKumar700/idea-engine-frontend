@@ -27,11 +27,11 @@ function InfluencerMarketing() {
               <div className="card-body">
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a1"
-                    value="0"
+                    value="Objective defined, services planned"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
                     Objective defined, services planned
@@ -39,11 +39,11 @@ function InfluencerMarketing() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a2"
-                    value="1"
+                    value="Objective defined, services still planning"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
                     Objective defined, services still planning
@@ -51,11 +51,11 @@ function InfluencerMarketing() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a3"
-                    value="2"
+                    value="Objective and services not defined yet"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
                     Objective and services not defined yet
@@ -63,7 +63,7 @@ function InfluencerMarketing() {
                 </div>
                 {/* <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a4"
@@ -87,43 +87,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q2"
+                      id="q2a1"
+                      value="Target market identified, offerings tailored"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q2a1">
                       Target market identified, offerings tailored
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q2"
+                      id="q2a2"
+                      value="Target market identified, offerings in progress"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q2a2">
                       Target market identified, offerings in progress
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q2"
+                      id="q2a3"
+                      value="Target market and offerings not determined yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q2a3">
                       Target market and offerings not determined yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -147,43 +147,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q3"
+                      id="q3a1"
+                      value="Clear differentiation strategy"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q3a1">
                       Clear differentiation strategy
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q3"
+                      id="q3a2"
+                      value="Differentiation strategy under development"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q3a2">
                       Differentiation strategy under development
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q3"
+                      id="q3a3"
+                      value="No differentiation strategy yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q3a3">
                       No differentiation strategy yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -208,44 +208,45 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q4"
+                      id="q4a1"
+                      value="Defined services and value proposition c. Services and
+                      value proposition not determined yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q4a1">
                       Defined services and value proposition c. Services and
                       value proposition not determined yet
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q4"
+                      id="q4a2"
+                      value="Services and value proposition in development"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q4a2">
                       Services and value proposition in development
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q4"
+                      id="q4a3"
+                      value="Services and value proposition not determined yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q4a3">
                       Services and value proposition not determined yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -271,43 +272,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q5"
+                      id="q5a1"
+                      value="Client acquisition strategy established"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q5a1">
                       Client acquisition strategy established
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q5"
+                      id="q5a2"
+                      value="Client acquisition strategy in progress"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q5a2">
                       Client acquisition strategy in progress
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q5"
+                      id="q5a3"
+                      value="No client acquisition strategy yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q5a3">
                       No client acquisition strategy yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -333,43 +334,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q6"
+                      id="q6a1"
+                      value="Defined campaign management process"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q6a1">
                       Defined campaign management process
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q6"
+                      id="q6a2"
+                      value="Campaign management process in development"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q6a2">
                       Campaign management process in development
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
-                      id="q1a3"
-                      value="2"
+                      id="q6a3"
+                      value="No campaign management process yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q6a3">
                       No campaign management process yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -395,43 +396,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q7"
+                      id="q7a1"
+                      value="Influencer selection criteria defined"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q7a1">
                       Influencer selection criteria defined
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q7"
+                      id="q7a2"
+                      value="Influencer selection criteria being develope"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q7a2">
                       Influencer selection criteria being develope
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q7"
+                      id="q7a3"
+                      value="No influencer selection criteria yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q7a3">
                       No influencer selection criteria yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -457,43 +458,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q8"
+                      id="q8a1"
+                      value="Pricing strategy established"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q8a1">
                       Pricing strategy established
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q8"
+                      id="q8a2"
+                      value="Pricing strategy in progress"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q8a2">
                       Pricing strategy in progress
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q8"
+                      id="q8a3"
+                      value="No pricing strategy yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q8a3">
                       No pricing strategy yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -519,43 +520,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q9"
+                      id="q9a1"
+                      value="Technology and tools selected"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q9a1">
                       Technology and tools selected
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q9"
+                      id="q9a2"
+                      value="Technology and tools being evaluated"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q9a2">
                       Technology and tools being evaluated
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q9"
+                      id="q9a3"
+                      value="No technology and tools selected yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q9a3">
                       No technology and tools selected yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
@@ -582,43 +583,43 @@ function InfluencerMarketing() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q10"
+                      id="q10a1"
+                      value="Long-term strategy defined"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q10a1">
                       Long-term strategy defined
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q10"
+                      id="q10a2"
+                      value="Long-term strategy in development"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q10a2">
                       Long-term strategy in development
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q10"
+                      id="q10a3"
+                      value="No long-term strategy yet"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q10a3">
                       No long-term strategy yet
                     </label>
                   </div>
                   {/* <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
                       name="q1"
                       id="q1a4"
