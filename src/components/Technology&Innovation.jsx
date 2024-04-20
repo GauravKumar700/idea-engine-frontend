@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-function TechnologyInnovation() {
+function InfluencerMarketing() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -10,15 +10,19 @@ function TechnologyInnovation() {
     <div className="container-fluid">
       <div className="row">
         <div className="col-12">
-          <h1 className="title text-center mb-3">Technology & Innovation</h1>
+          <h1 className="title text-center mb-3">Influencer Marketing</h1>
           <form>
             <div className="card w-100 max-w-lg">
               <div className="card-header">
                 <br></br>
-                <h4 className="card-title text-center">STEP 2 OF 6</h4>
+                <h4 className="card-title text-center">STEP 5 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
-                <p className="card-text">Which one do you like the most?</p>
+                <p className="card-text">
+                  What is the primary objective of your influencer marketing
+                  business, and what services will you offer to achieve this
+                  objective?
+                </p>
               </div>
               <div className="card-body">
                 <div className="form-check">
@@ -30,7 +34,7 @@ function TechnologyInnovation() {
                     value="0"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
-                    The first one
+                    Objective defined, services planned
                   </label>
                 </div>
                 <div className="form-check">
@@ -42,7 +46,7 @@ function TechnologyInnovation() {
                     value="1"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
-                    The second one
+                    Objective defined, services still planning
                   </label>
                 </div>
                 <div className="form-check">
@@ -54,10 +58,10 @@ function TechnologyInnovation() {
                     value="2"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
-                    The third one
+                    Objective and services not defined yet
                   </label>
                 </div>
-                <div className="form-check">
+                {/* <div className="form-check">
                   <input
                     className="form-check-input"
                     type="radio"
@@ -68,13 +72,17 @@ function TechnologyInnovation() {
                   <label className="form-check-label" htmlFor="q1a4">
                     The fourth one
                   </label>
-                </div>
+                </div> */}
               </div>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 2</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    Who is your target market for influencer marketing services,
+                    and how will you tailor your offerings to meet their
+                    specific needs?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -86,7 +94,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Target market identified, offerings tailored
                     </label>
                   </div>
                   <div className="form-check">
@@ -98,7 +106,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Target market identified, offerings in progress
                     </label>
                   </div>
                   <div className="form-check">
@@ -110,10 +118,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Target market and offerings not determined yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -124,14 +132,17 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 3</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How do you plan to differentiate your influencer marketing
+                    business from competitors in the industry?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -143,7 +154,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Clear differentiation strategy
                     </label>
                   </div>
                   <div className="form-check">
@@ -155,7 +166,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Differentiation strategy under development
                     </label>
                   </div>
                   <div className="form-check">
@@ -167,10 +178,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No differentiation strategy yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -181,14 +192,18 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 4</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What specific influencer marketing services will your
+                    business provide to clients, and how will you deliver value
+                    to them?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -200,7 +215,8 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Defined services and value proposition c. Services and
+                      value proposition not determined yet
                     </label>
                   </div>
                   <div className="form-check">
@@ -212,7 +228,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Services and value proposition in development
                     </label>
                   </div>
                   <div className="form-check">
@@ -224,10 +240,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Services and value proposition not determined yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -238,7 +254,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -246,7 +262,11 @@ function TechnologyInnovation() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 5</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How do you plan to attract clients to your influencer
+                    marketing services, and what strategies will you use to
+                    generate leads?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -258,7 +278,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Client acquisition strategy established
                     </label>
                   </div>
                   <div className="form-check">
@@ -270,7 +290,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Client acquisition strategy in progress
                     </label>
                   </div>
                   <div className="form-check">
@@ -282,10 +302,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No client acquisition strategy yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -296,7 +316,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -304,7 +324,11 @@ function TechnologyInnovation() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 6</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What is your process for managing influencer marketing
+                    campaigns, from strategy development to execution and
+                    measurement?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -316,7 +340,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Defined campaign management process
                     </label>
                   </div>
                   <div className="form-check">
@@ -328,7 +352,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Campaign management process in development
                     </label>
                   </div>
                   <div className="form-check">
@@ -340,10 +364,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No campaign management process yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -354,7 +378,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -362,7 +386,11 @@ function TechnologyInnovation() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 7</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How will you identify and select the right influencers for
+                    your clients' campaigns, considering factors such as
+                    audience demographics and brand alignment?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -374,7 +402,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Influencer selection criteria defined
                     </label>
                   </div>
                   <div className="form-check">
@@ -386,7 +414,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Influencer selection criteria being develope
                     </label>
                   </div>
                   <div className="form-check">
@@ -398,10 +426,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No influencer selection criteria yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -412,7 +440,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -420,7 +448,11 @@ function TechnologyInnovation() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 8</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How will you determine pricing for your influencer marketing
+                    services, and what factors will you consider when budgeting
+                    for client campaigns?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -432,7 +464,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Pricing strategy established
                     </label>
                   </div>
                   <div className="form-check">
@@ -444,7 +476,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Pricing strategy in progress
                     </label>
                   </div>
                   <div className="form-check">
@@ -456,10 +488,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No pricing strategy yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -470,7 +502,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -478,7 +510,11 @@ function TechnologyInnovation() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 9</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What technology platforms and tools will you utilize to
+                    streamline influencer discovery, campaign management, and
+                    performance tracking?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -490,7 +526,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Technology and tools selected
                     </label>
                   </div>
                   <div className="form-check">
@@ -502,7 +538,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Technology and tools being evaluated
                     </label>
                   </div>
                   <div className="form-check">
@@ -514,10 +550,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No technology and tools selected yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -528,7 +564,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -537,7 +573,11 @@ function TechnologyInnovation() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What is your vision for the future of your influencer
+                    marketing business, and how will you adapt to changes in the
+                    industry landscape to ensure long-term success?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -549,7 +589,7 @@ function TechnologyInnovation() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Long-term strategy defined
                     </label>
                   </div>
                   <div className="form-check">
@@ -561,7 +601,7 @@ function TechnologyInnovation() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Long-term strategy in development
                     </label>
                   </div>
                   <div className="form-check">
@@ -573,10 +613,10 @@ function TechnologyInnovation() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      No long-term strategy yet
                     </label>
                   </div>
-                  <div className="form-check">
+                  {/* <div className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
@@ -587,7 +627,7 @@ function TechnologyInnovation() {
                     <label className="form-check-label" htmlFor="q1a4">
                       The fourth one
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <br></br>
@@ -595,13 +635,16 @@ function TechnologyInnovation() {
             </div>
           </form>
 
-          {/* <div className="d-flex align-items-center justify-content-center">
-            <Link to="/">
+          <div className="d-flex align-items-center justify-content-center gap-3">
+            <Link to="/PublicRelations">
+              <Button variant="outline-primary">Back</Button>
+            </Link>
+            <Link to="/ContentProduction">
               <Button variant="primary" type="next">
                 Next
               </Button>
             </Link>
-          </div> */}
+          </div>
           <br></br>
         </div>
       </div>
@@ -609,4 +652,4 @@ function TechnologyInnovation() {
   );
 }
 
-export default TechnologyInnovation;
+export default InfluencerMarketing;
