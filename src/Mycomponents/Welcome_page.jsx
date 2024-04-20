@@ -1,29 +1,29 @@
-import React, { useEffect } from 'react';
-import './Welcome.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFolder, faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Link, useNavigate } from 'react-router-dom';
-import Cookies from 'js-cookie';
+import React, { useEffect } from "react";
+import "./Welcome.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolder, faTrashCan } from "@fortawesome/free-regular-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 function Welcome_page() {
-    // const handleClick = () => {
-    //     navigate('/qna-page')
-    // }
+  // const handleClick = () => {
+  //     navigate('/qna-page')
+  // }
 
-    let navigate = useNavigate()
-    useEffect(() => {
-        const cookies = Cookies.get('token')
-        if (!cookies) {
-            navigate("/login")
-        }
-        // eslint-disable-next-line
-    }, [])
+  let navigate = useNavigate();
+  useEffect(() => {
+    const cookies = Cookies.get("token");
+    if (!cookies) {
+      navigate("/login");
+    }
+    // eslint-disable-next-line
+  }, []);
 
-    return (
-      <div className="container-fluid">
-        <div className="day-algin">
-          {/* <div className="component__ProfileDropdown fix-top-right">
+  return (
+    <div className="container-fluid">
+      <div className="day-algin">
+        {/* <div className="component__ProfileDropdown fix-top-right">
                     <div className="button" data-type="compact">
                         <picture className="profile__img">
                             <img src="https://api.dicebear.com/6.x/initials/svg?seed=Mohd Faisal Saifi" alt="user profile image" />
@@ -64,33 +64,32 @@ function Welcome_page() {
                     </div>
                 </div> */}
 
-          {/* <div className='version mt-3'>
+        {/* <div className='version mt-3'>
                     <span className='free'>Free</span>
                     <span className='pro'>Pro</span>
                     <span className='pro'>Premium</span>
                 </div> */}
-          <h1 className="title mt-3">Welcome to Ten-IdeaEngine</h1>
-          <h3 className="subtitle mt-3">BLUEPRINT TO BRILLIANCE</h3>
-          <div className="content mt-5">
-            <p className="para1">
-              We are here for you if, you’re planning to start a company, need
-              any marketing, tech or production services or need an exhaustive
-              scope of work for niche services such as SEO, Ads, Branding etc.
-            </p>
-            <p className="para2 mt-2">
-              <b>
-                Disclaimer : We’re only your planners NOT your implementers.
-                Make sure that your creative execution is done right
-              </b>
-            </p>
-          </div>
-          <Link to="/qna-page">
-            <button className="create-btn mt-4">Create Free Blueprint</button>
-          </Link>
-          {/* <link type="button" href="/Main_Page" className='create-btn mt-4'>Create Free Blueprint</link> */}
+        <h1 className="title mt-3">Welcome to Ten-IdeaEngine</h1>
+        <h3 className="subtitle mt-3">BLUEPRINT TO BRILLIANCE</h3>
+        <div className="content mt-5">
+          <p className="para1">
+            We are here for you if, you’re planning to start a company, need any
+            marketing, tech or production services or need an exhaustive scope
+            of work for niche services such as SEO, Ads, Branding etc.
+          </p>
+          <p className="para2 mt-2">
+            <b>
+              Disclaimer : We’re only your planners NOT your implementers. Make
+              sure that your creative execution is done right
+            </b>
+          </p>
         </div>
+        <Link to="/qna-page">
+          <button className="create-btn mt-4">Create Free Blueprint</button>
+        </Link>
+        {/* <link type="button" href="/Main_Page" className='create-btn mt-4'>Create Free Blueprint</link> */}
       </div>
-    );
-
+    </div>
+  );
 }
 export default Welcome_page;

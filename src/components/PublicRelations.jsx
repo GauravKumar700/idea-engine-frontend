@@ -18,7 +18,7 @@ function PublicRelations() {
                 <h4 className="card-title text-center">STEP 4 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
-                <p className="card-text">Which one do you like the most?</p>
+                <p className="card-text">What are the big trends in PR we can take advantage of?</p>
               </div>
               <div className="card-body">
                 <div className="form-check">
@@ -30,7 +30,7 @@ function PublicRelations() {
                     value="0"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
-                    The first one
+                    Influencer marketing
                   </label>
                 </div>
                 <div className="form-check">
@@ -42,7 +42,7 @@ function PublicRelations() {
                     value="1"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
-                    The second one
+                    Crisis management
                   </label>
                 </div>
                 <div className="form-check">
@@ -54,7 +54,7 @@ function PublicRelations() {
                     value="2"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
-                    The third one
+                    Data-driven PR strategies
                   </label>
                 </div>
                 <div className="form-check">
@@ -66,7 +66,7 @@ function PublicRelations() {
                     value="3"
                   />
                   <label className="form-check-label" htmlFor="q1a4">
-                    The fourth one
+                    Community engagement initiatives
                   </label>
                 </div>
               </div>
@@ -74,7 +74,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 2</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">Who else is in the PR game, and how are we going to be different?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -86,7 +86,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Boutique PR agencies focusing on niche industries
                     </label>
                   </div>
                   <div className="form-check">
@@ -98,7 +98,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Large PR firms catering to corporate clients
                     </label>
                   </div>
                   <div className="form-check">
@@ -110,7 +110,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Freelance PR consultants offering personalized services
                     </label>
                   </div>
                   <div className="form-check">
@@ -122,7 +122,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      In-house PR teams within companies handling their own communications
                     </label>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 3</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">What exactly are we doing for our clients, and why does it matter?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -143,7 +143,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Media relations and press release distribution
                     </label>
                   </div>
                   <div className="form-check">
@@ -155,7 +155,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Reputation management and brand positioning
                     </label>
                   </div>
                   <div className="form-check">
@@ -167,7 +167,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Event planning and execution
                     </label>
                   </div>
                   <div className="form-check">
@@ -179,7 +179,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Crisis communication and issue management
                     </label>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 4</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">Are we going to focus on anything specific, and why?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -200,7 +200,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Specialize in tech industry PR due to our team's expertise
                     </label>
                   </div>
                   <div className="form-check">
@@ -212,7 +212,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Target hospitality sector for its growing need for PR services
                     </label>
                   </div>
                   <div className="form-check">
@@ -224,7 +224,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Offer crisis management as a core service due to rising demand
                     </label>
                   </div>
                   <div className="form-check">
@@ -236,7 +236,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Concentrate on local businesses to establish strong community ties
                     </label>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 5</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">Who are we trying to help, and what do they need?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -258,7 +258,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Startups seeking to build brand awareness
                     </label>
                   </div>
                   <div className="form-check">
@@ -270,7 +270,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Established companies aiming to repair damaged reputations
                     </label>
                   </div>
                   <div className="form-check">
@@ -282,7 +282,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Non-profit organizations requiring public support for their causes
                     </label>
                   </div>
                   <div className="form-check">
@@ -294,7 +294,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Celebrities and influencers needing PR representation
                     </label>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 6</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">How do we make sure they stick with us?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -316,7 +316,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Provide personalized PR strategies tailored to their goals
                     </label>
                   </div>
                   <div className="form-check">
@@ -328,7 +328,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Offer ongoing monitoring and analysis of media coverage
                     </label>
                   </div>
                   <div className="form-check">
@@ -340,7 +340,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Deliver timely and transparent communication
                     </label>
                   </div>
                   <div className="form-check">
@@ -352,7 +352,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Regularly review and adjust PR tactics based on client feedback
                     </label>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 7</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">How are we getting the word out about our PR agency?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -374,7 +374,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Social media marketing campaigns highlighting successful case studies
                     </label>
                   </div>
                   <div className="form-check">
@@ -386,7 +386,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Networking events and industry conferences to showcase our expertise
                     </label>
                   </div>
                   <div className="form-check">
@@ -398,7 +398,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Collaborating with media outlets to secure featured articles and interviews
                     </label>
                   </div>
                   <div className="form-check">
@@ -410,7 +410,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Partnering with complementary service providers for cross-promotion opportunities
                     </label>
                   </div>
                 </div>
@@ -420,7 +420,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 8</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">What do we do to turn interested people into clients</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -432,7 +432,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Offer free PR consultations to assess their needs
                     </label>
                   </div>
                   <div className="form-check">
@@ -444,7 +444,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Provide customizable PR packages with transparent pricing
                     </label>
                   </div>
                   <div className="form-check">
@@ -456,7 +456,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Showcase our team's experience and track record in the industry
                     </label>
                   </div>
                   <div className="form-check">
@@ -468,7 +468,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Offer a satisfaction guarantee or trial period for new clients
                     </label>
                   </div>
                 </div>
@@ -478,7 +478,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 9</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">What might go wrong, and how do we fix it?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -490,7 +490,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Miscommunication leading to client dissatisfaction
                     </label>
                   </div>
                   <div className="form-check">
@@ -502,7 +502,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Negative media coverage affecting client reputations
                     </label>
                   </div>
                   <div className="form-check">
@@ -514,7 +514,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Lack of resources to handle sudden spikes in PR crises
                     </label>
                   </div>
                   <div className="form-check">
@@ -526,7 +526,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Competition from larger PR firms undercutting our pricing
                     </label>
                   </div>
                 </div>
@@ -537,7 +537,7 @@ function PublicRelations() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">What are the anticipated risks, and what are our mitigation plans?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -549,7 +549,7 @@ function PublicRelations() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Establishing clear communication channels with clients to address concerns promptly
                     </label>
                   </div>
                   <div className="form-check">
@@ -561,7 +561,7 @@ function PublicRelations() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Building strong relationships with journalists and media contacts to manage negative publicity
                     </label>
                   </div>
                   <div className="form-check">
@@ -573,7 +573,7 @@ function PublicRelations() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Developing a crisis management protocol and training team members to handle PR emergencies
                     </label>
                   </div>
                   <div className="form-check">
@@ -585,7 +585,7 @@ function PublicRelations() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Diversifying our client portfolio and revenue streams to mitigate the impact of losing a major client
                     </label>
                   </div>
                 </div>
@@ -595,7 +595,7 @@ function PublicRelations() {
             </div>
           </form>
 
-          <div className="d-flex align-items-center justify-content-center gap-3">
+          {/* <div className="d-flex align-items-center justify-content-center gap-3">
             <Link to="/Branding&Design">
               <Button variant="outline-primary">Back</Button>
             </Link>
@@ -604,12 +604,12 @@ function PublicRelations() {
                 Next
               </Button>
             </Link>
-          </div>
+          </div> */}
           <br></br>
         </div>
       </div>
     </div>
   );
 }
-
+// Done.
 export default PublicRelations;

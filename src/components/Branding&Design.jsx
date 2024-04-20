@@ -18,7 +18,7 @@ function BrandingDesign() {
                 <h4 className="card-title text-center">STEP 3 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
-                <p className="card-text">Which one do you like the most?</p>
+                <p className="card-text">What tech trends can we use to our advantage?</p>
               </div>
               <div className="card-body">
                 <div className="form-check">
@@ -30,7 +30,7 @@ function BrandingDesign() {
                     value="0"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
-                    The first one
+                    Virtual and Augmented Reality
                   </label>
                 </div>
                 <div className="form-check">
@@ -42,7 +42,7 @@ function BrandingDesign() {
                     value="1"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
-                    The second one
+                    Artificial Intelligence
                   </label>
                 </div>
                 <div className="form-check">
@@ -54,7 +54,7 @@ function BrandingDesign() {
                     value="2"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
-                    The third one
+                    Voice and visual search optimization
                   </label>
                 </div>
                 <div className="form-check">
@@ -66,7 +66,7 @@ function BrandingDesign() {
                     value="3"
                   />
                   <label className="form-check-label" htmlFor="q1a4">
-                    The fourth one
+                    Blockchain
                   </label>
                 </div>
               </div>
@@ -74,7 +74,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 2</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text"> How do we plan to adapt to changing tech needs?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -86,7 +86,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Establish a dedicated R&D team
                     </label>
                   </div>
                   <div className="form-check">
@@ -98,7 +98,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Partner with tech startups
                     </label>
                   </div>
                   <div className="form-check">
@@ -110,7 +110,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Continuous employee training programs
                     </label>
                   </div>
                   <div className="form-check">
@@ -122,7 +122,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Agile project management methodologies
                     </label>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 3</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">What cool stuff are we offering?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -143,7 +143,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Interactive brand storytelling experiences
                     </label>
                   </div>
                   <div className="form-check">
@@ -155,7 +155,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Customized AR filters and lenses
                     </label>
                   </div>
                   <div className="form-check">
@@ -167,7 +167,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Data-driven design optimization
                     </label>
                   </div>
                   <div className="form-check">
@@ -179,7 +179,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Collaborative design workshops
                     </label>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 4</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">How do we make sure we're different from everyone else?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -200,7 +200,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Emphasize human-centric approach
                     </label>
                   </div>
                   <div className="form-check">
@@ -212,7 +212,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Blend creativity and data-driven insights
                     </label>
                   </div>
                   <div className="form-check">
@@ -224,7 +224,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Provide end-to-end branding solutions
                     </label>
                   </div>
                   <div className="form-check">
@@ -236,7 +236,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Focus on sustainability and ethical design
                     </label>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 5</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">Who are our main customers?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -258,7 +258,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Tech startups
                     </label>
                   </div>
                   <div className="form-check">
@@ -270,7 +270,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      E-commerce businesses
                     </label>
                   </div>
                   <div className="form-check">
@@ -282,7 +282,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Consumer brands targeting Gen Z and Millennial demographics
                     </label>
                   </div>
                   <div className="form-check">
@@ -294,7 +294,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      B2B companies
                     </label>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 6</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">How do we make sure our stuff fits what they want?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -316,7 +316,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Conduct thorough market research and customer surveys
                     </label>
                   </div>
                   <div className="form-check">
@@ -328,7 +328,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Offer customizable design packages
                     </label>
                   </div>
                   <div className="form-check">
@@ -340,7 +340,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Provide case studies and testimonials
                     </label>
                   </div>
                   <div className="form-check">
@@ -352,7 +352,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Regularly solicit feedback and iterate on design solutions
                     </label>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 7</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">How do we ensure our branding and design solutions remain fresh and relevant over time?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -374,7 +374,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Regularly conduct design audits and trend analyses to stay ahead of evolving aesthetics
                     </label>
                   </div>
                   <div className="form-check">
@@ -386,7 +386,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Foster a culture of creativity and experimentation within our design team
                     </label>
                   </div>
                   <div className="form-check">
@@ -398,7 +398,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Establish partnerships with trendsetting brands or influencers to gain insights into emerging styles
                     </label>
                   </div>
                   <div className="form-check">
@@ -410,7 +410,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Implement a system for collecting and integrating client feedback into our design processes
                     </label>
                   </div>
                 </div>
@@ -420,7 +420,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 8</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text"> What are the success drivers for your products or services? </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -432,7 +432,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Highlight our unique blend of creativity and technological expertise
                     </label>
                   </div>
                   <div className="form-check">
@@ -444,7 +444,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Showcase case studies of successful projects
                     </label>
                   </div>
                   <div className="form-check">
@@ -456,7 +456,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Offer competitive pricing and flexible service packages
                     </label>
                   </div>
                   <div className="form-check">
@@ -468,7 +468,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Invest in ongoing innovation to stay ahead
                     </label>
                   </div>
                 </div>
@@ -478,7 +478,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 9</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">What new things are we planning?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -490,7 +490,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Collaborate with emerging tech companies
                     </label>
                   </div>
                   <div className="form-check">
@@ -502,7 +502,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Develop proprietary design tools
                     </label>
                   </div>
                   <div className="form-check">
@@ -514,7 +514,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Offer subscription-based design services
                     </label>
                   </div>
                   <div className="form-check">
@@ -526,7 +526,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Launch a design-focused podcast or webinar series
                     </label>
                   </div>
                 </div>
@@ -537,7 +537,7 @@ function BrandingDesign() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">How do we make sure everyone's always thinking of cool new stuff?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -549,7 +549,7 @@ function BrandingDesign() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Encourage cross-disciplinary brainstorming sessions
                     </label>
                   </div>
                   <div className="form-check">
@@ -561,7 +561,7 @@ function BrandingDesign() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Establish an innovation incentive program
                     </label>
                   </div>
                   <div className="form-check">
@@ -573,7 +573,7 @@ function BrandingDesign() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Attend design and tech conferences regularly
                     </label>
                   </div>
                   <div className="form-check">
@@ -585,7 +585,7 @@ function BrandingDesign() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Foster a culture of experimentation and risk-taking
                     </label>
                   </div>
                 </div>
@@ -595,7 +595,7 @@ function BrandingDesign() {
             </div>
           </form>
 
-          <div className="d-flex align-items-center justify-content-center gap-3">
+          {/* <div className="d-flex align-items-center justify-content-center gap-3">
             <Link to="/Technology&Innovation">
               <Button variant="outline-primary">Back</Button>
             </Link>
@@ -604,12 +604,13 @@ function BrandingDesign() {
                 Next
               </Button>
             </Link>
-          </div>
+          </div> */}
           <br></br>
+         
         </div>
       </div>
     </div>
   );
 }
-
+// Done.
 export default BrandingDesign;

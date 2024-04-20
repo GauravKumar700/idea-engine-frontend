@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
@@ -18,7 +18,9 @@ function ContentProduction() {
                 <h4 className="card-title text-center">STEP 6 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
-                <p className="card-text">Which one do you like the most?</p>
+                <p className="card-text">
+                  What kinds of stuff are we making, and why do people want it?
+                </p>
               </div>
               <div className="card-body">
                 <div className="form-check">
@@ -30,7 +32,8 @@ function ContentProduction() {
                     value="0"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
-                    The first one
+                    Engaging blog posts offering valuable insights and
+                    information
                   </label>
                 </div>
                 <div className="form-check">
@@ -42,7 +45,8 @@ function ContentProduction() {
                     value="1"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
-                    The second one
+                    Interactive videos showcasing product demonstrations and
+                    tutorials
                   </label>
                 </div>
                 <div className="form-check">
@@ -54,7 +58,8 @@ function ContentProduction() {
                     value="2"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
-                    The third one
+                    Entertaining podcasts featuring industry experts and thought
+                    leaders
                   </label>
                 </div>
                 <div className="form-check">
@@ -66,7 +71,8 @@ function ContentProduction() {
                     value="3"
                   />
                   <label className="form-check-label" htmlFor="q1a4">
-                    The fourth one
+                    Visual infographics summarizing complex information in a
+                    digestible format
                   </label>
                 </div>
               </div>
@@ -74,7 +80,9 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 2</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    Who are we making it for, and what do they like?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -86,7 +94,8 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Millennials interested in socially conscious content and
+                      trends
                     </label>
                   </div>
                   <div className="form-check">
@@ -98,7 +107,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Gen Z consumers seeking authentic and relatable content
+                      experiences
                     </label>
                   </div>
                   <div className="form-check">
@@ -110,7 +120,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Professionals looking for actionable insights and career
+                      advice
                     </label>
                   </div>
                   <div className="form-check">
@@ -122,7 +133,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Parents seeking educational and entertaining content for
+                      their children
                     </label>
                   </div>
                 </div>
@@ -131,7 +143,10 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 3</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How do we make sure our stuff is better than everyone
+                    else's?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -143,7 +158,8 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Conducting in-depth research to identify content gaps and
+                      opportunities
                     </label>
                   </div>
                   <div className="form-check">
@@ -155,7 +171,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Investing in high-quality production equipment and editing
+                      software
                     </label>
                   </div>
                   <div className="form-check">
@@ -167,7 +184,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Collaborating with industry influencers and experts to
+                      lend credibility
                     </label>
                   </div>
                   <div className="form-check">
@@ -179,7 +197,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Implementing SEO best practices to increase
+                      discoverability and reach
                     </label>
                   </div>
                 </div>
@@ -188,7 +207,9 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 4</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What do we need to make our stuff, and who's doing what?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -200,7 +221,7 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Content writers creating compelling copy and storytelling
                     </label>
                   </div>
                   <div className="form-check">
@@ -212,7 +233,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Graphic designers crafting visually appealing images and
+                      infographics
                     </label>
                   </div>
                   <div className="form-check">
@@ -224,7 +246,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Video producers shooting and editing engaging video
+                      content
                     </label>
                   </div>
                   <div className="form-check">
@@ -236,7 +259,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Audio engineers recording and editing professional-grade
+                      podcasts and audio clips
                     </label>
                   </div>
                 </div>
@@ -246,7 +270,9 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 5</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What tools are we using to make sure our stuff looks good?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -258,7 +284,7 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Adobe Creative Suite for graphic design and video editing
                     </label>
                   </div>
                   <div className="form-check">
@@ -270,7 +296,7 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Canva for easy-to-use graphic design templates and layouts
                     </label>
                   </div>
                   <div className="form-check">
@@ -282,7 +308,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Final Cut Pro or Adobe Premiere Pro for professional video
+                      editing
                     </label>
                   </div>
                   <div className="form-check">
@@ -294,7 +321,7 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Audacity or Adobe Audition for audio recording and editing
                     </label>
                   </div>
                 </div>
@@ -304,7 +331,9 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 6</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How do we ensure the quality and consistency of our content?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -316,7 +345,8 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Implement a rigorous editorial review process to maintain
+                      high standards
                     </label>
                   </div>
                   <div className="form-check">
@@ -328,7 +358,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Utilize content calendars and scheduling tools to plan and
+                      organize content production
                     </label>
                   </div>
                   <div className="form-check">
@@ -340,7 +371,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Conduct regular content audits to identify areas for
+                      improvement and optimization
                     </label>
                   </div>
                   <div className="form-check">
@@ -352,7 +384,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Collaborate closely with clients to align content with
+                      their brand voice and objectives
                     </label>
                   </div>
                 </div>
@@ -362,7 +395,10 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 7</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How do we know if our stuff is doing well, and what do we do
+                    if it's not?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -374,7 +410,8 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Monitor key performance indicators (KPIs) such as
+                      engagement metrics and website traffic
                     </label>
                   </div>
                   <div className="form-check">
@@ -386,7 +423,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Conduct audience surveys and feedback forms to gather
+                      insights
                     </label>
                   </div>
                   <div className="form-check">
@@ -398,7 +436,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Analyze social media analytics and sentiment analysis to
+                      gauge audience response
                     </label>
                   </div>
                   <div className="form-check">
@@ -410,7 +449,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Iterate and optimize content based on performance data and
+                      audience feedback
                     </label>
                   </div>
                 </div>
@@ -420,7 +460,9 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 8</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    When are we starting, and what do we want to achieve?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -432,7 +474,8 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Launching content production within the next month with
+                      the goal of increasing brand visibility
                     </label>
                   </div>
                   <div className="form-check">
@@ -444,7 +487,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Setting specific milestones and targets for content
+                      engagement and audience growth
                     </label>
                   </div>
                   <div className="form-check">
@@ -456,7 +500,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Aligning content production with upcoming product launches
+                      or marketing campaigns
                     </label>
                   </div>
                   <div className="form-check">
@@ -468,7 +513,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Establishing a content calendar with regular publishing
+                      schedules and themes
                     </label>
                   </div>
                 </div>
@@ -478,7 +524,10 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 9</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    How do we know if we're doing a good job, and what's the
+                    plan for the future?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -490,7 +539,8 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Celebrate key milestones and achievements with the team
+                      and stakeholders
                     </label>
                   </div>
                   <div className="form-check">
@@ -502,7 +552,8 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Conduct regular performance reviews and assessments to
+                      track progress
                     </label>
                   </div>
                   <div className="form-check">
@@ -514,7 +565,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Solicit feedback from internal and external stakeholders
+                      to identify areas for improvement
                     </label>
                   </div>
                   <div className="form-check">
@@ -526,7 +578,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Develop a long-term content strategy with evolving goals
+                      and objectives
                     </label>
                   </div>
                 </div>
@@ -537,7 +590,9 @@ function ContentProduction() {
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
-                  <p className="card-text">Which one do you like the most?</p>
+                  <p className="card-text">
+                    What are the success evaluation metrics over time?
+                  </p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -549,7 +604,7 @@ function ContentProduction() {
                       value="0"
                     />
                     <label className="form-check-label" htmlFor="q1a1">
-                      The first one
+                      Increase in website traffic and organic search rankings
                     </label>
                   </div>
                   <div className="form-check">
@@ -561,7 +616,7 @@ function ContentProduction() {
                       value="1"
                     />
                     <label className="form-check-label" htmlFor="q1a2">
-                      The second one
+                      Growth in social media followers and engagement rates
                     </label>
                   </div>
                   <div className="form-check">
@@ -573,7 +628,8 @@ function ContentProduction() {
                       value="2"
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      The third one
+                      Higher conversion rates and lead generation from content
+                      marketing efforts
                     </label>
                   </div>
                   <div className="form-check">
@@ -585,7 +641,8 @@ function ContentProduction() {
                       value="3"
                     />
                     <label className="form-check-label" htmlFor="q1a4">
-                      The fourth one
+                      Positive brand sentiment and increased brand awareness
+                      measured through surveys and sentiment analysis
                     </label>
                   </div>
                 </div>
@@ -594,6 +651,7 @@ function ContentProduction() {
               <br></br>
             </div>
           </form>
+<<<<<<< HEAD
 
           <div className="d-flex align-items-center justify-content-center gap-3">
             <Link to="/InfluencerMarketing">
@@ -605,11 +663,13 @@ function ContentProduction() {
               </Button>
             </Link>
           </div>
+=======
+>>>>>>> 81343bd5de5f3cfeda81f95b1ed1b1076ce5f74b
           <br></br>
         </div>
       </div>
     </div>
   );
 }
-
+// Done.
 export default ContentProduction;
