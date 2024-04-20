@@ -10,10 +10,10 @@ import BrandingDesign from "../components/Branding&Design";
 function Mobilestepper() {
   const steps = [
     <div>
-      <DigitalMarketing />
+      <TechnologyInnovation />
     </div>,
     <div>
-      <TechnologyInnovation />
+      <DigitalMarketing />
     </div>,
     <div>
       <InfluencerMarketing />
@@ -27,7 +27,7 @@ function Mobilestepper() {
     <div>
       <BrandingDesign />
     </div>,
-    
+
     // <p style={{ color: "white" }}>Step 2 content</p>,
 
     // <p style={{ color: "white" }}>Step 3 content</p>,

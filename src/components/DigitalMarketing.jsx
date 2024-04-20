@@ -4,7 +4,9 @@ import { Button } from "react-bootstrap";
 //import "./question2.css"
 
 function DigitalMarketing() {
-
+ useEffect(() => {
+   window.scrollTo(0, 0);
+ }, []);
   return (
     <div className="container-fluid">
       <div className="row">
@@ -14,7 +16,7 @@ function DigitalMarketing() {
             <div className="card w-100 max-w-lg">
               <div className="card-header">
                 <br></br>
-                <h4 className="card-title text-center">STEP 1 OF 6</h4>
+                <h4 className="card-title text-center">STEP 2 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
                 <p className="card-text">
