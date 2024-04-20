@@ -15,7 +15,7 @@ function ContentProduction() {
             <div className="card w-100 max-w-lg">
               <div className="card-header">
                 <br></br>
-                <h4 className="card-title text-center">STEP 6 OF 6</h4>
+                <h4 className="card-title text-center">STEP 4 OF 6</h4>
 
                 <h5 className="card-title">Question 1</h5>
                 <p className="card-text">
