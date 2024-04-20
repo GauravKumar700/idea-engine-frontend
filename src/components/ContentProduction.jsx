@@ -601,7 +601,7 @@ function ContentProduction() {
             </Link>
             <Link to="/">
               <Button variant="primary" type="next">
-                Submit
+                Generate PDF
               </Button>
             </Link>
           </div>
