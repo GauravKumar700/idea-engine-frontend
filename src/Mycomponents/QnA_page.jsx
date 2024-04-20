@@ -4647,7 +4647,7 @@ function QnA_page() {
           {/* <Right_part/> */}
           <footer className="container mt-5">
             <div className="bottom-position">
-              <p className="bottom-text">
+              <p className="bottom-text" style={{ textAlign: '-webkit-center' }}>
                 **A PDF will be generated once all the questions has been
                 completed.
               </p>
