@@ -23,11 +23,11 @@ function BrandingDesign() {
               <div className="card-body">
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a1"
-                    value="0"
+                    value="Virtual and Augmented Reality"
                   />
                   <label className="form-check-label" htmlFor="q1a1">
                     Virtual and Augmented Reality
@@ -35,11 +35,11 @@ function BrandingDesign() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a2"
-                    value="1"
+                    value="Artificial Intelligence"
                   />
                   <label className="form-check-label" htmlFor="q1a2">
                     Artificial Intelligence
@@ -47,11 +47,11 @@ function BrandingDesign() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a3"
-                    value="2"
+                    value="Voice and visual search optimization"
                   />
                   <label className="form-check-label" htmlFor="q1a3">
                     Voice and visual search optimization
@@ -59,11 +59,11 @@ function BrandingDesign() {
                 </div>
                 <div className="form-check">
                   <input
-                    className="form-check-input"
+                    className="form-check-input border-2 border-dark"
                     type="radio"
                     name="q1"
                     id="q1a4"
-                    value="3"
+                    value="Blockchain"
                   />
                   <label className="form-check-label" htmlFor="q1a4">
                     Blockchain
@@ -79,49 +79,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q2"
+                      id="q2a1"
+                      value="Establish a dedicated R&D team"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q2a1">
                       Establish a dedicated R&D team
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q2"
+                      id="q2a2"
+                      value="Partner with tech startups"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q2a2">
                       Partner with tech startups
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q2"
+                      id="q2a3"
+                      value="Continuous employee training programs"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q2a3">
                       Continuous employee training programs
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q2"
+                      id="q2a4"
+                      value="Agile project management methodologies"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q2a4">
                       Agile project management methodologies
                     </label>
                   </div>
@@ -136,49 +136,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q3"
+                      id="q3a1"
+                      value=" Interactive brand storytelling experiences"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q3a1">
                       Interactive brand storytelling experiences
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q3"
+                      id="q3a2"
+                      value="Customized AR filters and lenses"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q3a2">
                       Customized AR filters and lenses
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q3"
+                      id="q3a3"
+                      value="Data-driven design optimization"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q3a3">
                       Data-driven design optimization
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q3"
+                      id="q3a4"
+                      value=" Collaborative design workshops"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q3a4">
                       Collaborative design workshops
                     </label>
                   </div>
@@ -193,49 +193,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q4"
+                      id="q4a1"
+                      value="Emphasize human-centric approach"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q4a1">
                       Emphasize human-centric approach
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q4"
+                      id="q4a2"
+                      value="Blend creativity and data-driven insights"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q4a2">
                       Blend creativity and data-driven insights
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q4"
+                      id="q4a3"
+                      value="Provide end-to-end branding solutions"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q4a3">
                       Provide end-to-end branding solutions
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q4"
+                      id="q4a4"
+                      value="Focus on sustainability and ethical design"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q4a4">
                       Focus on sustainability and ethical design
                     </label>
                   </div>
@@ -251,49 +251,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q5"
+                      id="q5a1"
+                      value="Tech startups"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q5a1">
                       Tech startups
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q5"
+                      id="q5a2"
+                      value="E-commerce businesses"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q5a2">
                       E-commerce businesses
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q5"
+                      id="q5a3"
+                      value="Consumer brands targeting Gen Z and Millennial demographics"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q5a3">
                       Consumer brands targeting Gen Z and Millennial demographics
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q5"
+                      id="q5a4"
+                      value="B2B companies"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q5a4">
                       B2B companies
                     </label>
                   </div>
@@ -309,49 +309,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q6"
+                      id="q6a1"
+                      value="Conduct thorough market research and customer surveys"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q6a1">
                       Conduct thorough market research and customer surveys
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q6"
+                      id="q6a2"
+                      value="Offer customizable design packages"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q6a2">
                       Offer customizable design packages
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q6"
+                      id="q6a3"
+                      value="Provide case studies and testimonials"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q6a3">
                       Provide case studies and testimonials
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q6"
+                      id="q6a4"
+                      value="Regularly solicit feedback and iterate on design solutions"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q6a4">
                       Regularly solicit feedback and iterate on design solutions
                     </label>
                   </div>
@@ -367,49 +367,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q7"
+                      id="q7a1"
+                      value="Regularly conduct design audits and trend analyses to stay ahead of evolving aesthetics"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q7a1">
                       Regularly conduct design audits and trend analyses to stay ahead of evolving aesthetics
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q7"
+                      id="q7a2"
+                      value="Foster a culture of creativity and experimentation within our design team"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q7a2">
                       Foster a culture of creativity and experimentation within our design team
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q7"
+                      id="q7a3"
+                      value="Establish partnerships with trendsetting brands or influencers to gain insights into emerging styles"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q7a3">
                       Establish partnerships with trendsetting brands or influencers to gain insights into emerging styles
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q7"
+                      id="q7a4"
+                      value="Implement a system for collecting and integrating client feedback into our design processes"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q7a4">
                       Implement a system for collecting and integrating client feedback into our design processes
                     </label>
                   </div>
@@ -425,49 +425,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q8"
+                      id="q8a1"
+                      value="Highlight our unique blend of creativity and technological expertise"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q8a1">
                       Highlight our unique blend of creativity and technological expertise
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q8"
+                      id="q8a2"
+                      value="Showcase case studies of successful projects"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q8a2">
                       Showcase case studies of successful projects
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q8"
+                      id="q8a3"
+                      value="Offer competitive pricing and flexible service packages"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q8a3">
                       Offer competitive pricing and flexible service packages
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q8"
+                      id="q8a4"
+                      value="Invest in ongoing innovation to stay ahead"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q8a4">
                       Invest in ongoing innovation to stay ahead
                     </label>
                   </div>
@@ -483,49 +483,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q9"
+                      id="q9a1"
+                      value="Collaborate with emerging tech companies"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q9a1">
                       Collaborate with emerging tech companies
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q9"
+                      id="q9a2"
+                      value="Develop proprietary design tools"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q9a2">
                       Develop proprietary design tools
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q9"
+                      id="q9a3"
+                      value="Offer subscription-based design services"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q9a3">
                       Offer subscription-based design services
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q9"
+                      id="q9a4"
+                      value="Launch a design-focused podcast or webinar series"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q9a4">
                       Launch a design-focused podcast or webinar series
                     </label>
                   </div>
@@ -542,49 +542,49 @@ function BrandingDesign() {
                 <div className="card-body">
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a1"
-                      value="0"
+                      name="q10"
+                      id="q10a1"
+                      value="Encourage cross-disciplinary brainstorming sessions"
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
+                    <label className="form-check-label" htmlFor="q10a1">
                       Encourage cross-disciplinary brainstorming sessions
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a2"
-                      value="1"
+                      name="q10"
+                      id="q10a2"
+                      value="Establish an innovation incentive program"
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
+                    <label className="form-check-label" htmlFor="q10a2">
                       Establish an innovation incentive program
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a3"
-                      value="2"
+                      name="q10"
+                      id="q10a3"
+                      value="Attend design and tech conferences regularly"
                     />
-                    <label className="form-check-label" htmlFor="q1a3">
+                    <label className="form-check-label" htmlFor="q10a3">
                       Attend design and tech conferences regularly
                     </label>
                   </div>
                   <div className="form-check">
                     <input
-                      className="form-check-input"
+                      className="form-check-input border-2 border-dark"
                       type="radio"
-                      name="q1"
-                      id="q1a4"
-                      value="3"
+                      name="q10"
+                      id="q10a4"
+                      value="Foster a culture of experimentation and risk-taking"
                     />
-                    <label className="form-check-label" htmlFor="q1a4">
+                    <label className="form-check-label" htmlFor="q10a4">
                       Foster a culture of experimentation and risk-taking
                     </label>
                   </div>
@@ -606,7 +606,7 @@ function BrandingDesign() {
             </Link>
           </div> */}
           <br></br>
-         
+
         </div>
       </div>
     </div>
