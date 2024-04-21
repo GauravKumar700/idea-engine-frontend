@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { createContext, useEffect } from "react";
 import "./QnA_page.css";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
@@ -8,6 +8,7 @@ import Cookies from "js-cookie";
 import Loader from "../components/Loader";
 import Mobilestepper from "./Mobilestepper";
 import DigitalMarketing from "../components/DigitalMarketing";
+import { context } from "../context";
 
 //import Left_part from './Left_part';
 //import Right_part from './Right_part';
@@ -85,9 +86,10 @@ function QnA_page() {
   // const[generatepdf, setgeneratepdf]=useState("");
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
+  const [domain, setDomain] = useState({})
   const [loader, setLoader] = useState(false);
 
-  const messages = { questions, answers };
+  const messages = { questions };
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOptionChange = (event) => {
@@ -95,44 +97,44 @@ function QnA_page() {
   };
 
   const handleDownloadPdf = async () => {
-    try {
-      setLoader(true);
-      const cookies = Cookies.get("token");
-      // Send a request to your backend to generate and download the PDF
-      const response = await fetch(
-        "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            token: cookies,
-          },
-          body: JSON.stringify({ messages }),
-        }
-      );
-      // Check if the response is successful
-      if (!response.ok) {
-        throw new Error("Failed to generate or download PDF");
-      } else {
-        setLoader(false);
-        // Convert the response body to a blob
-        const blob = await response.blob();
-        // Create a URL for the blob
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        // Create an anchor element to facilitate the download
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "output.pdf";
-        // Append the anchor element to the document body
-        document.body.appendChild(a);
-        // Trigger a click event on the anchor element to initiate the download
-        a.click();
-        // Remove the anchor element from the document body after the download is complete
-        document.body.removeChild(a);
-      }
-    } catch (error) {
-      console.error("Error generating or downloading PDF:", error);
-    }
+    //   try {
+    //     setLoader(true);
+    //     const cookies = Cookies.get("token");
+    //     // Send a request to your backend to generate and download the PDF
+    //     const response = await fetch(
+    //       "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
+    //       {
+    //         method: "POST",
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //           token: cookies,
+    //         },
+    //         body: JSON.stringify({ messages }),
+    //       }
+    //     );
+    //     // Check if the response is successful
+    //     if (!response.ok) {
+    //       throw new Error("Failed to generate or download PDF");
+    //     } else {
+    //       setLoader(false);
+    //       // Convert the response body to a blob
+    //       const blob = await response.blob();
+    //       // Create a URL for the blob
+    //       const url = window.URL.createObjectURL(new Blob([blob]));
+    //       // Create an anchor element to facilitate the download
+    //       const a = document.createElement("a");
+    //       a.href = url;
+    //       a.download = "output.pdf";
+    //       // Append the anchor element to the document body
+    //       document.body.appendChild(a);
+    //       // Trigger a click event on the anchor element to initiate the download
+    //       a.click();
+    //       // Remove the anchor element from the document body after the download is complete
+    //       document.body.removeChild(a);
+    //     }
+    //   } catch (error) {
+    //     console.error("Error generating or downloading PDF:", error);
+    //   }
   };
 
   let navigate = useNavigate(); // Initialize the useNavigate hook
@@ -152,6 +154,7 @@ function QnA_page() {
   const addQuestions = (newQuestion) => {
     setQuestions((questions) => [...questions, newQuestion]);
     // questions.push(newQuestion)
+    
   };
 
   const addAnswers = (newAnswer) => {
@@ -3255,7 +3258,7 @@ function QnA_page() {
                 className=" input--field p-3"
                 style={{ color: "white", textAlign: "initial" }}
               >
-                {currentQuestionIndex < influencer_ques.length ? (
+                {/* {currentQuestionIndex < influencer_ques.length ? (
                   <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
                     <p>{influencer_ques[currentQuestionIndex]}</p>
                     {userResponses.map((response, index) => (
@@ -3274,23 +3277,16 @@ function QnA_page() {
                         )}
                       </div>
                     ))}
-                  </div>
-                ) : (
+                  </div>) */}
+                 {/* : ( */}
                   <div>
-                    {/* <p className="res">Questionnaire complete! Thank you for your responses.</p> */}
-                    {/* <button
-                                        type="button"
-                                        className="btn btn-primary"
-                                        onClick={handleDownloadPdf}
-                                    >
-                                        Generate PDF
-                                    </button> */}
-
                     <div>
-                      <Mobilestepper />
+                      <context.Provider value={{ questions, setQuestions, addQuestions, answers, setAnswers, addAnswers, messages, domain, setDomain }}>
+                        <Mobilestepper />
+                      </context.Provider>
                     </div>
                   </div>
-                )}
+                {/* )} */}
               </div>
               <div ref={answersEndRef} />
             </div>

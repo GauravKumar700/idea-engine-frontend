@@ -27,10 +27,6 @@ function Mobilestepper() {
     <div>
       <BrandingDesign />
     </div>,
-
-    // <p style={{ color: "white" }}>Step 2 content</p>,
-
-    // <p style={{ color: "white" }}>Step 3 content</p>,
   ];
   //   const [activeStep, setActiveStep] = useState(0);
 

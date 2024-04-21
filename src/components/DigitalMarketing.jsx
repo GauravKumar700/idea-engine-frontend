@@ -1,14 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { context } from '../context';
 //import "./question2.css"
 
 function DigitalMarketing() {
- useEffect(() => {
-   window.scrollTo(0, 0);
- }, []);
+
+  const quest = {
+    "1": "What awesome stuff will your business offer?",
+    "2": "How do you figure out what to make and how to make it?",
+    "3": "How much do you expect to make, and how much will it cost to get started?",
+    "4": "What could go wrong with your business, and how will you handle it?",
+    "5": "Do you have any special rights to your cool ideas?",
+    "6": "How will you tell people about your awesome products?",
+    "7": "How can customers get your product or service?",
+    "8": "What's your plan for bringing in cash?",
+    "9": "How will you tell people about your awesome products?",
+    "10": "What goals are you aiming for, and how will you track your progress?"
+  }
+
+  const ref = useRef(null);
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    if (ref.current) {
+      // Scroll the component into view
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
+  let { questions, setQuestions, addQuestions, answers, setAnswers, addAnswers, domain, setDomain } = useContext(context)
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+
+  const addQuestion = (question, answer) => {
+    const updatedTechnology = {
+      ...domain['digital'],
+      [question]: answer
+    };
+    setDomain({
+      ...domain,
+      digital: updatedTechnology
+    });
+  };
+
+  const handleAnswerChange = (questionId, answer) => {
+    setSelectedAnswers({
+      ...selectedAnswers,
+      [questionId]: answer
+    });
+    addQuestion(quest[questionId], answer)
+  };
+
   return (
-    <div className="container-fluid">
+    <div ref={ref} className="container-fluid">
       <div className="row">
         <div className="col-12">
           <h1 className="title text-center mb-3">Digital Marketing</h1>
@@ -525,14 +568,6 @@ function DigitalMarketing() {
               <br></br>
             </div>
           </form>
-
-          {/* <div className="d-flex align-items-center justify-content-center">
-            <Link to="/Technology&Innovation">
-              <Button variant="primary" type="next">
-                Next
-              </Button>
-            </Link>
-          </div> */}
           <br></br>
         </div>
       </div>
