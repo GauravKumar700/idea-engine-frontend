@@ -47,7 +47,7 @@ function BrandingDesign() {
   };
 
   return (
-    <div className="container-fluid">
+    <div ref={ref} className="container-fluid">
       <div className="row">
         <div className="col-12">
           <h1 className="title text-center mb-3">Branding & Design</h1>

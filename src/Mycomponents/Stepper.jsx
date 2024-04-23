@@ -35,11 +35,11 @@ function Stepper({ steps }) {
 
   const handleNext = () => {
     console.log(domain)
-    let validator = validations(step)
-    if (validator) {
-      window.alert("Answer all the questions to proceed");
-      return
-    }
+    // let validator = validations(step)
+    // if (validator) {
+    //   window.alert("Answer all the questions to proceed");
+    //   return
+    // }
     setStep((step) => step + 1)
     setActiveStep((prevStep) => prevStep + 1);
   };
@@ -78,7 +78,6 @@ function Stepper({ steps }) {
       if (!response.ok) {
         throw new Error("Failed to generate or download PDF");
       } else {
-        setLoader(false);
         // Convert the response body to a blob
         const blob = await response.blob();
         // Create a URL for the blob
@@ -93,6 +92,7 @@ function Stepper({ steps }) {
         a.click();
         // Remove the anchor element from the document body after the download is complete
         document.body.removeChild(a);
+        setLoader(false);
       }
     } catch (error) {
       console.error("Error generating or downloading PDF:", error);
