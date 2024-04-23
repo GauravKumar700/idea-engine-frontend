@@ -1,6 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import { context } from "../context";
 
 function TechnologyInnovation() {
@@ -20,14 +18,13 @@ function TechnologyInnovation() {
 
   const ref = useRef(null);
   useEffect(() => {
-    // window.scrollTo(0, 0);
     if (ref.current) {
-      // Scroll the component into view
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
+    domain['technology'] = {}
   }, []);
 
-  let { questions, setQuestions, addQuestions, answers, setAnswers, addAnswers, domain, setDomain } = useContext(context)
+  let { domain, setDomain } = useContext(context)
   const [selectedAnswers, setSelectedAnswers] = useState({});
 
   const addQuestion = (question, answer) => {
@@ -74,6 +71,7 @@ function TechnologyInnovation() {
                       id="q1a1"
                       value="Innovative software solutions"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['technology'] && domain['technology']['What awesome stuff will your business offer?'] === "Innovative software solutions"}
                     />
                     <label className="form-check-label" htmlFor="q1a1">
                       Innovative software solutions
@@ -87,6 +85,7 @@ function TechnologyInnovation() {
                       id="q1a2"
                       value="Advanced hardware devices"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['technology'] && domain['technology']['What awesome stuff will your business offer?'] === "Advanced hardware devices"}
                     />
                     <label className="form-check-label" htmlFor="q1a2">
                       Advanced hardware devices
@@ -100,6 +99,7 @@ function TechnologyInnovation() {
                       id="q1a3"
                       value="Integrated technology platforms"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['technology'] && domain['technology']['What awesome stuff will your business offer?'] === "Integrated technology platforms"}
                     />
                     <label className="form-check-label" htmlFor="q1a3">
                       Integrated technology platforms

@@ -8,17 +8,40 @@ function Stepper({ steps }) {
   const [activeStep, setActiveStep] = useState(0);
   const [step, setStep] = useState(1)
   const [loader, setLoader] = useState(false);
-  // const [questions, setQuestions] = useState(["hii"]);
-  // const [answers, setAnswers] = useState(["hlw"]);
   let { questions, setQuestions, addQuestions, answers, setAnswers, addAnswers, domain, setDomain } = useContext(context)
 
   const messages = { questions, answers };
 
+  function validations(step) {
+    if (step === 1 && Object.keys(domain['technology']).length < 9) {
+      return true;
+    }
+    if (step === 2 && Object.keys(domain['digital']).length < 10) {
+      return true;
+    }
+    if (step === 3 && Object.keys(domain['influencer']).length < 10) {
+      return true;
+    }
+    if (step === 4 && Object.keys(domain['content']).length < 10) {
+      return true;
+    }
+    if (step === 5 && Object.keys(domain['publicRelation']).length < 10) {
+      return true;
+    }
+    if (step === 6 && Object.keys(domain['branding']).length < 10) {
+      return true;
+    }
+  }
+
   const handleNext = () => {
-    // console.log(questions, setQuestions, addQuestions, answers, setAnswers, addAnswers)
+    console.log(domain)
+    let validator = validations(step)
+    if (validator) {
+      window.alert("Answer all the questions to proceed");
+      return
+    }
     setStep((step) => step + 1)
     setActiveStep((prevStep) => prevStep + 1);
-    console.log(domain)
   };
 
   const handleBack = () => {
@@ -32,49 +55,48 @@ function Stepper({ steps }) {
   }
 
   const handleDownloadPdf = async () => {
-    // try {
-    //   setLoader(true);
-    //   // console.log(messages)
-    //   const cookies = Cookies.get("token");
-    //   // console.log(cookies)
-    //   // Send a request to your backend to generate and download the PDF
-    //   console.log(messages.questions)
-    //   const response = await fetch(
-    //     "http://localhost:8080/api/v1/generatepdf",
-    //     {
-    //       method: "POST",
-    //       // mode: 'no-cors',
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         // token: cookies,
-    //       },
-    //       body: JSON.stringify({ messages }),
-    //     }
-    //   );
-    //   // Check if the response is successful
-    //   if (!response.ok) {
-    //     throw new Error("Failed to generate or download PDF");
-    //   } else {
-    //     setLoader(false);
-    //     // Convert the response body to a blob
-    //     const blob = await response.blob();
-    //     // Create a URL for the blob
-    //     const url = window.URL.createObjectURL(new Blob([blob]));
-    //     // Create an anchor element to facilitate the download
-    //     const a = document.createElement("a");
-    //     a.href = url;
-    //     a.download = "output.pdf";
-    //     // Append the anchor element to the document body
-    //     document.body.appendChild(a);
-    //     // Trigger a click event on the anchor element to initiate the download
-    //     a.click();
-    //     // Remove the anchor element from the document body after the download is complete
-    //     document.body.removeChild(a);
-    //   }
-    // } catch (error) {
-    //   console.error("Error generating or downloading PDF:", error);
-    // }
-    console.log(domain)
+    try {
+      setLoader(true);
+      // console.log(messages)
+      const cookies = Cookies.get("token");
+      // console.log(cookies)
+      // Send a request to your backend to generate and download the PDF
+      console.log(messages.questions)
+      const response = await fetch(
+        "http://localhost:8080/api/v1/generatepdf",
+        {
+          method: "POST",
+          // mode: 'no-cors',
+          headers: {
+            "Content-Type": "application/json",
+            // token: cookies,
+          },
+          body: JSON.stringify({ messages, domain }),
+        }
+      );
+      // Check if the response is successful
+      if (!response.ok) {
+        throw new Error("Failed to generate or download PDF");
+      } else {
+        setLoader(false);
+        // Convert the response body to a blob
+        const blob = await response.blob();
+        // Create a URL for the blob
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        // Create an anchor element to facilitate the download
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "output.pdf";
+        // Append the anchor element to the document body
+        document.body.appendChild(a);
+        // Trigger a click event on the anchor element to initiate the download
+        a.click();
+        // Remove the anchor element from the document body after the download is complete
+        document.body.removeChild(a);
+      }
+    } catch (error) {
+      console.error("Error generating or downloading PDF:", error);
+    }
   };
 
   return (

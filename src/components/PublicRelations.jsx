@@ -1,75 +1,121 @@
-import React, { useEffect } from 'react';
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { context } from "../context";
 
 function PublicRelations() {
+
+  const quest = {
+    "1": "What are the big trends in PR we can take advantage of?",
+    "2": "Who else is in the PR game, and how are we going to be different?",
+    "3": "What exactly are we doing for our clients, and why does it matter?",
+    "4": "Are we going to focus on anything specific, and why?",
+    "5": "Who are we trying to help, and what do they need?",
+    "6": "How do we make sure they stick with us?",
+    "7": "How are we getting the word out about our PR agency?",
+    "8": "What do we do to turn interested people into clients",
+    "9": "What might go wrong, and how do we fix it?",
+    "10": "What are the anticipated risks, and what are our mitigation plans?"
+  }
+
+  const ref = useRef(null);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    domain['publicRelation'] = {}
   }, []);
+
+  let { domain, setDomain } = useContext(context)
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+
+  const addQuestion = (question, answer) => {
+    const updatePublicRelation = {
+      ...domain['publicRelation'],
+      [question]: answer
+    };
+    setDomain({
+      ...domain,
+      publicRelation: updatePublicRelation
+    });
+  };
+
+  const handleAnswerChange = (questionId, answer) => {
+    setSelectedAnswers({
+      ...selectedAnswers,
+      [questionId]: answer
+    });
+    addQuestion(quest[questionId], answer)
+  };
+
   return (
-    <div className="container-fluid">
+    <div ref={ref} className="container-fluid">
       <div className="row">
         <div className="col-12">
           <h1 className="title text-center mb-3">Public Relations</h1>
-          <form>
-            <div className="card w-100 max-w-lg">
-              <div className="card-header">
-                <br></br>
-                <h4 className="card-title text-center">STEP 5 OF 6</h4>
-
-                <h5 className="card-title">Question 1</h5>
-                <p className="card-text">What are the big trends in PR we can take advantage of?</p>
+          <form className="card w-100 max-w-lg">
+            <h4 className="card-title text-center mt-4">STEP 5 OF 6</h4>
+            <div>
+              <div className="card w-100 max-w-lg">
+                <div className="card-header">
+                  <br></br>
+                  <h5 className="card-title">Question 1</h5>
+                  <p className="card-text">What are the big trends in PR we can take advantage of?</p>
+                </div>
+                <div className="card-body">
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a1"
+                      value="Influencer marketing"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a1">
+                      Influencer marketing
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a2"
+                      value="Crisis management"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a2">
+                      Crisis management
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a3"
+                      value="Data-driven PR strategies"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a3">
+                      Data-driven PR strategies
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a4"
+                      value="Community engagement initiatives"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a4">
+                      Community engagement initiatives
+                    </label>
+                  </div>
+                </div>
               </div>
-              <div className="card-body">
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a1"
-                    value="0"
-                  />
-                  <label className="form-check-label" htmlFor="q1a1">
-                    Influencer marketing
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a2"
-                    value="1"
-                  />
-                  <label className="form-check-label" htmlFor="q1a2">
-                    Crisis management
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a3"
-                    value="2"
-                  />
-                  <label className="form-check-label" htmlFor="q1a3">
-                    Data-driven PR strategies
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a4"
-                    value="3"
-                  />
-                  <label className="form-check-label" htmlFor="q1a4">
-                    Community engagement initiatives
-                  </label>
-                </div>
-              </div>
+              <br></br>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
@@ -84,6 +130,7 @@ function PublicRelations() {
                       name="q2"
                       id="q2a1"
                       value="Boutique PR agencies focusing on niche industries"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a1">
                       Boutique PR agencies focusing on niche industries
@@ -96,6 +143,7 @@ function PublicRelations() {
                       name="q2"
                       id="q2a2"
                       value="Large PR firms catering to corporate clients"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a2">
                       Large PR firms catering to corporate clients
@@ -108,6 +156,7 @@ function PublicRelations() {
                       name="q2"
                       id="q2a3"
                       value="Freelance PR consultants offering personalized services"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a3">
                       Freelance PR consultants offering personalized services
@@ -120,6 +169,7 @@ function PublicRelations() {
                       name="q2"
                       id="q2a4"
                       value="In-house PR teams within companies handling their own communications"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a4">
                       In-house PR teams within companies handling their own communications
@@ -127,6 +177,7 @@ function PublicRelations() {
                   </div>
                 </div>
               </div>
+              <br></br>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
@@ -141,6 +192,7 @@ function PublicRelations() {
                       name="q3"
                       id="q3a1"
                       value="Media relations and press release distribution"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a1">
                       Media relations and press release distribution
@@ -153,6 +205,7 @@ function PublicRelations() {
                       name="q3"
                       id="q3a2"
                       value="Reputation management and brand positioning"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a2">
                       Reputation management and brand positioning
@@ -165,6 +218,7 @@ function PublicRelations() {
                       name="q3"
                       id="q3a3"
                       value="Event planning and execution"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a3">
                       Event planning and execution
@@ -177,6 +231,7 @@ function PublicRelations() {
                       name="q3"
                       id="q3a4"
                       value="Crisis communication and issue management"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a4">
                       Crisis communication and issue management
@@ -184,6 +239,7 @@ function PublicRelations() {
                   </div>
                 </div>
               </div>
+              <br></br>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
@@ -198,6 +254,7 @@ function PublicRelations() {
                       name="q4"
                       id="q4a1"
                       value="Specialize in tech industry PR due to our team's expertise"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a1">
                       Specialize in tech industry PR due to our team's expertise
@@ -210,6 +267,7 @@ function PublicRelations() {
                       name="q4"
                       id="q4a2"
                       value="Target hospitality sector for its growing need for PR services"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a2">
                       Target hospitality sector for its growing need for PR services
@@ -222,6 +280,7 @@ function PublicRelations() {
                       name="q4"
                       id="q4a3"
                       value="Offer crisis management as a core service due to rising demand"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a3">
                       Offer crisis management as a core service due to rising demand
@@ -234,6 +293,7 @@ function PublicRelations() {
                       name="q4"
                       id="q4a4"
                       value="Concentrate on local businesses to establish strong community ties"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a4">
                       Concentrate on local businesses to establish strong community ties
@@ -256,6 +316,7 @@ function PublicRelations() {
                       name="q5"
                       id="q5a1"
                       value="Startups seeking to build brand awareness"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a1">
                       Startups seeking to build brand awareness
@@ -268,6 +329,7 @@ function PublicRelations() {
                       name="q5"
                       id="q5a2"
                       value="Established companies aiming to repair damaged reputations"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a2">
                       Established companies aiming to repair damaged reputations
@@ -280,6 +342,7 @@ function PublicRelations() {
                       name="q5"
                       id="q5a3"
                       value="Non-profit organizations requiring public support for their causes"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a3">
                       Non-profit organizations requiring public support for their causes
@@ -292,6 +355,7 @@ function PublicRelations() {
                       name="q5"
                       id="q5a4"
                       value="Celebrities and influencers needing PR representation"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a4">
                       Celebrities and influencers needing PR representation
@@ -314,6 +378,7 @@ function PublicRelations() {
                       name="q6"
                       id="q6a1"
                       value=" Provide personalized PR strategies tailored to their goals"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a1">
                       Provide personalized PR strategies tailored to their goals
@@ -326,6 +391,7 @@ function PublicRelations() {
                       name="q6"
                       id="q6a2"
                       value="Offer ongoing monitoring and analysis of media coverage"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a2">
                       Offer ongoing monitoring and analysis of media coverage
@@ -338,6 +404,7 @@ function PublicRelations() {
                       name="q6"
                       id="q6a3"
                       value="Deliver timely and transparent communication"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a3">
                       Deliver timely and transparent communication
@@ -350,6 +417,7 @@ function PublicRelations() {
                       name="q6"
                       id="q6a4"
                       value="Regularly review and adjust PR tactics based on client feedback"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a4">
                       Regularly review and adjust PR tactics based on client feedback
@@ -372,6 +440,7 @@ function PublicRelations() {
                       name="q7"
                       id="q7a1"
                       value="Social media marketing campaigns highlighting successful case studies"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a1">
                       Social media marketing campaigns highlighting successful case studies
@@ -384,6 +453,7 @@ function PublicRelations() {
                       name="q7"
                       id="q7a2"
                       value="Networking events and industry conferences to showcase our expertise"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a2">
                       Networking events and industry conferences to showcase our expertise
@@ -396,6 +466,7 @@ function PublicRelations() {
                       name="q7"
                       id="q7a3"
                       value="Collaborating with media outlets to secure featured articles and interviews"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a3">
                       Collaborating with media outlets to secure featured articles and interviews
@@ -408,6 +479,7 @@ function PublicRelations() {
                       name="q7"
                       id="q7a4"
                       value="Partnering with complementary service providers for cross-promotion opportunities"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a4">
                       Partnering with complementary service providers for cross-promotion opportunities
@@ -430,6 +502,7 @@ function PublicRelations() {
                       name="q8"
                       id="q8a1"
                       value="Offer free PR consultations to assess their needs"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a1">
                       Offer free PR consultations to assess their needs
@@ -442,6 +515,7 @@ function PublicRelations() {
                       name="q8"
                       id="q8a2"
                       value="Provide customizable PR packages with transparent pricing"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a2">
                       Provide customizable PR packages with transparent pricing
@@ -454,6 +528,7 @@ function PublicRelations() {
                       name="q8"
                       id="q8a3"
                       value="Showcase our team's experience and track record in the industry"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a3">
                       Showcase our team's experience and track record in the industry
@@ -466,6 +541,7 @@ function PublicRelations() {
                       name="q8"
                       id="q8a4"
                       value=" Offer a satisfaction guarantee or trial period for new clients"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a4">
                       Offer a satisfaction guarantee or trial period for new clients
@@ -488,6 +564,7 @@ function PublicRelations() {
                       name="q9"
                       id="q9a1"
                       value="Miscommunication leading to client dissatisfaction"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a1">
                       Miscommunication leading to client dissatisfaction
@@ -500,6 +577,7 @@ function PublicRelations() {
                       name="q9"
                       id="q9a2"
                       value="Negative media coverage affecting client reputations"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a2">
                       Negative media coverage affecting client reputations
@@ -512,6 +590,7 @@ function PublicRelations() {
                       name="q9"
                       id="q9a3"
                       value="Lack of resources to handle sudden spikes in PR crises"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a3">
                       Lack of resources to handle sudden spikes in PR crises
@@ -524,6 +603,7 @@ function PublicRelations() {
                       name="q9"
                       id="q9a4"
                       value="Competition from larger PR firms undercutting our pricing"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a4">
                       Competition from larger PR firms undercutting our pricing
@@ -533,7 +613,6 @@ function PublicRelations() {
               </div>
               <br></br>
               <br></br>
-
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
@@ -547,6 +626,7 @@ function PublicRelations() {
                       name="q10"
                       id="q10a1"
                       value=" Establishing clear communication channels with clients to address concerns promptly"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a1">
                       Establishing clear communication channels with clients to address concerns promptly
@@ -559,6 +639,7 @@ function PublicRelations() {
                       name="q10"
                       id="q10a2"
                       value="Building strong relationships with journalists and media contacts to manage negative publicity"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a2">
                       Building strong relationships with journalists and media contacts to manage negative publicity
@@ -571,6 +652,7 @@ function PublicRelations() {
                       name="q10"
                       id="q10a3"
                       value=" Developing a crisis management protocol and training team members to handle PR emergencies"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a3">
                       Developing a crisis management protocol and training team members to handle PR emergencies
@@ -583,6 +665,7 @@ function PublicRelations() {
                       name="q10"
                       id="q10a4"
                       value="Diversifying our client portfolio and revenue streams to mitigate the impact of losing a major client"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a4">
                       Diversifying our client portfolio and revenue streams to mitigate the impact of losing a major client
@@ -594,22 +677,10 @@ function PublicRelations() {
               <br></br>
             </div>
           </form>
-
-          {/* <div className="d-flex align-items-center justify-content-center gap-3">
-            <Link to="/Branding&Design">
-              <Button variant="outline-primary">Back</Button>
-            </Link>
-            <Link to="/InfluencerMarketing">
-              <Button variant="primary" type="next">
-                Next
-              </Button>
-            </Link>
-          </div> */}
           <br></br>
         </div>
       </div>
     </div>
   );
 }
-// Done.
 export default PublicRelations;

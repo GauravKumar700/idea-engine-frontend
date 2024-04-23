@@ -1,44 +1,40 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import { context } from '../context';
-//import "./question2.css"
 
 function DigitalMarketing() {
 
   const quest = {
-    "1": "What awesome stuff will your business offer?",
-    "2": "How do you figure out what to make and how to make it?",
-    "3": "How much do you expect to make, and how much will it cost to get started?",
-    "4": "What could go wrong with your business, and how will you handle it?",
-    "5": "Do you have any special rights to your cool ideas?",
-    "6": "How will you tell people about your awesome products?",
-    "7": "How can customers get your product or service?",
-    "8": "What's your plan for bringing in cash?",
-    "9": "How will you tell people about your awesome products?",
-    "10": "What goals are you aiming for, and how will you track your progress?"
+    "1": "How do you plan to integrate social media marketing (YouTube, Facebook, Instagram) and performance marketing(Ads) into your overall digital marketing business strategy?",
+    "2": "What types of clients are you targeting for your digital marketing services, and how will you tailor your offerings to meet their specific needs across social media platforms and ad campaigns?",
+    "3": "Can you outline the specific services you will offer for social media marketing(YouTube, Facebook, Instagram) and performance marketing(Ads), including campaign creation, optimization, and analytics?",
+    "4": "What expertise do you have in leveraging each social media platform (YouTube, Facebook, Instagram) and advertising channels for performance marketing, and how will you capitalize on their unique strengths?",
+    "5": "How do you plan to integrate social media marketing efforts across YouTube, Facebook, and Instagram with performance marketing campaigns to create cohesive and impactful digital marketing strategies for your clients?",
+    "6": "What strategies will you employ to effectively target and engage audiences on each social media platform (YouTube, Facebook, Instagram) and through performance marketing ads, ensuring maximum reach and conversion potential?",
+    "7": "How will you allocate budgets between social media marketing efforts and performance marketing ad campaigns, considering factors such as platform costs, ad bidding strategies, and client goals?",
+    "8": "What metrics and analytics will you use to measure the success of your social media marketing efforts on YouTube, Facebook, and Instagram, as well as the performance of your ad campaigns, and how will you report these insights to",
+    "9": "How do you plan to develop compelling ad creatives and messaging that resonate with target audiences across social media platforms (YouTube, Facebook, Instagram) and performance marketing campaigns, driving engagement and conversions?",
+    "10": "Where do you see your digital marketing business in the next 5 years in terms of social media marketing and performance marketing, and how will you adapt to evolving trends and technologies in the digital landscape?"
   }
 
   const ref = useRef(null);
   useEffect(() => {
-    // window.scrollTo(0, 0);
     if (ref.current) {
-      // Scroll the component into view
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
+    domain['digital'] = {}
   }, []);
 
-  let { questions, setQuestions, addQuestions, answers, setAnswers, addAnswers, domain, setDomain } = useContext(context)
+  let { domain, setDomain } = useContext(context)
   const [selectedAnswers, setSelectedAnswers] = useState({});
 
   const addQuestion = (question, answer) => {
-    const updatedTechnology = {
+    const updateDigital = {
       ...domain['digital'],
       [question]: answer
     };
     setDomain({
       ...domain,
-      digital: updatedTechnology
+      digital: updateDigital
     });
   };
 
@@ -55,55 +51,59 @@ function DigitalMarketing() {
       <div className="row">
         <div className="col-12">
           <h1 className="title text-center mb-3">Digital Marketing</h1>
-          <form>
-            <div className="card w-100 max-w-lg">
-              <div className="card-header">
-                <br></br>
-                <h4 className="card-title text-center">STEP 2 OF 6</h4>
-
-                <h5 className="card-title">Question 1</h5>
-                <p className="card-text">
-                  How do you plan to integrate social media marketing (YouTube,
-                  Facebook, Instagram) and performance marketing (Ads) into your
-                  overall digital marketing business strategy?
-                </p>
-              </div>
-              <div className="card-body">
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a1"
-                    value="Integrate both equally"
-                  />
-                  <label className="form-check-label" htmlFor="q1a1">
-                    Integrate both equally
-                  </label>
+          <form className="card w-100 max-w-lg">
+            <h4 className="card-title text-center mt-4">STEP 2 OF 6</h4>
+            <div>
+              <div className="card w-100 max-w-lg">
+                <div className="card-header">
+                  <br></br>
+                  <h5 className="card-title">Question 1</h5>
+                  <p className="card-text">
+                    How do you plan to integrate social media marketing (YouTube,
+                    Facebook, Instagram) and performance marketing (Ads) into your
+                    overall digital marketing business strategy?
+                  </p>
                 </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a2"
-                    value="Focus more on social media"
-                  />
-                  <label className="form-check-label" htmlFor="q1a2">
-                    Focus more on social media
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input border-2 border-dark"
-                    type="radio"
-                    name="q1"
-                    id="q1a3"
-                    value="Prioritize performance marketing"
-                  />
-                  <label className="form-check-label" htmlFor="q1a3">
-                    Prioritize performance marketing
-                  </label>
+                <div className="card-body">
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a1"
+                      value="Integrate both equally"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a1">
+                      Integrate both equally
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a2"
+                      value="Focus more on social media"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a2">
+                      Focus more on social media
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a3"
+                      value="Prioritize performance marketing"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                    />
+                    <label className="form-check-label" htmlFor="q1a3">
+                      Prioritize performance marketing
+                    </label>
+                  </div>
                 </div>
               </div>
               <br></br>
@@ -125,6 +125,7 @@ function DigitalMarketing() {
                       name="q2"
                       id="q2a1"
                       value="Small businesses"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a1">
                       Small businesses
@@ -137,6 +138,7 @@ function DigitalMarketing() {
                       name="q2"
                       id="q2a2"
                       value="E-commerce companies"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a2">
                       E-commerce companies
@@ -149,6 +151,7 @@ function DigitalMarketing() {
                       name="q2"
                       id="q2a3"
                       value="Enterprises"
+                      onChange={(e) => handleAnswerChange("2", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q2a3">
                       Enterprises
@@ -175,6 +178,7 @@ function DigitalMarketing() {
                       name="q3"
                       id="q3a1"
                       value="Comprehensive services for both"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a1">
                       Comprehensive services for both
@@ -187,6 +191,7 @@ function DigitalMarketing() {
                       name="q3"
                       id="q3a2"
                       value="Specialize in one area"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a2">
                       Specialize in one area
@@ -199,6 +204,7 @@ function DigitalMarketing() {
                       name="q3"
                       id="q3a3"
                       value="Customized offerings for each client"
+                      onChange={(e) => handleAnswerChange("3", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q3a3">
                       Customized offerings for each client
@@ -225,6 +231,7 @@ function DigitalMarketing() {
                       name="q4"
                       id="q4a1"
                       value="Extensive expertise in all platforms"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a1">
                       Extensive expertise in all platforms
@@ -237,6 +244,7 @@ function DigitalMarketing() {
                       name="q4"
                       id="q4a2"
                       value="Specialized knowledge in select platforms"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a2">
                       Specialized knowledge in select platforms
@@ -249,6 +257,7 @@ function DigitalMarketing() {
                       name="q4"
                       id="q4a3"
                       value="Willingness to learn and adapt"
+                      onChange={(e) => handleAnswerChange("4", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q4a3">
                       Willingness to learn and adapt
@@ -276,6 +285,7 @@ function DigitalMarketing() {
                       name="q5"
                       id="q5a1"
                       value="Seamless integration across all platforms"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a1">
                       Seamless integration across all platforms
@@ -288,6 +298,7 @@ function DigitalMarketing() {
                       name="q5"
                       id="q5a2"
                       value="Separate strategies for each platform"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a2">
                       Separate strategies for each platform
@@ -300,6 +311,7 @@ function DigitalMarketing() {
                       name="q5"
                       id="q5a3"
                       value="Flexible approach based on client needs"
+                      onChange={(e) => handleAnswerChange("5", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q5a3">
                       Flexible approach based on client needs
@@ -327,6 +339,7 @@ function DigitalMarketing() {
                       name="q6"
                       id="q6a1"
                       value="Detailed audience segmentation"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a1">
                       Detailed audience segmentation
@@ -339,6 +352,7 @@ function DigitalMarketing() {
                       name="q6"
                       id="q6a2"
                       value="Tailored messaging for each platform"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a2">
                       Tailored messaging for each platform
@@ -351,6 +365,7 @@ function DigitalMarketing() {
                       name="q6"
                       id="q6a3"
                       value="Continuous optimization based on analytics"
+                      onChange={(e) => handleAnswerChange("6", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q6a3">
                       Continuous optimization based on analytics
@@ -378,6 +393,7 @@ function DigitalMarketing() {
                       name="q7"
                       id="q7a1"
                       value="Balanced allocation across both"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a1">
                       Balanced allocation across both
@@ -390,6 +406,7 @@ function DigitalMarketing() {
                       name="q7"
                       id="q7a2"
                       value="Adjust based on campaign performance1"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a2">
                       Adjust based on campaign performance
@@ -402,6 +419,7 @@ function DigitalMarketing() {
                       name="q7"
                       id="q7a3"
                       value="Client-driven budget allocation"
+                      onChange={(e) => handleAnswerChange("7", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q7a3">
                       Client-driven budget allocation
@@ -429,6 +447,7 @@ function DigitalMarketing() {
                       name="q8"
                       id="q8a1"
                       value="Comprehensive reporting with KPIs"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a1">
                       Comprehensive reporting with KPIs
@@ -441,6 +460,7 @@ function DigitalMarketing() {
                       name="q8"
                       id="q8a2"
                       value="Comprehensive reporting with KPIs"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a2">
                       Comprehensive reporting with KPIs
@@ -453,6 +473,7 @@ function DigitalMarketing() {
                       name="q8"
                       id="q8a3"
                       value="Emphasis on conversion tracking"
+                      onChange={(e) => handleAnswerChange("8", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q8a3">
                       Emphasis on conversion tracking
@@ -481,6 +502,7 @@ function DigitalMarketing() {
                       name="q9"
                       id="q9a1"
                       value="Creative storytelling approach"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a1">
                       Creative storytelling approach
@@ -493,6 +515,7 @@ function DigitalMarketing() {
                       name="q9"
                       id="q9a2"
                       value="A/B testing for ad variations"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a2">
                       A/B testing for ad variations
@@ -505,6 +528,7 @@ function DigitalMarketing() {
                       name="q9"
                       id="q9a3"
                       value="Collaborative process with clients"
+                      onChange={(e) => handleAnswerChange("9", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q9a3">
                       Collaborative process with clients
@@ -514,7 +538,6 @@ function DigitalMarketing() {
               </div>
               <br></br>
               <br></br>
-
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
@@ -533,6 +556,7 @@ function DigitalMarketing() {
                       name="q10"
                       id="q10a1"
                       value="Diversifying services"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a1">
                       Diversifying services
@@ -545,6 +569,7 @@ function DigitalMarketing() {
                       name="q10"
                       id="q10a2"
                       value="Expanding clientele"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a2">
                       Expanding clientele
@@ -557,6 +582,7 @@ function DigitalMarketing() {
                       name="q10"
                       id="q10a3"
                       value="Embracing emergin trends"
+                      onChange={(e) => handleAnswerChange("10", e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="q10a3">
                       Embracing emergin trends
