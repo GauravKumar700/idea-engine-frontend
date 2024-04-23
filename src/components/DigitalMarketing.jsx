@@ -73,6 +73,7 @@ function DigitalMarketing() {
                       id="q1a1"
                       value="Integrate both equally"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to integrate social media marketing (YouTube ,Facebook, Instagram) and performance marketing (Ads) into your overall digital marketing business strategy?'] === " Integrate both equally"}
                     />
                     <label className="form-check-label" htmlFor="q1a1">
                       Integrate both equally
@@ -86,6 +87,7 @@ function DigitalMarketing() {
                       id="q1a2"
                       value="Focus more on social media"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to integrate social media marketing (YouTube ,Facebook, Instagram) and performance marketing (Ads) into your overall digital marketing business strategy?'] === " Focus more on social media"}
                     />
                     <label className="form-check-label" htmlFor="q1a2">
                       Focus more on social media
@@ -99,6 +101,7 @@ function DigitalMarketing() {
                       id="q1a3"
                       value="Prioritize performance marketing"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to integrate social media marketing (YouTube ,Facebook, Instagram) and performance marketing (Ads) into your overall digital marketing business strategy?'] === " Prioritize performance marketing"}
                     />
                     <label className="form-check-label" htmlFor="q1a3">
                       Prioritize performance marketing
@@ -126,6 +129,7 @@ function DigitalMarketing() {
                       id="q2a1"
                       value="Small businesses"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What types of clients are you targeting for your digital marketing services, and how will you tailor your offerings to meet their specific needs across social media platforms and ad campaigns?'] === " Small businesses"}
                     />
                     <label className="form-check-label" htmlFor="q2a1">
                       Small businesses
@@ -139,6 +143,7 @@ function DigitalMarketing() {
                       id="q2a2"
                       value="E-commerce companies"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What types of clients are you targeting for your digital marketing services, and how will you tailor your offerings to meet their specific needs across social media platforms and ad campaigns?'] === " E-commerce companies"}
                     />
                     <label className="form-check-label" htmlFor="q2a2">
                       E-commerce companies
@@ -152,6 +157,7 @@ function DigitalMarketing() {
                       id="q2a3"
                       value="Enterprises"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What types of clients are you targeting for your digital marketing services, and how will you tailor your offerings to meet their specific needs across social media platforms and ad campaigns?'] === " Enterprises"}
                     />
                     <label className="form-check-label" htmlFor="q2a3">
                       Enterprises
@@ -179,6 +185,7 @@ function DigitalMarketing() {
                       id="q3a1"
                       value="Comprehensive services for both"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' Can you outline the specific services you will offer for social media marketing (YouTube, Facebook, Instagram) and performance marketing (Ads), including campaign creation, optimization, and analytics?'] === " Comprehensive services for both"}
                     />
                     <label className="form-check-label" htmlFor="q3a1">
                       Comprehensive services for both
@@ -192,6 +199,7 @@ function DigitalMarketing() {
                       id="q3a2"
                       value="Specialize in one area"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' Can you outline the specific services you will offer for social media marketing (YouTube, Facebook, Instagram) and performance marketing (Ads), including campaign creation, optimization, and analytics?'] === " Specialize in one area"}
                     />
                     <label className="form-check-label" htmlFor="q3a2">
                       Specialize in one area
@@ -205,6 +213,7 @@ function DigitalMarketing() {
                       id="q3a3"
                       value="Customized offerings for each client"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' Can you outline the specific services you will offer for social media marketing (YouTube, Facebook, Instagram) and performance marketing (Ads), including campaign creation, optimization, and analytics?'] === " Customized offerings for each client"}
                     />
                     <label className="form-check-label" htmlFor="q3a3">
                       Customized offerings for each client
@@ -232,6 +241,7 @@ function DigitalMarketing() {
                       id="q4a1"
                       value="Extensive expertise in all platforms"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What expertise do you have in leveraging each social media platform (YouTube, Facebook, Instagram) and advertising channels for performance marketing, and how will you capitalize on their unique strengths?'] === " Extensive expertise in all platforms"}
                     />
                     <label className="form-check-label" htmlFor="q4a1">
                       Extensive expertise in all platforms
@@ -245,6 +255,7 @@ function DigitalMarketing() {
                       id="q4a2"
                       value="Specialized knowledge in select platforms"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What expertise do you have in leveraging each social media platform (YouTube, Facebook, Instagram) and advertising channels for performance marketing, and how will you capitalize on their unique strengths?'] === " Specialized knowledge in select platforms"}
                     />
                     <label className="form-check-label" htmlFor="q4a2">
                       Specialized knowledge in select platforms
@@ -258,6 +269,7 @@ function DigitalMarketing() {
                       id="q4a3"
                       value="Willingness to learn and adapt"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What expertise do you have in leveraging each social media platform (YouTube, Facebook, Instagram) and advertising channels for performance marketing, and how will you capitalize on their unique strengths?'] === " Willingness to learn and adapt"}
                     />
                     <label className="form-check-label" htmlFor="q4a3">
                       Willingness to learn and adapt
@@ -286,6 +298,7 @@ function DigitalMarketing() {
                       id="q5a1"
                       value="Seamless integration across all platforms"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to integrate social media marketing efforts across YouTube, Facebook, and Instagram with performance marketing campaigns to create cohesive and impactful digital marketing strategies for your clients?'] === " Seamless integration across all platforms"}
                     />
                     <label className="form-check-label" htmlFor="q5a1">
                       Seamless integration across all platforms
@@ -299,6 +312,7 @@ function DigitalMarketing() {
                       id="q5a2"
                       value="Separate strategies for each platform"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to integrate social media marketing efforts across YouTube, Facebook, and Instagram with performance marketing campaigns to create cohesive and impactful digital marketing strategies for your clients?'] === " Separate strategies for each platform"}
                     />
                     <label className="form-check-label" htmlFor="q5a2">
                       Separate strategies for each platform
@@ -312,6 +326,7 @@ function DigitalMarketing() {
                       id="q5a3"
                       value="Flexible approach based on client needs"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to integrate social media marketing efforts across YouTube, Facebook, and Instagram with performance marketing campaigns to create cohesive and impactful digital marketing strategies for your clients?'] === " Flexible approach based on client needs"}
                     />
                     <label className="form-check-label" htmlFor="q5a3">
                       Flexible approach based on client needs
@@ -340,6 +355,7 @@ function DigitalMarketing() {
                       id="q6a1"
                       value="Detailed audience segmentation"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What strategies will you employ to effectively target and engage audiences on each social media platform (YouTube, Facebook, Instagram) and through performance marketing ads, ensuring maximum reach and conversion potential?'] === " Detailed audience segmentation"}
                     />
                     <label className="form-check-label" htmlFor="q6a1">
                       Detailed audience segmentation
@@ -353,6 +369,7 @@ function DigitalMarketing() {
                       id="q6a2"
                       value="Tailored messaging for each platform"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What strategies will you employ to effectively target and engage audiences on each social media platform (YouTube, Facebook, Instagram) and through performance marketing ads, ensuring maximum reach and conversion potential?'] === " Tailored messaging for each platform"}
                     />
                     <label className="form-check-label" htmlFor="q6a2">
                       Tailored messaging for each platform
@@ -366,6 +383,7 @@ function DigitalMarketing() {
                       id="q6a3"
                       value="Continuous optimization based on analytics"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What strategies will you employ to effectively target and engage audiences on each social media platform (YouTube, Facebook, Instagram) and through performance marketing ads, ensuring maximum reach and conversion potential?'] === " Continuous optimization based on analytics"}
                     />
                     <label className="form-check-label" htmlFor="q6a3">
                       Continuous optimization based on analytics
@@ -394,6 +412,7 @@ function DigitalMarketing() {
                       id="q7a1"
                       value="Balanced allocation across both"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How will you allocate budgets between social media marketing efforts and performance marketing ad campaigns, considering factors such as platform costs, ad bidding strategies, and client goals?'] === " Balanced allocation across both"}
                     />
                     <label className="form-check-label" htmlFor="q7a1">
                       Balanced allocation across both
@@ -407,6 +426,7 @@ function DigitalMarketing() {
                       id="q7a2"
                       value="Adjust based on campaign performance1"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How will you allocate budgets between social media marketing efforts and performance marketing ad campaigns, considering factors such as platform costs, ad bidding strategies, and client goals?'] === " Adjust based on campaign performance1"}
                     />
                     <label className="form-check-label" htmlFor="q7a2">
                       Adjust based on campaign performance
@@ -420,6 +440,7 @@ function DigitalMarketing() {
                       id="q7a3"
                       value="Client-driven budget allocation"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How will you allocate budgets between social media marketing efforts and performance marketing ad campaigns, considering factors such as platform costs, ad bidding strategies, and client goals?'] === " Client-driven budget allocation"}
                     />
                     <label className="form-check-label" htmlFor="q7a3">
                       Client-driven budget allocation
@@ -448,6 +469,7 @@ function DigitalMarketing() {
                       id="q8a1"
                       value="Comprehensive reporting with KPIs"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What metrics and analytics will you use to measure the success of your social media marketing efforts on YouTube, Facebook, and Instagram, as well as the performance of your ad campaigns, and how will you report these insights to '] === " Comprehensive reporting with KPIs"}
                     />
                     <label className="form-check-label" htmlFor="q8a1">
                       Comprehensive reporting with KPIs
@@ -461,6 +483,7 @@ function DigitalMarketing() {
                       id="q8a2"
                       value="Comprehensive reporting with KPIs"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What metrics and analytics will you use to measure the success of your social media marketing efforts on YouTube, Facebook, and Instagram, as well as the performance of your ad campaigns, and how will you report these insights to '] === " Comprehensive reporting with KPIs"}
                     />
                     <label className="form-check-label" htmlFor="q8a2">
                       Comprehensive reporting with KPIs
@@ -474,6 +497,7 @@ function DigitalMarketing() {
                       id="q8a3"
                       value="Emphasis on conversion tracking"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' What metrics and analytics will you use to measure the success of your social media marketing efforts on YouTube, Facebook, and Instagram, as well as the performance of your ad campaigns, and how will you report these insights to '] === " Emphasis on conversion tracking"}
                     />
                     <label className="form-check-label" htmlFor="q8a3">
                       Emphasis on conversion tracking
@@ -503,6 +527,7 @@ function DigitalMarketing() {
                       id="q9a1"
                       value="Creative storytelling approach"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to develop compelling ad creatives and messaging that resonate with target audiences across social media platforms (YouTube, Facebook, Instagram) and performance marketing campaigns, driving engagement and conversions?'] === " Creative storytelling approach"}
                     />
                     <label className="form-check-label" htmlFor="q9a1">
                       Creative storytelling approach
@@ -516,6 +541,7 @@ function DigitalMarketing() {
                       id="q9a2"
                       value="A/B testing for ad variations"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to develop compelling ad creatives and messaging that resonate with target audiences across social media platforms (YouTube, Facebook, Instagram) and performance marketing campaigns, driving engagement and conversions?'] === " A/B testing for ad variations"}
                     />
                     <label className="form-check-label" htmlFor="q9a2">
                       A/B testing for ad variations
@@ -529,6 +555,7 @@ function DigitalMarketing() {
                       id="q9a3"
                       value="Collaborative process with clients"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' How do you plan to develop compelling ad creatives and messaging that resonate with target audiences across social media platforms (YouTube, Facebook, Instagram) and performance marketing campaigns, driving engagement and conversions?'] === " Collaborative process with clients"}
                     />
                     <label className="form-check-label" htmlFor="q9a3">
                       Collaborative process with clients
@@ -557,6 +584,7 @@ function DigitalMarketing() {
                       id="q10a1"
                       value="Diversifying services"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' Where do you see your digital marketing business in the next 5 years in terms of social media marketing and performance marketing, and how will you adapt to evolving trends and technologies in the digital landscape?'] === " Diversifying services"}
                     />
                     <label className="form-check-label" htmlFor="q10a1">
                       Diversifying services
@@ -570,6 +598,7 @@ function DigitalMarketing() {
                       id="q10a2"
                       value="Expanding clientele"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' Where do you see your digital marketing business in the next 5 years in terms of social media marketing and performance marketing, and how will you adapt to evolving trends and technologies in the digital landscape?'] === " Expanding clientele"}
                     />
                     <label className="form-check-label" htmlFor="q10a2">
                       Expanding clientele
@@ -583,6 +612,7 @@ function DigitalMarketing() {
                       id="q10a3"
                       value="Embracing emergin trends"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
+                      checked={domain['digital'] && domain['digital'][' Where do you see your digital marketing business in the next 5 years in terms of social media marketing and performance marketing, and how will you adapt to evolving trends and technologies in the digital landscape?'] === " Embracing emergin trends"}
                     />
                     <label className="form-check-label" htmlFor="q10a3">
                       Embracing emergin trends
