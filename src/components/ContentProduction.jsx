@@ -69,8 +69,7 @@ function ContentProduction() {
                       type="radio"
                       name="q1"
                       id="q1a1"
-                      value="Engaging blog posts offering valuable insights and
-                    information"
+                      value="Engaging blog posts offering valuable insights and information"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
                       checked={domain['content'] && domain['content']['What kinds of stuff are we making, and why do people want it?'] === "Engaging blog posts offering valuable insights and information"}
                     />
@@ -85,8 +84,7 @@ function ContentProduction() {
                       type="radio"
                       name="q1"
                       id="q1a2"
-                      value="Interactive videos showcasing product demonstrations and
-                    tutorials"
+                      value="Interactive videos showcasing product demonstrations and tutorials"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
                       checked={domain['content'] && domain['content']['What kinds of stuff are we making, and why do people want it?'] === "Interactive videos showcasing product demonstrations and tutorials"}
                     />
@@ -101,8 +99,7 @@ function ContentProduction() {
                       type="radio"
                       name="q1"
                       id="q1a3"
-                      value="Entertaining podcasts featuring industry experts and thought
-                    leaders"
+                      value="Entertaining podcasts featuring industry experts and thought leaders"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
                       checked={domain['content'] && domain['content']['What kinds of stuff are we making, and why do people want it?'] === "Entertaining podcasts featuring industry experts and thought leaders"}
                     />
@@ -117,8 +114,7 @@ function ContentProduction() {
                       type="radio"
                       name="q1"
                       id="q1a4"
-                      value="Visual infographics summarizing complex information in a
-                    digestible format"
+                      value="Visual infographics summarizing complex information in a digestible format"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
                       checked={domain['content'] && domain['content']['What kinds of stuff are we making, and why do people want it?'] === "Visual infographics summarizing complex information in a digestible format"}
                     />
@@ -148,7 +144,7 @@ function ContentProduction() {
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
                       checked={domain['content'] && domain['content']['Who are we making it for, and what do they like?'] === "Millennials interested in socially conscious content and trends"}
                     />
-                    <label className="form-check-label" htmlFor="q2a2">
+                    <label className="form-check-label" htmlFor="q2a1">
                       Millennials interested in socially conscious content and
                       trends
                     </label>
@@ -159,8 +155,7 @@ function ContentProduction() {
                       type="radio"
                       name="q2"
                       id="q2a2"
-                      value="Gen Z consumers seeking authentic and relatable content
-                      experiences"
+                      value="Gen Z consumers seeking authentic and relatable content experiences"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
                       checked={domain['content'] && domain['content']['Who are we making it for, and what do they like?'] === "Gen Z consumers seeking authentic and relatable content experiences"}
                     />
@@ -175,8 +170,7 @@ function ContentProduction() {
                       type="radio"
                       name="q2"
                       id="q2a3"
-                      value="Professionals looking for actionable insights and career
-                      advice"
+                      value="Professionals looking for actionable insights and career advice"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
                       checked={domain['content'] && domain['content']['Who are we making it for, and what do they like?'] === "Professionals looking for actionable insights and career advice"}
                     />
@@ -191,8 +185,7 @@ function ContentProduction() {
                       type="radio"
                       name="q2"
                       id="q2a4"
-                      value="Parents seeking educational and entertaining content for
-                      their children"
+                      value="Parents seeking educational and entertaining content for their children"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
                       checked={domain['content'] && domain['content']['Who are we making it for, and what do they like?'] === "Parents seeking educational and entertaining content for their children"}
                     />
@@ -219,10 +212,9 @@ function ContentProduction() {
                       type="radio"
                       name="q3"
                       id="q3a1"
-                      value="Conducting in-depth research to identify content gaps and
-                      opportunities"
+                      value="Conducting in-depth research to identify content gaps and opportunities"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we make sure our stuff is better than everyone elses?'] === "Conducting in-depth research to identify content gaps and opportunities"}
+                      checked={domain['content'] && domain['content']["How do we make sure our stuff is better than everyone else's?"] === "Conducting in-depth research to identify content gaps and opportunities"}
                     />
                     <label className="form-check-label" htmlFor="q3a1">
                       Conducting in-depth research to identify content gaps and
@@ -235,10 +227,9 @@ function ContentProduction() {
                       type="radio"
                       name="q3"
                       id="q3a2"
-                      value=" Investing in high-quality production equipment and editing
-                      software"
+                      value=" Investing in high-quality production equipment and editing software"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we make sure our stuff is better than everyone elses?'] === " Investing in high-quality production equipment and editing software"}
+                      checked={domain['content'] && domain['content']["How do we make sure our stuff is better than everyone else's?"] === " Investing in high-quality production equipment and editing software"}
                     />
                     <label className="form-check-label" htmlFor="q3a2">
                       Investing in high-quality production equipment and editing
@@ -251,10 +242,9 @@ function ContentProduction() {
                       type="radio"
                       name="q3"
                       id="q3a3"
-                      value="Collaborating with industry influencers and experts to
-                      lend credibility"
+                      value="Collaborating with industry influencers and experts to lend credibility"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we make sure our stuff is better than everyone elses?'] === "Collaborating with industry influencers and experts to lend credibility"}
+                      checked={domain['content'] && domain['content']["How do we make sure our stuff is better than everyone else's?"] === "Collaborating with industry influencers and experts to lend credibility"}
                     />
                     <label className="form-check-label" htmlFor="q3a3">
                       Collaborating with industry influencers and experts to
@@ -267,10 +257,9 @@ function ContentProduction() {
                       type="radio"
                       name="q3"
                       id="q3a4"
-                      value="Implementing SEO best practices to increase
-                      discoverability and reach"
+                      value="Implementing SEO best practices to increase discoverability and reach"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we make sure our stuff is better than everyone elses?'] === "Implementing SEO best practices to increase discoverability and reach"}
+                      checked={domain['content'] && domain['content']["How do we make sure our stuff is better than everyone else's?"] === "Implementing SEO best practices to increase discoverability and reach"}
                     />
                     <label className="form-check-label" htmlFor="q3a4">
                       Implementing SEO best practices to increase
@@ -296,7 +285,7 @@ function ContentProduction() {
                       id="q4a1"
                       value="Content writers creating compelling copy and storytelling"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['content'] && domain['content']['What do we need to make our stuff, and whos doing what?'] === "Content writers creating compelling copy and storytelling"}
+                      checked={domain['content'] && domain['content']["What do we need to make our stuff, and who's doing what?"] === "Content writers creating compelling copy and storytelling"}
                     />
                     <label className="form-check-label" htmlFor="q4a1">
                       Content writers creating compelling copy and storytelling
@@ -308,10 +297,9 @@ function ContentProduction() {
                       type="radio"
                       name="q4"
                       id="q4a2"
-                      value="Graphic designers crafting visually appealing images and
-                      infographics"
+                      value="Graphic designers crafting visually appealing images and infographics"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['content'] && domain['content']['What do we need to make our stuff, and whos doing what?'] === "Graphic designers crafting visually appealing images and infographics"}
+                      checked={domain['content'] && domain['content']["What do we need to make our stuff, and who's doing what?"] === "Graphic designers crafting visually appealing images and infographics"}
                     />
                     <label className="form-check-label" htmlFor="q4a2">
                       Graphic designers crafting visually appealing images and
@@ -324,14 +312,12 @@ function ContentProduction() {
                       type="radio"
                       name="q4"
                       id="q4a3"
-                      value="Video producers shooting and editing engaging video
-                      content"
+                      value="Video producers shooting and editing engaging video content"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['content'] && domain['content']['What do we need to make our stuff, and whos doing what?'] === "Video producers shooting and editing engaging video content"}
+                      checked={domain['content'] && domain['content']["What do we need to make our stuff, and who's doing what?"] === "Video producers shooting and editing engaging video content"}
                     />
                     <label className="form-check-label" htmlFor="q4a3">
-                      Video producers shooting and editing engaging video
-                      content
+                      Video producers shooting and editing engaging video content
                     </label>
                   </div>
                   <div className="form-check">
@@ -340,10 +326,9 @@ function ContentProduction() {
                       type="radio"
                       name="q4"
                       id="q4a4"
-                      value="Audio engineers recording and editing professional-grade
-                      podcasts and audio clips"
+                      value="Audio engineers recording and editing professional-grade podcasts and audio clips"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['content'] && domain['content']['What do we need to make our stuff, and whos doing what?'] === "Audio engineers recording and editing professional-grade podcasts and audio clips"}
+                      checked={domain['content'] && domain['content']["What do we need to make our stuff, and who's doing what?"] === "Audio engineers recording and editing professional-grade podcasts and audio clips"}
                     />
                     <label className="form-check-label" htmlFor="q4a4">
                       Audio engineers recording and editing professional-grade
@@ -396,8 +381,7 @@ function ContentProduction() {
                       type="radio"
                       name="q5"
                       id="q5a3"
-                      value="Final Cut Pro or Adobe Premiere Pro for professional video
-                      editing"
+                      value="Final Cut Pro or Adobe Premiere Pro for professional video editing"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
                       checked={domain['content'] && domain['content']['What tools are we using to make sure our stuff looks good?'] === "Final Cut Pro or Adobe Premiere Pro for professional video editing"}
                     />
@@ -438,8 +422,7 @@ function ContentProduction() {
                       type="radio"
                       name="q6"
                       id="q6a1"
-                      value="Implement a rigorous editorial review process to maintain
-                      high standards"
+                      value="Implement a rigorous editorial review process to maintain high standards"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we ensure the quality and consistency of our content?'] === "Implement a rigorous editorial review process to maintain high standards"}
                     />
@@ -454,8 +437,7 @@ function ContentProduction() {
                       type="radio"
                       name="q6"
                       id="q6a2"
-                      value="Utilize content calendars and scheduling tools to plan and
-                      organize content production"
+                      value="Utilize content calendars and scheduling tools to plan and organize content production"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we ensure the quality and consistency of our content?'] === "Utilize content calendars and scheduling tools to plan and organize content production"}
                     />
@@ -470,8 +452,7 @@ function ContentProduction() {
                       type="radio"
                       name="q6"
                       id="q6a3"
-                      value="Conduct regular content audits to identify areas for
-                      improvement and optimization"
+                      value="Conduct regular content audits to identify areas for improvement and optimization"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we ensure the quality and consistency of our content?'] === "Conduct regular content audits to identify areas for improvement and optimization"}
                     />
@@ -486,8 +467,7 @@ function ContentProduction() {
                       type="radio"
                       name="q6"
                       id="q6a4"
-                      value=" Collaborate closely with clients to align content with
-                      their brand voice and objectives"
+                      value=" Collaborate closely with clients to align content with their brand voice and objectives"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we ensure the quality and consistency of our content?'] === " Collaborate closely with clients to align content with their brand voice and objectives"}
                     />
@@ -515,8 +495,7 @@ function ContentProduction() {
                       type="radio"
                       name="q7"
                       id="q7a1"
-                      value=" Monitor key performance indicators (KPIs) such as
-                      engagement metrics and website traffic"
+                      value=" Monitor key performance indicators (KPIs) such as engagement metrics and website traffic"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === " Monitor key performance indicators (KPIs) such as engagement metrics and website traffic"}
                     />
@@ -531,8 +510,7 @@ function ContentProduction() {
                       type="radio"
                       name="q7"
                       id="q7a2"
-                      value=" Conduct audience surveys and feedback forms to gather
-                      insights"
+                      value=" Conduct audience surveys and feedback forms to gather insights"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === " Conduct audience surveys and feedback forms to gather insights"}
                     />
@@ -547,8 +525,7 @@ function ContentProduction() {
                       type="radio"
                       name="q7"
                       id="q7a3"
-                      value=" Analyze social media analytics and sentiment analysis to
-                      gauge audience response"
+                      value=" Analyze social media analytics and sentiment analysis to gauge audience response"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === " Analyze social media analytics and sentiment analysis to gauge audience response"}
                     />
@@ -563,8 +540,7 @@ function ContentProduction() {
                       type="radio"
                       name="q7"
                       id="q7a4"
-                      value=" Iterate and optimize content based on performance data and
-                      audience feedback"
+                      value=" Iterate and optimize content based on performance data and audience feedback"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
                       checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === " Iterate and optimize content based on performance data and audience feedback"}
                     />
@@ -591,8 +567,7 @@ function ContentProduction() {
                       type="radio"
                       name="q8"
                       id="q8a1"
-                      value=" Launching content production within the next month with
-                      the goal of increasing brand visibility"
+                      value=" Launching content production within the next month with the goal of increasing brand visibility"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
                       checked={domain['content'] && domain['content']['When are we starting, and what do we want to achieve?'] === " Launching content production within the next month with the goal of increasing brand visibility"}
                     />
@@ -607,8 +582,7 @@ function ContentProduction() {
                       type="radio"
                       name="q8"
                       id="q8a2"
-                      value="Setting specific milestones and targets for content
-                      engagement and audience growth"
+                      value="Setting specific milestones and targets for content engagement and audience growth"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
                       checked={domain['content'] && domain['content']['When are we starting, and what do we want to achieve?'] === "Setting specific milestones and targets for content engagement and audience growth"}
                     />
@@ -623,8 +597,7 @@ function ContentProduction() {
                       type="radio"
                       name="q8"
                       id="q8a3"
-                      value="Aligning content production with upcoming product launches
-                      or marketing campaigns"
+                      value="Aligning content production with upcoming product launches or marketing campaigns"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
                       checked={domain['content'] && domain['content']['When are we starting, and what do we want to achieve?'] === "Aligning content production with upcoming product launches or marketing campaigns"}
                     />
@@ -639,8 +612,7 @@ function ContentProduction() {
                       type="radio"
                       name="q8"
                       id="q8a4"
-                      value="Establishing a content calendar with regular publishing
-                      schedules and themes"
+                      value="Establishing a content calendar with regular publishing schedules and themes"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
                       checked={domain['content'] && domain['content']['When are we starting, and what do we want to achieve?'] === "Establishing a content calendar with regular publishing schedules and themes"}
                     />
@@ -668,10 +640,9 @@ function ContentProduction() {
                       type="radio"
                       name="q9"
                       id="q9a1"
-                      value="Celebrate key milestones and achievements with the team
-                      and stakeholders"
+                      value="Celebrate key milestones and achievements with the team and stakeholders"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === "Celebrate key milestones and achievements with the team and stakeholders"}
+                      checked={domain['content'] && domain['content']["How do we know if we're doing a good job, and what's the plan for the future?"] === "Celebrate key milestones and achievements with the team and stakeholders"}
                     />
                     <label className="form-check-label" htmlFor="q9a1">
                       Celebrate key milestones and achievements with the team
@@ -684,10 +655,9 @@ function ContentProduction() {
                       type="radio"
                       name="q9"
                       id="q9a2"
-                      value="Conduct regular performance reviews and assessments to
-                      track progress"
+                      value="Conduct regular performance reviews and assessments to track progress"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === "Conduct regular performance reviews and assessments to track progress"}
+                      checked={domain['content'] && domain['content']["How do we know if we're doing a good job, and what's the plan for the future?"] === "Conduct regular performance reviews and assessments to track progress"}
                     />
                     <label className="form-check-label" htmlFor="q9a2">
                       Conduct regular performance reviews and assessments to
@@ -700,10 +670,9 @@ function ContentProduction() {
                       type="radio"
                       name="q9"
                       id="q9a3"
-                      value=" Solicit feedback from internal and external stakeholders
-                      to identify areas for improvement"
+                      value="Solicit feedback from internal and external stakeholders to identify areas for improvement"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === " Solicit feedback from internal and external stakeholders to identify areas for improvement"}
+                      checked={domain['content'] && domain['content']["How do we know if we're doing a good job, and what's the plan for the future?"] === "Solicit feedback from internal and external stakeholders to identify areas for improvement"}
                     />
                     <label className="form-check-label" htmlFor="q9a3">
                       Solicit feedback from internal and external stakeholders
@@ -716,10 +685,9 @@ function ContentProduction() {
                       type="radio"
                       name="q9"
                       id="q9a4"
-                      value="  Develop a long-term content strategy with evolving goals
-                      and objectives"
+                      value="Develop a long-term content strategy with evolving goals and objectives"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['content'] && domain['content']['How do we know if our stuff is doing well, and what do we do if it\'s not?'] === "  Develop a long-term content strategy with evolving goals and objectives"}
+                      checked={domain['content'] && domain['content']["How do we know if we're doing a good job, and what's the plan for the future?"] === "Develop a long-term content strategy with evolving goals and objectives"}
                     />
                     <label className="form-check-label" htmlFor="q9a4">
                       Develop a long-term content strategy with evolving goals
@@ -772,8 +740,7 @@ function ContentProduction() {
                       type="radio"
                       name="q10"
                       id="q10a3"
-                      value=" Higher conversion rates and lead generation from content
-                      marketing efforts"
+                      value=" Higher conversion rates and lead generation from content marketing efforts"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
                       checked={domain['content'] && domain['content']['What are the success evaluation metrics over time?'] === " Higher conversion rates and lead generation from content marketing efforts"}
                     />
@@ -788,8 +755,7 @@ function ContentProduction() {
                       type="radio"
                       name="q10"
                       id="q10a4"
-                      value=" Positive brand sentiment and increased brand awareness
-                      measured through surveys and sentiment analysis"
+                      value=" Positive brand sentiment and increased brand awareness measured through surveys and sentiment analysis"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
                       checked={domain['content'] && domain['content']['What are the success evaluation metrics over time?'] === " Positive brand sentiment and increased brand awareness measured through surveys and sentiment analysis"}
                     />
@@ -804,18 +770,6 @@ function ContentProduction() {
               <br></br>
             </div>
           </form>
-
-
-          {/* <div className="d-flex align-items-center justify-content-center gap-3">
-            <Link to="/InfluencerMarketing">
-              <Button variant="outline-primary">Back</Button>
-            </Link>
-            <Link to="/">
-              <Button variant="primary" type="next">
-                Generate PDF
-              </Button>
-            </Link>
-          </div> */}
           <br></br>
         </div>
       </div>

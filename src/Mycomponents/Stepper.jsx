@@ -13,7 +13,7 @@ function Stepper({ steps }) {
   const messages = { questions, answers };
 
   function validations(step) {
-    if (step === 1 && Object.keys(domain['technology']).length < 9) {
+    if (step === 1 && Object.keys(domain['technology']).length < 8) {
       return true;
     }
     if (step === 2 && Object.keys(domain['digital']).length < 10) {
@@ -34,12 +34,11 @@ function Stepper({ steps }) {
   }
 
   const handleNext = () => {
-    console.log(domain)
-    // let validator = validations(step)
-    // if (validator) {
-    //   window.alert("Answer all the questions to proceed");
-    //   return
-    // }
+    let validator = validations(step)
+    if (validator) {
+      window.alert("Answer all the questions to proceed");
+      return
+    }
     setStep((step) => step + 1)
     setActiveStep((prevStep) => prevStep + 1);
   };
@@ -58,8 +57,8 @@ function Stepper({ steps }) {
     try {
       setLoader(true);
       // console.log(messages)
+      console.log(domain)
       const cookies = Cookies.get("token");
-      // console.log(cookies)
       // Send a request to your backend to generate and download the PDF
       console.log(messages.questions)
       const response = await fetch(
@@ -69,7 +68,7 @@ function Stepper({ steps }) {
           // mode: 'no-cors',
           headers: {
             "Content-Type": "application/json",
-            // token: cookies,
+            token: cookies,
           },
           body: JSON.stringify({ messages, domain }),
         }

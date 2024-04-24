@@ -270,7 +270,7 @@ function TechnologyInnovation() {
               </div>
               <br></br>
               <br></br>
-              <div className="card w-100 max-w-lg">
+              {/* <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 5</h5>
                   <p className="card-text">
@@ -323,10 +323,10 @@ function TechnologyInnovation() {
                 </div>
               </div>
               <br></br>
-              <br></br>
+              <br></br> */}
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
-                  <h5 className="card-title">Question 6</h5>
+                  <h5 className="card-title">Question 5</h5>
                   <p className="card-text">
                     How will you tell people about your awesome products?
                   </p>
@@ -380,7 +380,7 @@ function TechnologyInnovation() {
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
-                  <h5 className="card-title">Question 7</h5>
+                  <h5 className="card-title">Question 6</h5>
                   <p className="card-text">
                     How can customers get your product or service?
                   </p>
@@ -434,8 +434,7 @@ function TechnologyInnovation() {
                       type="radio"
                       name="q7"
                       id="q7a4"
-                      value="Subscription service/Through authorized distributors or
-                      resellers"
+                      value="Subscription service/Through authorized distributors or resellers"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
                       checked={domain['technology'] && domain['technology']['How can customers get your product or service?'] === "Subscription service/Through authorized distributors or resellers"}
                     />
@@ -450,7 +449,7 @@ function TechnologyInnovation() {
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
-                  <h5 className="card-title">Question 8</h5>
+                  <h5 className="card-title">Question 7</h5>
                   <p className="card-text">
                     What's your plan for bringing in cash?
                   </p>
@@ -464,7 +463,7 @@ function TechnologyInnovation() {
                       id="q8a1"
                       value="Product sales"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
-                      checked={domain['technology'] && domain['technology']['Whats your plan for bringing in cash?'] === "Product sales"}
+                      checked={domain['technology'] && domain['technology']["What's your plan for bringing in cash?"] === "Product sales"}
                     />
                     <label className="form-check-label" htmlFor="q8a1">
                       Product sales
@@ -478,7 +477,7 @@ function TechnologyInnovation() {
                       id="q8a2"
                       value="Subscription services"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
-                      checked={domain['technology'] && domain['technology']['Whats your plan for bringing in cash?'] === "Subscription services"}
+                      checked={domain['technology'] && domain['technology']["What's your plan for bringing in cash?"] === "Subscription services"}
                     />
                     <label className="form-check-label" htmlFor="q8a2">
                       Subscription services
@@ -492,7 +491,7 @@ function TechnologyInnovation() {
                       id="q8a3"
                       value="Licensing agreements"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
-                      checked={domain['technology'] && domain['technology']['Whats your plan for bringing in cash?'] === "Licensing agreements"}
+                      checked={domain['technology'] && domain['technology']["What's your plan for bringing in cash?"] === "Licensing agreements"}
                     />
                     <label className="form-check-label" htmlFor="q8a3">
                       Licensing agreements
@@ -502,7 +501,7 @@ function TechnologyInnovation() {
               </div>
               <br></br>
               <br></br>
-              <div className="card w-100 max-w-lg">
+              {/* <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 9</h5>
                   <p className="card-text">
@@ -555,10 +554,10 @@ function TechnologyInnovation() {
                 </div>
               </div>
               <br></br>
-              <br></br>
+              <br></br> */}
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
-                  <h5 className="card-title">Question 10</h5>
+                  <h5 className="card-title">Question 8</h5>
                   <p className="card-text">
                     What goals are you aiming for, and how will you track your
                     progress?

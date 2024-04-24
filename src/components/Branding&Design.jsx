@@ -268,7 +268,7 @@ function BrandingDesign() {
                       id="q4a1"
                       value="Emphasize human-centric approach"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure were different from everyone else?'] === "Emphasize human-centric approach"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure we're different from everyone else?"] === "Emphasize human-centric approach"}
                     />
                     <label className="form-check-label" htmlFor="q4a1">
                       Emphasize human-centric approach
@@ -282,7 +282,7 @@ function BrandingDesign() {
                       id="q4a2"
                       value="Blend creativity and data-driven insights"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure were different from everyone else?'] === "Blend creativity and data-driven insights"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure we're different from everyone else?"] === "Blend creativity and data-driven insights"}
                     />
                     <label className="form-check-label" htmlFor="q4a2">
                       Blend creativity and data-driven insights
@@ -296,7 +296,7 @@ function BrandingDesign() {
                       id="q4a3"
                       value="Provide end-to-end branding solutions"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure were different from everyone else?'] === "Provide end-to-end branding solutions"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure we're different from everyone else?"] === "Provide end-to-end branding solutions"}
                     />
                     <label className="form-check-label" htmlFor="q4a3">
                       Provide end-to-end branding solutions
@@ -310,7 +310,7 @@ function BrandingDesign() {
                       id="q4a4"
                       value="Focus on sustainability and ethical design"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure were different from everyone else?'] === "Focus on sustainability and ethical design"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure we're different from everyone else?"] === "Focus on sustainability and ethical design"}
                     />
                     <label className="form-check-label" htmlFor="q4a4">
                       Focus on sustainability and ethical design
@@ -664,7 +664,7 @@ function BrandingDesign() {
                       id="q10a1"
                       value="Encourage cross-disciplinary brainstorming sessions"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure everyones always thinking of cool new stuff?'] === "Encourage cross-disciplinary brainstorming sessions"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure everyone's always thinking of cool new stuff?"] === "Encourage cross-disciplinary brainstorming sessions"}
                     />
                     <label className="form-check-label" htmlFor="q10a1">
                       Encourage cross-disciplinary brainstorming sessions
@@ -678,7 +678,7 @@ function BrandingDesign() {
                       id="q10a2"
                       value="Establish an innovation incentive program"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure everyones always thinking of cool new stuff?'] === "Establish an innovation incentive program"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure everyone's always thinking of cool new stuff?"] === "Establish an innovation incentive program"}
                     />
                     <label className="form-check-label" htmlFor="q10a2">
                       Establish an innovation incentive program
@@ -692,7 +692,7 @@ function BrandingDesign() {
                       id="q10a3"
                       value="Attend design and tech conferences regularly"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure everyones always thinking of cool new stuff?'] === "Attend design and tech conferences regularly"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure everyone's always thinking of cool new stuff?"] === "Attend design and tech conferences regularly"}
                     />
                     <label className="form-check-label" htmlFor="q10a3">
                       Attend design and tech conferences regularly
@@ -706,7 +706,7 @@ function BrandingDesign() {
                       id="q10a4"
                       value="Foster a culture of experimentation and risk-taking"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['branding'] && domain['branding']['How do we make sure everyones always thinking of cool new stuff?'] === "Foster a culture of experimentation and risk-taking"}
+                      checked={domain['branding'] && domain['branding']["How do we make sure everyone's always thinking of cool new stuff?"] === "Foster a culture of experimentation and risk-taking"}
                     />
                     <label className="form-check-label" htmlFor="q10a4">
                       Foster a culture of experimentation and risk-taking
