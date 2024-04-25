@@ -62,7 +62,7 @@ function Stepper({ steps }) {
       // Send a request to your backend to generate and download the PDF
       console.log(messages.questions)
       const response = await fetch(
-        "http://localhost:8080/api/v1/generatepdf",
+        "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
         {
           method: "POST",
           // mode: 'no-cors',
