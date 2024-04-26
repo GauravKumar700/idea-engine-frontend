@@ -24,6 +24,7 @@ import BrandingDesign from "./components/Branding&Design";
 import PublicRelations from "./components/PublicRelations";
 import InfluencerMarketing from "./components/InfluencerMarketing";
 import ContentProduction from "./components/ContentProduction";
+import Blueprint from "./Mycomponents/Blueprint";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/PublicRelations" element={<PublicRelations/>} />
         <Route path="/InfluencerMarketing" element={<InfluencerMarketing/>} />
         <Route path="/ContentProduction" element={<ContentProduction/>} />
+        <Route path="/blueprint" element={<Blueprint/>} />
         
 
 

@@ -4,16 +4,16 @@ import { context } from "../context";
 function InfluencerMarketing() {
 
   const quest = {
-    "1": "What is the primary objective of your influencer marketing business, and what services will you offer to achieve this objective?",
-    "2": "Who is your target market for influencer marketing services, and how will you tailor your offerings to meet their specific needs?",
-    "3": "How do you plan to differentiate your influencer marketing business from competitors in the industry?",
-    "4": "What specific influencer marketing services will your business provide to clients, and how will you deliver value to them?",
-    "5": "How do you plan to attract clients to your influencer marketing services, and what strategies will you use to generate leads?",
-    "6": "What is your process for managing influencer marketing campaigns, from strategy development to execution and measurement?",
-    "7": "How will you identify and select the right influencers for your clients' campaigns, considering factors such as audience demographics and brand alignment?",
-    "8": "How will you determine pricing for your influencer marketing services, and what factors will you consider when budgeting for client campaigns?",
-    "9": "What technology platforms and tools will you utilize to streamline influencer discovery, campaign management, and performance tracking?",
-    "10": "What is your vision for the future of your influencer marketing business, and how will you adapt to changes in the industry landscape to ensure long-term success?"
+    "1": "What sets your influencer marketing business apart from competitors?",
+    "2": "How do you plan to establish and communicate your brand identity to resonate with your target audience?",
+    "3": "What strategies will you use to build relationships with influencers in your chosen niche?",
+    "4": "How will you tailor your service packages to meet the unique needs and objectives of your clients?",
+    "5": "What methods will you use to reach out to brands and pitch your services effectively?",
+    "6": "How do you plan to coordinate with influencers to create engaging content that aligns with brands' objectives?",
+    "7": "What metrics will you use to monitor campaign performance and track ROI for your clients?",
+    "8": "How will you stay updated on industry trends, platform algorithms, and best practices in influencer marketing?",
+    "9": "What strategies do you have in place to adapt and evolve your business as the influencer marketing landscape changes?",
+    "10": "What strategies will you implement to stay ahead of emerging trends and innovations in influencer marketing?"
   }
 
   const ref = useRef(null);
@@ -58,11 +58,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <br></br>
                   <h5 className="card-title">Question 1</h5>
-                  <p className="card-text">
-                    What is the primary objective of your influencer marketing
-                    business, and what services will you offer to achieve this
-                    objective?
-                  </p>
+                  <p className="card-text">What sets your influencer marketing business apart from competitors?</p>
                 </div>
                 <div className="card-body">
                   <div className="form-check">
@@ -71,13 +67,11 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q1"
                       id="q1a1"
-                      value="Objective defined, services planned"
+                      value="Unique value proposition"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is the primary objective of your influencer marketing business, and what services will you offer to achieve this objective?'] === "Objective defined, services planned"}
+                      checked={domain['influencer'] && domain['influencer']['What sets your influencer marketing business apart from competitors?'] === "Unique value proposition"}
                     />
-                    <label className="form-check-label" htmlFor="q1a1">
-                      Objective defined, services planned
-                    </label>
+                    <label className="form-check-label" htmlFor="q1a1">Unique value proposition</label>
                   </div>
                   <div className="form-check">
                     <input
@@ -85,13 +79,11 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q1"
                       id="q1a2"
-                      value="Objective defined, services still planning"
+                      value="Specialized expertise"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is the primary objective of your influencer marketing business, and what services will you offer to achieve this objective?'] === "Objective defined, services still planning"}
+                      checked={domain['influencer'] && domain['influencer']['What sets your influencer marketing business apart from competitors?'] === "Specialized expertise"}
                     />
-                    <label className="form-check-label" htmlFor="q1a2">
-                      Objective defined, services still planning
-                    </label>
+                    <label className="form-check-label" htmlFor="q1a2">Specialized expertise</label>
                   </div>
                   <div className="form-check">
                     <input
@@ -99,24 +91,35 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q1"
                       id="q1a3"
-                      value="Objective and services not defined yet"
+                      value="Innovativ`e approach"
                       onChange={(e) => handleAnswerChange("1", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is the primary objective of your influencer marketing business, and what services will you offer to achieve this objective?'] === "Objective and services not defined yet"}
+                      checked={domain['influencer'] && domain['influencer']['What sets your influencer marketing business apart from competitors?'] === "Innovativ`e approach"}
                     />
                     <label className="form-check-label" htmlFor="q1a3">
-                      Objective and services not defined yet
+                      Innovativ`e approach
                     </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input border-2 border-dark"
+                      type="radio"
+                      name="q1"
+                      id="q1a4"
+                      value="Strong industry connections"
+                      onChange={(e) => handleAnswerChange("1", e.target.value)}
+                      checked={domain['influencer'] && domain['influencer']['What sets your influencer marketing business apart from competitors?'] === "Strong industry connections"}
+                    />
+                    <label className="form-check-label" htmlFor="q1a4">Strong industry connections</label>
                   </div>
                 </div>
               </div>
+              <br></br>
               <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 2</h5>
                   <p className="card-text">
-                    Who is your target market for influencer marketing services,
-                    and how will you tailor your offerings to meet their
-                    specific needs?
+                    How do you plan to establish and communicate your brand identity to resonate with your target audience?
                   </p>
                 </div>
                 <div className="card-body">
@@ -126,12 +129,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q2"
                       id="q2a1"
-                      value="Target market identified, offerings tailored"
+                      value="Consistent messaging"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['Who is your target market for influencer marketing services, and how will you tailor your offerings to meet their specific needs?'] === "Target market identified, offerings tailored"}
+                      checked={domain['influencer'] && domain['influencer']['How do you plan to establish and communicate your brand identity to resonate with your target audience?'] === "Consistent messaging"}
                     />
                     <label className="form-check-label" htmlFor="q2a1">
-                      Target market identified, offerings tailored
+                      Consistent messaging
                     </label>
                   </div>
                   <div className="form-check">
@@ -140,12 +143,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q2"
                       id="q2a2"
-                      value="Target market identified, offerings in progress"
+                      value="Engaging visual content"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['Who is your target market for influencer marketing services, and how will you tailor your offerings to meet their specific needs?'] === "Target market identified, offerings in progress"}
+                      checked={domain['influencer'] && domain['influencer']['How do you plan to establish and communicate your brand identity to resonate with your target audience?'] === "Engaging visual content"}
                     />
                     <label className="form-check-label" htmlFor="q2a2">
-                      Target market identified, offerings in progress
+                      Engaging visual content
                     </label>
                   </div>
                   <div className="form-check">
@@ -154,23 +157,23 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q2"
                       id="q2a3"
-                      value="Target market and offerings not determined yet"
+                      value="Authentic storytelling"
                       onChange={(e) => handleAnswerChange("2", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['Who is your target market for influencer marketing services, and how will you tailor your offerings to meet their specific needs?'] === "Target market and offerings not determined yet"}
+                      checked={domain['influencer'] && domain['influencer']['How do you plan to establish and communicate your brand identity to resonate with your target audience?'] === "Authentic storytelling"}
                     />
                     <label className="form-check-label" htmlFor="q2a3">
-                      Target market and offerings not determined yet
+                      Authentic storytelling
                     </label>
                   </div>
                 </div>
               </div>
               <br></br>
+              <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 3</h5>
                   <p className="card-text">
-                    How do you plan to differentiate your influencer marketing
-                    business from competitors in the industry?
+                    What strategies will you use to build relationships with influencers in your chosen niche?
                   </p>
                 </div>
                 <div className="card-body">
@@ -180,12 +183,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q3"
                       id="q3a1"
-                      value="Clear differentiation strategy"
+                      value="Engaging with their content"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How do you plan to differentiate your influencer marketing business from competitors in the industry?'] === "Clear differentiation strategy"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies will you use to build relationships with influencers in your chosen niche?'] === "Engaging with their content"}
                     />
                     <label className="form-check-label" htmlFor="q3a1">
-                      Clear differentiation strategy
+                      Engaging with their content
                     </label>
                   </div>
                   <div className="form-check">
@@ -194,12 +197,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q3"
                       id="q3a2"
-                      value="Differentiation strategy under development"
+                      value="Providing value"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How do you plan to differentiate your influencer marketing business from competitors in the industry?'] === "Differentiation strategy under development"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies will you use to build relationships with influencers in your chosen niche?'] === "Providing value"}
                     />
                     <label className="form-check-label" htmlFor="q3a2">
-                      Differentiation strategy under development
+                      Providing value
                     </label>
                   </div>
                   <div className="form-check">
@@ -208,24 +211,23 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q3"
                       id="q3a3"
-                      value="No differentiation strategy yet"
+                      value="Networking events"
                       onChange={(e) => handleAnswerChange("3", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How do you plan to differentiate your influencer marketing business from competitors in the industry?'] === "No differentiation strategy yet"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies will you use to build relationships with influencers in your chosen niche?'] === "Networking events"}
                     />
                     <label className="form-check-label" htmlFor="q3a3">
-                      No differentiation strategy yet
+                      Networking events
                     </label>
                   </div>
                 </div>
               </div>
               <br></br>
+              <br></br>
               <div className="card w-100 max-w-lg">
                 <div className="card-header">
                   <h5 className="card-title">Question 4</h5>
                   <p className="card-text">
-                    What specific influencer marketing services will your
-                    business provide to clients, and how will you deliver value
-                    to them?
+                    How will you tailor your service packages to meet the unique needs and objectives of your clients?
                   </p>
                 </div>
                 <div className="card-body">
@@ -235,13 +237,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q4"
                       id="q4a1"
-                      value="Defined services and value proposition c. Services and value proposition not determined yet"
+                      value="Customization options"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What specific influencer marketing services will your business provide to clients, and how will you deliver value to them?'] === "Defined services and value proposition c. Services and value proposition not determined yet"}
+                      checked={domain['influencer'] && domain['influencer']['How will you tailor your service packages to meet the unique needs and objectives of your clients?'] === "Customization options"}
                     />
                     <label className="form-check-label" htmlFor="q4a1">
-                      Defined services and value proposition c. Services and
-                      value proposition not determined yet
+                      Customization options
                     </label>
                   </div>
                   <div className="form-check">
@@ -250,12 +251,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q4"
                       id="q4a2"
-                      value="Services and value proposition in development"
+                      value="Flexible pricing"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What specific influencer marketing services will your business provide to clients, and how will you deliver value to them?'] === "Services and value proposition in development"}
+                      checked={domain['influencer'] && domain['influencer']['How will you tailor your service packages to meet the unique needs and objectives of your clients?'] === "Flexible pricing"}
                     />
                     <label className="form-check-label" htmlFor="q4a2">
-                      Services and value proposition in development
+                      Flexible pricing
                     </label>
                   </div>
                   <div className="form-check">
@@ -264,12 +265,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q4"
                       id="q4a3"
-                      value="Services and value proposition not determined yet"
+                      value="Personalized strategy sessions"
                       onChange={(e) => handleAnswerChange("4", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What specific influencer marketing services will your business provide to clients, and how will you deliver value to them?'] === "Services and value proposition not determined yet"}
+                      checked={domain['influencer'] && domain['influencer']['How will you tailor your service packages to meet the unique needs and objectives of your clients?'] === "Personalized strategy sessions"}
                     />
                     <label className="form-check-label" htmlFor="q4a3">
-                      Services and value proposition not determined yet
+                      Personalized strategy sessions
                     </label>
                   </div>
                 </div>
@@ -280,9 +281,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <h5 className="card-title">Question 5</h5>
                   <p className="card-text">
-                    How do you plan to attract clients to your influencer
-                    marketing services, and what strategies will you use to
-                    generate leads?
+                    What methods will you use to reach out to brands and pitch your services effectively?
                   </p>
                 </div>
                 <div className="card-body">
@@ -292,12 +291,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q5"
                       id="q5a1"
-                      value="Client acquisition strategy established"
+                      value="Social media outreach"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How do you plan to attract clients to your influencer marketing services, and what strategies will you use to generate leads?'] === "Client acquisition strategy established"}
+                      checked={domain['influencer'] && domain['influencer']['What methods will you use to reach out to brands and pitch your services effectively?'] === "Social media outreach"}
                     />
                     <label className="form-check-label" htmlFor="q5a1">
-                      Client acquisition strategy established
+                      Social media outreach
                     </label>
                   </div>
                   <div className="form-check">
@@ -306,12 +305,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q5"
                       id="q5a2"
-                      value="Client acquisition strategy in progress"
+                      value="Email campaigns"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How do you plan to attract clients to your influencer marketing services, and what strategies will you use to generate leads?'] === "Client acquisition strategy in progress"}
+                      checked={domain['influencer'] && domain['influencer']['What methods will you use to reach out to brands and pitch your services effectively?'] === "Email campaigns"}
                     />
                     <label className="form-check-label" htmlFor="q5a2">
-                      Client acquisition strategy in progress
+                      Email campaigns
                     </label>
                   </div>
                   <div className="form-check">
@@ -320,12 +319,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q5"
                       id="q5a3"
-                      value="No client acquisition strategy yet"
+                      value="Networking events"
                       onChange={(e) => handleAnswerChange("5", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How do you plan to attract clients to your influencer marketing services, and what strategies will you use to generate leads?'] === "No client acquisition strategy yet"}
+                      checked={domain['influencer'] && domain['influencer']['What methods will you use to reach out to brands and pitch your services effectively?'] === "Networking events"}
                     />
                     <label className="form-check-label" htmlFor="q5a3">
-                      No client acquisition strategy yet
+                      Networking events
                     </label>
                   </div>
                 </div>
@@ -336,9 +335,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <h5 className="card-title">Question 6</h5>
                   <p className="card-text">
-                    What is your process for managing influencer marketing
-                    campaigns, from strategy development to execution and
-                    measurement?
+                    How do you plan to coordinate with influencers to create engaging content that aligns with brands' objectives?
                   </p>
                 </div>
                 <div className="card-body">
@@ -348,12 +345,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q6"
                       id="q6a1"
-                      value="Defined campaign management process"
+                      value="Clear communication channels"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is your process for managing influencer marketing campaigns, from strategy development to execution and measurement?'] === "Defined campaign management process"}
+                      checked={domain['influencer'] && domain['influencer']["How do you plan to coordinate with influencers to create engaging content that aligns with brands' objectives?"] === "Clear communication channels"}
                     />
                     <label className="form-check-label" htmlFor="q6a1">
-                      Defined campaign management process
+                      Clear communication channels
                     </label>
                   </div>
                   <div className="form-check">
@@ -362,12 +359,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q6"
                       id="q6a2"
-                      value="Campaign management process in development"
+                      value="Content briefs and guidelines"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is your process for managing influencer marketing campaigns, from strategy development to execution and measurement?'] === "Campaign management process in development"}
+                      checked={domain['influencer'] && domain['influencer']["How do you plan to coordinate with influencers to create engaging content that aligns with brands' objectives?"] === "Content briefs and guidelines"}
                     />
                     <label className="form-check-label" htmlFor="q6a2">
-                      Campaign management process in development
+                      Content briefs and guidelines
                     </label>
                   </div>
                   <div className="form-check">
@@ -376,12 +373,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q1"
                       id="q6a3"
-                      value="No campaign management process yet"
+                      value="Regular feedback and revisions"
                       onChange={(e) => handleAnswerChange("6", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is your process for managing influencer marketing campaigns, from strategy development to execution and measurement?'] === "No campaign management process yet"}
+                      checked={domain['influencer'] && domain['influencer']["How do you plan to coordinate with influencers to create engaging content that aligns with brands' objectives?"] === "Regular feedback and revisions"}
                     />
                     <label className="form-check-label" htmlFor="q6a3">
-                      No campaign management process yet
+                      Regular feedback and revisions
                     </label>
                   </div>
                 </div>
@@ -392,9 +389,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <h5 className="card-title">Question 7</h5>
                   <p className="card-text">
-                    How will you identify and select the right influencers for
-                    your clients' campaigns, considering factors such as
-                    audience demographics and brand alignment?
+                    What metrics will you use to monitor campaign performance and track ROI for your clients?
                   </p>
                 </div>
                 <div className="card-body">
@@ -404,12 +399,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q7"
                       id="q7a1"
-                      value="Influencer selection criteria defined"
+                      value="Engagement metrics (likes, comments, shares)"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']["How will you identify and select the right influencers for your clients' campaigns, considering factors such as audience demographics and brand alignment?"] === "Influencer selection criteria defined"}
+                      checked={domain['influencer'] && domain['influencer']["What metrics will you use to monitor campaign performance and track ROI for your clients?"] === "Engagement metrics (likes, comments, shares)"}
                     />
                     <label className="form-check-label" htmlFor="q7a1">
-                      Influencer selection criteria defined
+                      Engagement metrics (likes, comments, shares)
                     </label>
                   </div>
                   <div className="form-check">
@@ -418,12 +413,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q7"
                       id="q7a2"
-                      value="Influencer selection criteria being develope"
+                      value="Conversion metrics (click-through rates, conversions)"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']["How will you identify and select the right influencers for your clients' campaigns, considering factors such as audience demographics and brand alignment?"] === "Influencer selection criteria being develope"}
+                      checked={domain['influencer'] && domain['influencer']["What metrics will you use to monitor campaign performance and track ROI for your clients?"] === "Conversion metrics (click-through rates, conversions)"}
                     />
                     <label className="form-check-label" htmlFor="q7a2">
-                      Influencer selection criteria being develope
+                      Conversion metrics (click-through rates, conversions)
                     </label>
                   </div>
                   <div className="form-check">
@@ -432,12 +427,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q7"
                       id="q7a3"
-                      value="No influencer selection criteria yet"
+                      value="Brand sentiment analysis"
                       onChange={(e) => handleAnswerChange("7", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']["How will you identify and select the right influencers for your clients' campaigns, considering factors such as audience demographics and brand alignment?"] === "No influencer selection criteria yet"}
+                      checked={domain['influencer'] && domain['influencer']["What metrics will you use to monitor campaign performance and track ROI for your clients?"] === "Brand sentiment analysis"}
                     />
                     <label className="form-check-label" htmlFor="q7a3">
-                      No influencer selection criteria yet
+                      Brand sentiment analysis
                     </label>
                   </div>
                 </div>
@@ -448,9 +443,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <h5 className="card-title">Question 8</h5>
                   <p className="card-text">
-                    How will you determine pricing for your influencer marketing
-                    services, and what factors will you consider when budgeting
-                    for client campaigns?
+                    How will you stay updated on industry trends, platform algorithms, and best practices in influencer marketing?
                   </p>
                 </div>
                 <div className="card-body">
@@ -460,12 +453,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q8"
                       id="q8a1"
-                      value="Pricing strategy established"
+                      value="Industry publications and blogs"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How will you determine pricing for your influencer marketing services, and what factors will you consider when budgeting for client campaigns?'] === "Pricing strategy established"}
+                      checked={domain['influencer'] && domain['influencer']['How will you stay updated on industry trends, platform algorithms, and best practices in influencer marketing?'] === "Industry publications and blogs"}
                     />
                     <label className="form-check-label" htmlFor="q8a1">
-                      Pricing strategy established
+                      Industry publications and blogs
                     </label>
                   </div>
                   <div className="form-check">
@@ -474,12 +467,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q8"
                       id="q8a2"
-                      value="Pricing strategy in progress"
+                      value="Social media monitoring"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How will you determine pricing for your influencer marketing services, and what factors will you consider when budgeting for client campaigns?'] === "Pricing strategy in progress"}
+                      checked={domain['influencer'] && domain['influencer']['How will you stay updated on industry trends, platform algorithms, and best practices in influencer marketing?'] === "Social media monitoring"}
                     />
                     <label className="form-check-label" htmlFor="q8a2">
-                      Pricing strategy in progress
+                      Social media monitoring
                     </label>
                   </div>
                   <div className="form-check">
@@ -488,12 +481,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q8"
                       id="q8a3"
-                      value="No pricing strategy yet"
+                      value="Networking with industry professionals"
                       onChange={(e) => handleAnswerChange("8", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['How will you determine pricing for your influencer marketing services, and what factors will you consider when budgeting for client campaigns?'] === "No pricing strategy yet"}
+                      checked={domain['influencer'] && domain['influencer']['How will you stay updated on industry trends, platform algorithms, and best practices in influencer marketing?'] === "Networking with industry professionals"}
                     />
                     <label className="form-check-label" htmlFor="q8a3">
-                      No pricing strategy yet
+                      Networking with industry professionals
                     </label>
                   </div>
                 </div>
@@ -504,9 +497,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <h5 className="card-title">Question 9</h5>
                   <p className="card-text">
-                    What technology platforms and tools will you utilize to
-                    streamline influencer discovery, campaign management, and
-                    performance tracking?
+                    What strategies do you have in place to adapt and evolve your business as the influencer marketing landscape changes?
                   </p>
                 </div>
                 <div className="card-body">
@@ -516,12 +507,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q9"
                       id="q9a1"
-                      value="Technology and tools selected"
+                      value="Continuous learning and education"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What technology platforms and tools will you utilize to streamline influencer discovery, campaign management, and performance tracking?'] === "Technology and tools selected"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies do you have in place to adapt and evolve your business as the influencer marketing landscape changes?'] === "Continuous learning and education"}
                     />
                     <label className="form-check-label" htmlFor="q9a1">
-                      Technology and tools selected
+                      Continuous learning and education
                     </label>
                   </div>
                   <div className="form-check">
@@ -530,12 +521,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q9"
                       id="q9a2"
-                      value="Technology and tools being evaluated"
+                      value="Experimentation with new approaches"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What technology platforms and tools will you utilize to streamline influencer discovery, campaign management, and performance tracking?'] === "Technology and tools being evaluated"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies do you have in place to adapt and evolve your business as the influencer marketing landscape changes?'] === "Experimentation with new approaches"}
                     />
                     <label className="form-check-label" htmlFor="q9a2">
-                      Technology and tools being evaluated
+                      Experimentation with new approaches
                     </label>
                   </div>
                   <div className="form-check">
@@ -544,12 +535,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q9"
                       id="q9a3"
-                      value="No technology and tools selected yet"
+                      value="Flexible business model"
                       onChange={(e) => handleAnswerChange("9", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What technology platforms and tools will you utilize to streamline influencer discovery, campaign management, and performance tracking?'] === "No technology and tools selected yet"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies do you have in place to adapt and evolve your business as the influencer marketing landscape changes?'] === "Flexible business model"}
                     />
                     <label className="form-check-label" htmlFor="q9a3">
-                      No technology and tools selected yet
+                      Flexible business model
                     </label>
                   </div>
                 </div>
@@ -560,9 +551,7 @@ function InfluencerMarketing() {
                 <div className="card-header">
                   <h5 className="card-title">Question 10</h5>
                   <p className="card-text">
-                    What is your vision for the future of your influencer
-                    marketing business, and how will you adapt to changes in the
-                    industry landscape to ensure long-term success?
+                    What strategies will you implement to stay ahead of emerging trends and innovations in influencer marketing?
                   </p>
                 </div>
                 <div className="card-body">
@@ -572,12 +561,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q10"
                       id="q10a1"
-                      value="Long-term strategy defined"
+                      value="Attending industry conferences and events"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is your vision for the future of your influencer marketing business, and how will you adapt to changes in the industry landscape to ensure long-term success?'] === "Long-term strategy defined"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies will you implement to stay ahead of emerging trends and innovations in influencer marketing?'] === "Attending industry conferences and events"}
                     />
                     <label className="form-check-label" htmlFor="q10a1">
-                      Long-term strategy defined
+                      Attending industry conferences and events
                     </label>
                   </div>
                   <div className="form-check">
@@ -586,12 +575,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q10"
                       id="q10a2"
-                      value="Long-term strategy in development"
+                      value="Networking with thought leaders and experts"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is your vision for the future of your influencer marketing business, and how will you adapt to changes in the industry landscape to ensure long-term success?'] === "Long-term strategy in development"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies will you implement to stay ahead of emerging trends and innovations in influencer marketing?'] === "Networking with thought leaders and experts"}
                     />
                     <label className="form-check-label" htmlFor="q10a2">
-                      Long-term strategy in development
+                      Networking with thought leaders and experts
                     </label>
                   </div>
                   <div className="form-check">
@@ -600,12 +589,12 @@ function InfluencerMarketing() {
                       type="radio"
                       name="q10"
                       id="q10a3"
-                      value="No long-term strategy yet"
+                      value="Subscribing to industry newsletters and publications"
                       onChange={(e) => handleAnswerChange("10", e.target.value)}
-                      checked={domain['influencer'] && domain['influencer']['What is your vision for the future of your influencer marketing business, and how will you adapt to changes in the industry landscape to ensure long-term success?'] === "No long-term strategy yet"}
+                      checked={domain['influencer'] && domain['influencer']['What strategies will you implement to stay ahead of emerging trends and innovations in influencer marketing?'] === "Subscribing to industry newsletters and publications"}
                     />
                     <label className="form-check-label" htmlFor="q10a3">
-                      No long-term strategy yet
+                      Subscribing to industry newsletters and publications
                     </label>
                   </div>
                 </div>

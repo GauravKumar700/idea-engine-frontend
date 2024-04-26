@@ -108,7 +108,7 @@ function Stepper({ steps }) {
           <div className='d-flex justify-content-center'>
             <Button disabled={activeStep === 0} onClick={handleBack} variant="outline-primary" className=' mx-2'>Back</Button>
             {step !== 6 && <Button disabled={activeStep === steps.length - 1} onClick={handleNext} variant="outline-primary" className=' mx-2'>Next</Button>}
-            {step === 6 && <Button onClick={handleDownloadPdf} variant="outline-primary" className=' mx-2'>Generate Pdf</Button>}
+            {<Button href='/blueprint' variant="outline-primary" className=' mx-2'>Generate Blueprint</Button>}
           </div>
         </div>
         )}
