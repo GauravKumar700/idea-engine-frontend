@@ -28,44 +28,7 @@ function QnA_page() {
   const messages = { questions };
 
   const handleDownloadPdf = async () => {
-    //   try {
-    //     setLoader(true);
-    //     const cookies = Cookies.get("token");
-    //     // Send a request to your backend to generate and download the PDF
-    //     const response = await fetch(
-    //       "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
-    //       {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //           token: cookies,
-    //         },
-    //         body: JSON.stringify({ messages }),
-    //       }
-    //     );
-    //     // Check if the response is successful
-    //     if (!response.ok) {
-    //       throw new Error("Failed to generate or download PDF");
-    //     } else {
-    //       setLoader(false);
-    //       // Convert the response body to a blob
-    //       const blob = await response.blob();
-    //       // Create a URL for the blob
-    //       const url = window.URL.createObjectURL(new Blob([blob]));
-    //       // Create an anchor element to facilitate the download
-    //       const a = document.createElement("a");
-    //       a.href = url;
-    //       a.download = "output.pdf";
-    //       // Append the anchor element to the document body
-    //       document.body.appendChild(a);
-    //       // Trigger a click event on the anchor element to initiate the download
-    //       a.click();
-    //       // Remove the anchor element from the document body after the download is complete
-    //       document.body.removeChild(a);
-    //     }
-    //   } catch (error) {
-    //     console.error("Error generating or downloading PDF:", error);
-    //   }
+    
   };
 
   let navigate = useNavigate();
