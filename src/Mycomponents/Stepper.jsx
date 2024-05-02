@@ -79,20 +79,24 @@ function Stepper({ steps }) {
   }
 
   const answer = async (tPrompt) => {
-    const response = await fetch(
-      "https://idea-engine-backend.vercel.app/api/v1/generateresponse",
-      {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-          token: cookies,
-        },
-        body: JSON.stringify({ tPrompt }),
-      }
-    );
-    const res = await response.json();
-    return res;
+    try {
+      const response = await fetch(
+        "https://idea-engine-backend.vercel.app/api/v1/generateresponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+            token: cookies,
+          },
+          body: JSON.stringify({ tPrompt }),
+        }
+      );
+      const res = await response.json();
+      return res;
+    } catch (error) {
+      console.error("Some error occured at generating response!!")
+    }
   }
 
   const handleDownloadPdf = async () => {
