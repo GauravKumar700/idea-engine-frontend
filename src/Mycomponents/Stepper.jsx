@@ -83,6 +83,7 @@ function Stepper({ steps }) {
       "https://idea-engine-backend.vercel.app/api/v1/generateresponse",
       {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
           token: cookies,
@@ -170,6 +171,7 @@ function Stepper({ steps }) {
           "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
           {
             method: "POST",
+            mode: "no-cors",
             headers: {
               "Content-Type": "application/json",
               token: cookies,
