@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import Cookies from "js-cookie";
 import Loader from "../components/Loader";
 import { context } from '../context';
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 function Stepper({ steps }) {
   const [activeStep, setActiveStep] = useState(0);
