@@ -28,7 +28,7 @@ function QnA_page() {
   const messages = { questions };
 
   const handleDownloadPdf = async () => {
-    
+
   };
 
   let navigate = useNavigate();
@@ -99,7 +99,7 @@ function QnA_page() {
     setButtonidea(false);
   };
 
-// For Question and Answer
+  // For Question and Answer
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userResponses, setUserResponses] = useState([]);
 
