@@ -70,8 +70,6 @@ function QnA_page() {
     addQuestions("business stage");
     addAnswers("Idea / Vision");
     setIdea(true);
-    setStartup(false);
-    setBrand(false);
     setButtonidea("1px solid #0060d0");
     setButtonstartup(false);
     setButtonbrand(false);
@@ -80,9 +78,7 @@ function QnA_page() {
   const startupHandler = () => {
     addQuestions("What is the stage of your business ?");
     addAnswers("Startup / Growth");
-    setIdea(false);
-    setStartup(true);
-    setBrand(false);
+    setIdea(true);
     setButtonstartup("1px solid #0060d0");
     setButtonbrand(false);
     setButtonidea(false);
@@ -91,9 +87,7 @@ function QnA_page() {
   const brandHandler = () => {
     addQuestions("What is the stage of your business ?");
     addAnswers("Brand / Enterprise");
-    setIdea(false);
-    setStartup(false);
-    setBrand(true);
+    setIdea(true);
     setButtonbrand("1px solid #0060d0");
     setButtonstartup(false);
     setButtonidea(false);
@@ -833,94 +827,6 @@ function QnA_page() {
                       </div>
                     </div>
                   )}
-              </div>
-              <div ref={answersEndRef} />
-            </div>
-          )}
-
-          {/* Startup / Growth */}
-          {startup && (
-            <div className="row">
-              <div
-                className=" input--field p-3"
-                style={{ color: "white", textAlign: "initial" }}
-              >
-                {currentQuestionIndex < influencer_ques.length ? (
-                  <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                    <p>{influencer_ques[currentQuestionIndex]}</p>
-                    {userResponses.map((response, index) => (
-                      <div key={index}>
-                        <div className="res">
-                          <p>
-                            <strong>Response:</strong> {response}
-                          </p>
-                          <div ref={answersEndRef} />
-                        </div>
-
-                        {index < influencer_ques.length - 1 && (
-                          <p>
-                            <strong></strong> {influencer_ques[index + 1]}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="res">
-                    {/* <p>Questionnaire complete! Thank you for your responses.</p> */}
-                    <button
-                      type="button"
-                      className="btn btn-primary"
-                      onClick={handleDownloadPdf}
-                    >
-                      Generate PDF
-                    </button>
-                  </div>
-                )}
-              </div>
-              <div ref={answersEndRef} />
-            </div>
-          )}
-
-          {/* Brand / Enterprise */}
-          {brand && (
-            <div className="row">
-              <div
-                className=" input--field p-3"
-                style={{ color: "white", textAlign: "initial" }}
-              >
-                {currentQuestionIndex < influencer_ques.length ? (
-                  <div style={{ marginTop: "2px", whiteSpace: "normal" }}>
-                    <p>{influencer_ques[currentQuestionIndex]}</p>
-                    {userResponses.map((response, index) => (
-                      <div key={index}>
-                        <div className="res">
-                          <p>
-                            <strong>Response:</strong> {response}
-                          </p>
-                          <div ref={answersEndRef} />
-                        </div>
-
-                        {index < influencer_ques.length - 1 && (
-                          <p>
-                            <strong></strong> {influencer_ques[index + 1]}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="res">
-                    {/* <p>Questionnaire complete! Thank you for your responses.</p> */}
-                    <button
-                      type="button"
-                      className="btn btn-primary"
-                      onClick={handleDownloadPdf}
-                    >
-                      Generate PDF
-                    </button>
-                  </div>
-                )}
               </div>
               <div ref={answersEndRef} />
             </div>
