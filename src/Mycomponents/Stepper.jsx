@@ -64,6 +64,7 @@ function Stepper({ steps }) {
       window.alert("Answer all the questions to proceed");
       return
     }
+    // handleDownloadPdf()
     setStep((step) => step + 1)
     setActiveStep((prevStep) => prevStep + 1);
   };
@@ -81,8 +82,9 @@ function Stepper({ steps }) {
   const answer = async (tPrompt) => {
     try {
       const cookies = Cookies.get("token");
+      console.log(tPrompt)
       const response = await fetch(
-        "https://idea-engine-backend.vercel.app/api/v1/generateresponse",
+        "https://idea-engine-backend-4gyo.vercel.app/api/v1/generateresponse",
         {
           method: "POST",
           headers: {
@@ -93,6 +95,7 @@ function Stepper({ steps }) {
         }
       );
       const res = await response.json();
+      console.log(res)
       return res;
     } catch (error) {
       console.error("Some error occured at generating response!!")
@@ -105,11 +108,16 @@ function Stepper({ steps }) {
       const questions = messages.questions
       const answers = messages.answers
       let tPrompt = await generatePrompt(questions, answers);
-
+      console.log("Start")
       let text = await answer(tPrompt);
+      console.log("Common")
+      console.log(text)
 
-      let executiveText = await answer(`${tPrompt} + \nPlease explain in more detail about the Executive summary statement`);
+      let exePrompt = `${tPrompt} + \nPlease explain in more detail about the Executive summary statement`
+      let executiveText = await answer(exePrompt);
       text += executiveText
+      console.log("Executive")
+      console.log(executiveText)
 
       let marketText = await answer(`${tPrompt} + \nPlease explain in more detail about the Market Analysis statement`);
       text += marketText
@@ -172,7 +180,7 @@ function Stepper({ steps }) {
         const cookies = Cookies.get("token");
         // Send a request to your backend to generate and download the PDF
         const response = await fetch(
-          "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
+          "https://idea-engine-backend-4gyo.vercel.app/api/v1/generatepdf",
           {
             method: "POST",
             headers: {
