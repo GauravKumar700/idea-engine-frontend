@@ -79,28 +79,46 @@ function Stepper({ steps }) {
     return <div>No steps provided</div>;
   }
 
+  // const answer = async (tPrompt) => {
+  //   try {
+  //     const cookies = Cookies.get("token");
+  //     console.log(tPrompt)
+  //     const response = await fetch(
+  //       "https://idea-engine-backend-4gyo.vercel.app/api/v1/generateresponse",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           token: cookies,
+  //         },
+  //         body: JSON.stringify({ tPrompt }),
+  //       }
+  //     );
+  //     const res = await response.json();
+  //     console.log(res)
+  //     return res;
+  //   } catch (error) {
+  //     console.error("Some error occured at generating response!!")
+  //   }
+  // }
+
+  const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
   const answer = async (tPrompt) => {
     try {
-      const cookies = Cookies.get("token");
-      console.log(tPrompt)
-      const response = await fetch(
-        "https://idea-engine-backend-4gyo.vercel.app/api/v1/generateresponse",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            token: cookies,
-          },
-          body: JSON.stringify({ tPrompt }),
-        }
-      );
-      const res = await response.json();
-      console.log(res)
-      return res;
+      // For text-only input, use the gemini-pro model
+      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      // const prompt = question
+      const result = await model.generateContent(tPrompt);
+      // const response = await result.response;
+      const res = result.response;
+      const text = res.text();
+      // console.log(text);
+      return text
     } catch (error) {
-      console.error("Some error occured at generating response!!")
+      window.alert(error)
     }
   }
+
 
   const handleDownloadPdf = async () => {
     try {
