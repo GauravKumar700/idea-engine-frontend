@@ -193,8 +193,7 @@ function Stepper({ steps }) {
         const cookies = Cookies.get("token");
         // Send a request to your backend to generate and download the PDF
         const response = await fetch(
-          // "https://idea-engine-backend-4gyo.vercel.app/api/v1/generatepdf",
-          "http://localhost:8080/api/v1/generatepdf",
+          "https://idea-engine-backend-4gyo.vercel.app/api/v1/generatepdf",
           {
             method: "POST",
             headers: {
