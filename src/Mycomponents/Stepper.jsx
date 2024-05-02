@@ -80,11 +80,11 @@ function Stepper({ steps }) {
 
   const answer = async (tPrompt) => {
     try {
+      const cookies = Cookies.get("token");
       const response = await fetch(
         "https://idea-engine-backend.vercel.app/api/v1/generateresponse",
         {
           method: "POST",
-          mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
             token: cookies,
@@ -175,7 +175,6 @@ function Stepper({ steps }) {
           "https://idea-engine-backend.vercel.app/api/v1/generatepdf",
           {
             method: "POST",
-            mode: "no-cors",
             headers: {
               "Content-Type": "application/json",
               token: cookies,
