@@ -5,6 +5,8 @@ import { faFolder, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import Loader from "../components/Loader";
+import zIndex from "@mui/material/styles/zIndex";
 
 function Welcome_page() {
   // const handleClick = () => {

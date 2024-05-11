@@ -1,17 +1,23 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Login.css"
 import Cookies from "js-cookie";
-import Loader from "./Loader";
+import { Box, CircularProgress } from '@mui/material'
 
 const DivlayoutAuthPage = () => {
   const [login, setLogin] = useState(false)
+  const [percent, setPercent] = useState(10);
   let navigate = useNavigate()
-  function validate() {
-    const mail = document.getElementById("email").value;
-    const regExp = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
-    regExp.test(mail) ? alert("You have entered a valid email") : alert("You have entered wrong email");
-  }
+
+  useEffect(() => {
+    console.log("question " + percent); // Logs the updated value whenever percent changes
+  }, [percent]);
+
+  // function validate() {
+  //   const mail = document.getElementById("email").value;
+  //   const regExp = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+  //   regExp.test(mail) ? alert("You have entered a valid email") : alert("You have entered wrong email");
+  // }
 
   //Connection Login Page to backend
 
@@ -20,8 +26,10 @@ const DivlayoutAuthPage = () => {
   const [password, setPassword] = useState('');
 
   const loginUser = async (e) => {
-    setLogin(true)
     e.preventDefault();
+    setLogin(true)
+    setPercent(prevPercent => prevPercent + 20);
+
     const res = await fetch('https://idea-engine-backend-4gyo.vercel.app/api/v1/login', {
       method: "POST",
       headers: {
@@ -32,6 +40,7 @@ const DivlayoutAuthPage = () => {
         password
       })
     });
+    setPercent(prevPercent => prevPercent + 20);
 
     const data = await res.json();
 
@@ -42,17 +51,19 @@ const DivlayoutAuthPage = () => {
     }
     else {
       // dispatch({type: "USER", payload: true});
-      setLogin(false)
-      window.alert("Login Successfull");
+
+      // window.alert("Login Successfull");
       // const time = new Date(data.options.expires).toUTCString()
       // const expirationDate = new Date();
-      // expirationDate.setDate(expirationDate.getDate() + 5);
+      // expirationDate.setDate(expirationDate.getDate() + 5);      
+      setPercent(prevPercent => prevPercent + 20);
 
       Cookies.set("token", data.token, {
         expires: 5,
         path: '/welcome-page',
         httpOnly: true
       })
+      setPercent(prevPercent => prevPercent + 10);
 
       Cookies.set('token', data.token, {
         expires: 5,
@@ -61,6 +72,9 @@ const DivlayoutAuthPage = () => {
 
       document.cookie = `token=${data.token}; expires=${new Date(data.options.expires).toUTCString()}; path='/welcome-page'`
       document.cookie = `token=${data.token}; expires=${new Date(data.options.expires).toUTCString()}; path='/qna-page'`
+      setPercent(prevPercent => prevPercent + 20);
+
+      setLogin(false)
       navigate('/welcome-page')
     }
   }
@@ -96,7 +110,23 @@ const DivlayoutAuthPage = () => {
   return (
     <>
       {login ? (
-        <Loader />
+        <div style={{ backgroundColor: '#000000', height: '100vh', width: '100vw', zIndex: '20', position: 'fixed', top: '0', left: '0', right: '0', }}>
+          <Box position={'relative'} justifyContent={'center'} height={'100vh'} alignItems={'center'} display="flex">
+            <CircularProgress variant="determinate" size={55} value={percent} />
+            <Box
+              bottom={0}
+              right={0}
+              top={0}
+              justifyContent="center"
+              left={0}
+              display="flex"
+              alignItems="center"
+              position="absolute"
+            >
+              {`${Math.round(percent)}%`}
+            </Box>
+          </Box>
+        </div>
       ) : (
         <div>
           <div className="divlayout-auth-mypage mx-auto">
