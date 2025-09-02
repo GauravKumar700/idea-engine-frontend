@@ -1,8 +1,23 @@
 import { Link, useNavigate } from "react-router-dom"
 import "./DivlayoutAuthPage.css";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Box, CircularProgress } from '@mui/material'
 
 const DivlayoutAuthPage = () => {
+  const [signup, setSignup] = useState(false)
+  const [percent, setPercent] = useState(10);
+  useEffect(() => {
+    let interval;
+    if (signup) {
+      interval = setInterval(() => {
+        setPercent(prev => {
+          if (prev >= 95) return 95; // cap until fetch finishes
+          return prev + 1;
+        });
+      }, 50); // 1% every 50ms
+    }
+    return () => clearInterval(interval);
+  }, [signup]);
 
   function validate() {
     const mail = document.getElementById("email").value;
@@ -29,6 +44,9 @@ const DivlayoutAuthPage = () => {
 
   const PostData = async (e) => {
     e.preventDefault();
+    setSignup(true)
+    // setPercent(prevPercent => prevPercent + 20);
+
     try {
       const { name, email, password } = user;
       const res = await fetch("https://idea-engine-backend-4gyo.vercel.app/api/v1/register", {
@@ -40,18 +58,22 @@ const DivlayoutAuthPage = () => {
           name, email, password
         })
       });
-      // console.log(res);
+      setPercent(prevPercent => prevPercent + 20);
       const data = await res.json(); // Error line
-      if (res.status === 401){
+      if (res.status === 401) {
+        setSignup(false)
         window.alert("User Already Exists!!")
-      }
-
-      if (res.status === 400 || !data) {
+      } else if (res.status === 400 || !data) {
+        setSignup(false)
         window.alert("Invalid Registration");
-        // console.log("Invalid Registration");
       } else {
+        setPercent(100);
+        setTimeout(() => {
+          setSignup(false);
+          window.alert("Registration Successful");
+          navigate('/login');
+        }, 50);
         window.alert("Registration Successfull");
-        // console.log("Registration Successfull");
         navigate('/login');
       }
     } catch (error) {
@@ -82,44 +104,62 @@ const DivlayoutAuthPage = () => {
 
 
   return (
-    <div className="divlayout-auth-page-signup">
-      <div className="svg">
-        <img className="vector-icon" alt="" src="/vector.svg" />
-      </div>
-      <div className="divpage-fg">
-        <div className="section-signup">
-          <div className="heading-1">
-            <div className="welcome-to-dayzero">
-              Welcome To Ten-IdeaEngine!
-            </div>
-          </div>
-          <div className="ppage-tagmargin">
-            <div className="blueprint-to-brilliance">
-              BLUEPRINT TO BRILLIANCE
-            </div>
-          </div>
-          <div className="heading-2margin">
-            <div className="heading-2">
-              <div className="a-blueprint-engine-container-signup">
-                <span className="a-blueprint-engine">{`A blueprint engine that converts your ideas into execution focused plan of action within `}</span>
-                <b>6 minutes</b>
-                <span className="a-blueprint-engine">.</span>
+    <>
+      {signup ? (<div style={{ backgroundColor: '#000000', height: '100vh', width: '100vw', zIndex: '20', position: 'fixed', top: '0', left: '0', right: '0', }} >
+        <Box position={'relative'} justifyContent={'center'} height={'100vh'} alignItems={'center'} display="flex">
+          <CircularProgress variant="determinate" size={55} value={percent} />
+          <Box
+            bottom={0}
+            right={0}
+            top={0}
+            justifyContent="center"
+            left={0}
+            display="flex"
+            alignItems="center"
+            position="absolute"
+          >
+            {`${Math.round(percent)}%`}
+          </Box>
+        </Box>
+      </div >) : (
+        <div className="divlayout-auth-page-signup">
+          <div className="svg">
+            <img className="vector-icon" alt="" src="/vector.svg" />
+          </div >
+          <div className="divpage-fg">
+            <div className="section-signup">
+              <div className="heading-1">
+                <div className="welcome-to-dayzero">
+                  Welcome To Ten-IdeaEngine!
+                </div>
+              </div>
+              <div className="ppage-tagmargin">
+                <div className="blueprint-to-brilliance">
+                  BLUEPRINT TO BRILLIANCE
+                </div>
+              </div>
+              <div className="heading-2margin">
+                <div className="heading-2">
+                  <div className="a-blueprint-engine-container-signup">
+                    <span className="a-blueprint-engine">{`A blueprint engine that converts your ideas into execution focused plan of action within `}</span>
+                    <b>6 minutes</b>
+                    <span className="a-blueprint-engine">.</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="section1">
-          <div className="pform-title">
-            <div className="create-your-account-signup">
-              Create your account
-            </div>
-          </div>
-          <div className="pform-subtitle">
-            <div className="fill-your-details">
-              Fill your details to get started
-            </div>
-          </div>
-          {/* <div className="divor-box">
+            <div className="section1">
+              <div className="pform-title">
+                <div className="create-your-account-signup">
+                  Create your account
+                </div>
+              </div>
+              <div className="pform-subtitle">
+                <div className="fill-your-details">
+                  Fill your details to get started
+                </div>
+              </div>
+              {/* <div className="divor-box">
             <button className="button1">
               <img className="svg-icon" alt="" src="/svg.svg" />
               <div className="span1">
@@ -134,62 +174,64 @@ const DivlayoutAuthPage = () => {
               </div>
             </div>
           </div> */}
-          <div className="form-signup">
-            <input
-              className="input"
-              type="text"
-              name="name"
-              id="name"
-              autoComplete="off"
-              value={user.name}
-              onChange={handleInputs}
-              placeholder="Enter Your Name"
-            ></input>
+              <div className="form-signup">
+                <input
+                  className="input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  autoComplete="off"
+                  value={user.name}
+                  onChange={handleInputs}
+                  placeholder="Enter Your Name"
+                ></input>
 
-            <input
-              className="input"
-              type="email"
-              name="email"
-              id="email"
-              autoComplete="off"
-              value={user.email}
-              onChange={handleInputs}
-              placeholder="Enter Your Email"
-            ></input>
+                <input
+                  className="input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  autoComplete="off"
+                  value={user.email}
+                  onChange={handleInputs}
+                  placeholder="Enter Your Email"
+                ></input>
 
-            <input
-              className="input"
-              type="password"
-              name="password"
-              id="password"
-              autoComplete="off"
-              value={user.password}
-              onChange={handleInputs}
-              placeholder="Enter Unique Password"
-            ></input>
+                <input
+                  className="input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  autoComplete="off"
+                  value={user.password}
+                  onChange={handleInputs}
+                  placeholder="Enter Unique Password"
+                ></input>
 
-            <button
-              className="button2"
-              type="submit"
-              name="signup"
-              id="signup"
-              value="Register"
-              onClick={PostData}
-            >
-              <div className="create-an-account">Create an account</div>
-            </button>
-            <div className="pswitch-link">
-              <div className="do-you-already-container-signup">
-                <span>{`Do you already have an account? `}</span>
-                <Link to="/login">
-                  <span className="login">Login</span>
-                </Link>
+                <button
+                  className="button2"
+                  type="submit"
+                  name="signup"
+                  id="signup"
+                  value="Register"
+                  onClick={PostData}
+                >
+                  <div className="create-an-account">Create an account</div>
+                </button>
+                <div className="pswitch-link">
+                  <div className="do-you-already-container-signup">
+                    <span>{`Do you already have an account? `}</span>
+                    <Link to="/login">
+                      <span className="login">Login</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div >
+      )}
+    </>
   );
 };
 

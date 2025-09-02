@@ -10,8 +10,17 @@ const DivlayoutAuthPage = () => {
   let navigate = useNavigate()
 
   useEffect(() => {
-    console.log("question " + percent); // Logs the updated value whenever percent changes
-  }, [percent]);
+    let interval;
+    if (login) {
+      interval = setInterval(() => {
+        setPercent(prev => {
+          if (prev >= 95) return 95; // cap until fetch finishes
+          return prev + 1;
+        });
+      }, 50); // 1% every 50ms
+    }
+    return () => clearInterval(interval);
+  }, [login]);
 
   // function validate() {
   //   const mail = document.getElementById("email").value;
@@ -52,7 +61,7 @@ const DivlayoutAuthPage = () => {
     else {
       // dispatch({type: "USER", payload: true});
 
-      // window.alert("Login Successfull");
+      window.alert("Login Successfull");
       // const time = new Date(data.options.expires).toUTCString()
       // const expirationDate = new Date();
       // expirationDate.setDate(expirationDate.getDate() + 5);      
