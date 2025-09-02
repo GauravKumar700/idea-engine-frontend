@@ -112,7 +112,7 @@ function Stepper({ steps }) {
   const answer = async (tPrompt) => {
     try {
       // For text-only input, use the gemini-pro model
-      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
       const result = await model.generateContent(tPrompt);
       // const response = await result.response;
       const res = result.response;
