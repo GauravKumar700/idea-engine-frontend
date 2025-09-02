@@ -106,9 +106,9 @@ function Stepper({ steps }) {
   //   }
   // }
 
-  // const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
   const genAI = new GoogleGenerativeAI("AIzaSyDr4sqQlx23JlaNuQgPIp7uTd3v-p8txlY");
   const genAI2 = new GoogleGenerativeAI("AIzaSyDOZDJynCurEUCiSqLTlh2mkKz0hLEs9I8");
+  const genAI3 = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
 
   const answer = async (tPrompt) => {
     try {
@@ -128,6 +128,20 @@ function Stepper({ steps }) {
     try {
       // For text-only input, use the gemini-pro model
       const model = genAI2.getGenerativeModel({ model: "gemini-2.5-flash" });
+      const result = await model.generateContent(tPrompt);
+      // const response = await result.response;
+      const res = result.response;
+      const text = res.text();
+      // console.log(text);
+      return text
+    } catch (error) {
+      window.alert(error)
+    }
+  }
+  const answer3 = async (tPrompt) => {
+    try {
+      // For text-only input, use the gemini-pro model
+      const model = genAI3.getGenerativeModel({ model: "gemini-2.5-flash" });
       const result = await model.generateContent(tPrompt);
       // const response = await result.response;
       const res = result.response;
@@ -173,7 +187,7 @@ function Stepper({ steps }) {
       let productText = await answer(`${tPrompt} + \nPlease explain in more detail about the Product Description statement`);
       text['productText'] = productText
       setPercent(prevPercent => prevPercent + 2);
-      let buisnessText = await answer(`${tPrompt} + \nPlease explain in more detail about the Business Model statement`);
+      let buisnessText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Business Model statement`);
       text['buisnessText'] = buisnessText
       setPercent(prevPercent => prevPercent + 2);
 
@@ -188,25 +202,25 @@ function Stepper({ steps }) {
       text['guidanceText'] = guidanceText
       setPercent(prevPercent => prevPercent + 2);
 
-      let missionText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Mission Statement statement`);
+      let missionText = await answer3(`${tPrompt} + \nPlease explain in more detail about the Mission Statement statement`);
       text['missionText'] = missionText
       setPercent(prevPercent => prevPercent + 2);
 
-      let visionText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Vision Statement statement`);
+      let visionText = await answer3(`${tPrompt} + \nPlease explain in more detail about the Vision Statement statement`);
       text['visionText'] = visionText
       setPercent(prevPercent => prevPercent + 2);
 
       let { technology } = domain
       let technologyPrompt = `Our buisness offers ${technology['What awesome stuff will your business offer?']}. we have ${technology['How do you figure out what to make and how to make it?']} to figure out what to make and how to make it. We are looking for ${technology['How much do you expect to make, and how much will it cost to get started?']}. ${technology['What could go wrong with your business, and how will you handle it?']} is a threat for my buisness. We tell people about our awesome products through ${technology['How will you tell people about your awesome products?']}. Our Customers get product or service through ${technology['How can customers get your product or service?']}.  My buisness goal is ${technology['What goals are you aiming for, and how will you track your progress?']}`
       // My Plan for bringing in cash by ${ technology["What's your plan for bringing in cash ?"] }.
-      let technologyText = await answer(technologyPrompt)
+      let technologyText = await answer3(technologyPrompt)
       text['technologyText'] = technologyText
       setPercent(prevPercent => prevPercent + 9);
       console.log("login " + percent)
 
       let { digital } = domain
       let digitalPrompt = `We are targeting ${digital['types of clients']} clients for our digital marketing services. We want to offer ${digital['specific services you will offer']} services in social media marketing(YouTube, Facebook, Instagram) and performance marketing (Ads), including campaign creation, optimization, and analytics. We plan to integrate social media marketing efforts ${digital['plan to integrate social media marketing efforts']} across YouTube, Facebook, and Instagram with performance marketing campaigns to create cohesive and impactful digital marketing strategies for our clients. ${digital['strategies will you employ to effectively target and engage audiences']} strategies we will employ to effectively target and engage audiences on each social media platform (YouTube, Facebook, Instagram) and through performance marketing ads, ensuring maximum reach and conversion potential. We will allocate budgets between social media marketing efforts and performance marketing ad campaigns, considering factors such as platform costs, ad bidding strategies, and client goals ${digital['How will you allocate budgets between social media marketing efforts and performance marketing ad campaigns, considering factors such as platform costs, ad bidding strategies, and client goals?']}. ${digital["What metrics and analytics will you use to measure the success of your social media marketing efforts on YouTube, Facebook, and Instagram, as well as the performance of your ad campaigns, and how will you report these insights to"]} metrics and analytics we will use to measure the success of our social media marketing efforts on YouTube, Facebook, and Instagram, as well as the performance of our ad campaigns. ${digital['How do you plan to develop compelling ad creatives and messaging that resonate with target audiences across social media platforms (YouTube, Facebook, Instagram) and performance marketing campaigns, driving engagement and conversions?']} plan to develop compelling ad creatives and messaging that resonate with target audiences across social media platforms (YouTube, Facebook, Instagram) and performance marketing campaigns, driving engagement and conversions.`
-      let digitalText = await answer(digitalPrompt)
+      let digitalText = await answer3(digitalPrompt)
       text['digitalText'] = digitalText
       setPercent(prevPercent => prevPercent + 9);
       console.log("login " + percent)
@@ -230,7 +244,7 @@ function Stepper({ steps }) {
 
       let { publicRelation } = domain
       let publicRelationPrompt = `${publicRelation['What are the big trends in PR we can take advantage of?']} is the big trends in PR we can take advantage of. ${publicRelation['Who else is in the PR game, and how are we going to be different?']} is in the PR game, and how are we going to be different. we are doing ${publicRelation['What exactly are we doing for our clients, and why does it matter?']} for our clients, and why does it matter. we are going to focus on ${publicRelation['Are we going to focus on anything specific, and why?']}. we are trying to help ${publicRelation['Who are we trying to help, and what do they need?']} and what do they need. By ${publicRelation['How do we make sure they stick with us?']} we make sure they stick with us. By ${publicRelation['How are we getting the word out about our PR agency?']} we are getting the word out about our PR agency. We are doing ${publicRelation['What do we do to turn interested people into clients']} to turn interested people into clients. ${publicRelation['What might go wrong, and how do we fix it?']} might go wrong, and how do we fix it. ${publicRelation['What are the anticipated risks, and what are our mitigation plans?']} are the anticipated risks, and how to overcome this.`
-      let publicRelationText = await answer(publicRelationPrompt)
+      let publicRelationText = await answer3(publicRelationPrompt)
       text['publicRelationText'] = publicRelationText
       setPercent(prevPercent => prevPercent + 9);
       console.log("login " + percent)
