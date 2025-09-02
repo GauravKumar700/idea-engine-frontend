@@ -106,12 +106,13 @@ function Stepper({ steps }) {
   //   }
   // }
 
-  const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
+  // const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
+  const genAI = new GoogleGenerativeAI("AIzaSyDr4sqQlx23JlaNuQgPIp7uTd3v-p8txlY");
+
   const answer = async (tPrompt) => {
     try {
       // For text-only input, use the gemini-pro model
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-      // const prompt = question
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const result = await model.generateContent(tPrompt);
       // const response = await result.response;
       const res = result.response;
