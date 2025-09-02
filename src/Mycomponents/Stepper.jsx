@@ -108,11 +108,26 @@ function Stepper({ steps }) {
 
   // const genAI = new GoogleGenerativeAI("AIzaSyAM1T6li4pgjil1q55wbC_UvYq-cbNJs2I");
   const genAI = new GoogleGenerativeAI("AIzaSyDr4sqQlx23JlaNuQgPIp7uTd3v-p8txlY");
+  const genAI2 = new GoogleGenerativeAI("AIzaSyDOZDJynCurEUCiSqLTlh2mkKz0hLEs9I8");
 
   const answer = async (tPrompt) => {
     try {
       // For text-only input, use the gemini-pro model
-      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+      const result = await model.generateContent(tPrompt);
+      // const response = await result.response;
+      const res = result.response;
+      const text = res.text();
+      // console.log(text);
+      return text
+    } catch (error) {
+      window.alert(error)
+    }
+  }
+  const answer2 = async (tPrompt) => {
+    try {
+      // For text-only input, use the gemini-pro model
+      const model = genAI2.getGenerativeModel({ model: "gemini-2.5-flash" });
       const result = await model.generateContent(tPrompt);
       // const response = await result.response;
       const res = result.response;
@@ -162,22 +177,22 @@ function Stepper({ steps }) {
       text['buisnessText'] = buisnessText
       setPercent(prevPercent => prevPercent + 2);
 
-      let financialText = await answer(`${tPrompt} + \nPlease explain in more detail about the Financial Plan statement`);
+      let financialText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Financial Plan statement`);
       text['financialText'] = financialText
       setPercent(prevPercent => prevPercent + 2);
 
-      let marketingText = await answer(`${tPrompt} + \nPlease explain in more detail about the Marketing and Sales Strategy statement`);
+      let marketingText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Marketing and Sales Strategy statement`);
       text['marketingText'] = marketingText
       setPercent(prevPercent => prevPercent + 2);
-      let guidanceText = await answer(`${tPrompt} + \nPlease explain in more detail about the Guidance Plan statement`);
+      let guidanceText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Guidance Plan statement`);
       text['guidanceText'] = guidanceText
       setPercent(prevPercent => prevPercent + 2);
 
-      let missionText = await answer(`${tPrompt} + \nPlease explain in more detail about the Mission Statement statement`);
+      let missionText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Mission Statement statement`);
       text['missionText'] = missionText
       setPercent(prevPercent => prevPercent + 2);
 
-      let visionText = await answer(`${tPrompt} + \nPlease explain in more detail about the Vision Statement statement`);
+      let visionText = await answer2(`${tPrompt} + \nPlease explain in more detail about the Vision Statement statement`);
       text['visionText'] = visionText
       setPercent(prevPercent => prevPercent + 2);
 
@@ -207,7 +222,7 @@ function Stepper({ steps }) {
 
       let { content } = domain
       let contentPrompt = `${content['What kinds of stuff are we making, and why do people want it?']} we are making. we are making it for ${content['Who are we making it for, and what do they like?']}. By ${content["How do we make sure our stuff is better than everyone else's?"]} we are making sure our stuff is better than everyone else's. We need ${content["What do we need to make our stuff, and who's doing what?"]} to make our stuff. we are using ${content['What tools are we using to make sure our stuff looks good?']} to make sure our stuff looks good. By ${content['How do we ensure the quality and consistency of our content?']} we ensure the quality and consistency of our content. By ${content["How do we know if our stuff is doing well, and what do we do if it's not?"]} we know if our stuff is doing well, and what do we do if it's not. We are starting ${content['When are we starting, and what do we want to achieve?']}. By ${content["How do we know if we're doing a good job, and what's the plan for the future?"]} we know if we're doing a good job. ${content['What are the success evaluation metrics over time?']} are the success evaluation metrics over time.`
-      let contentText = await answer(contentPrompt)
+      let contentText = await answer2(contentPrompt)
       text['contentText'] = contentText
       setPercent(prevPercent => prevPercent + 9);
       console.log("login " + percent)
@@ -223,7 +238,7 @@ function Stepper({ steps }) {
 
       let { branding } = domain
       let brandingPrompt = `${branding['What tech trends can we use to our advantage?']} tech trends can we use to our advantage. By ${branding['How do we plan to adapt to changing tech needs?']} we are  planning to adapt to changing tech needs. ${branding['What cool stuff are we offering?']} cool stuff are we offering. By ${branding["How do we make sure we're different from everyone else?"]} we make sure we're different from everyone else. ${branding['Who are our main customers?']} are our main customers. By ${branding['How do we make sure our stuff fits what they want?']} we make sure our stuff fits what customers want. By ${branding['How do we ensure our branding and design solutions remain fresh and relevant over time?']} we ensure our branding and design solutions remain fresh and relevant over time. ${branding['What are the success drivers for your products or services?']} are the success drivers for our products or services. ${branding['What new things are we planning?']} new things are we planning. By ${branding["How do we make sure everyone's always thinking of cool new stuff?"]} we make sure everyone's always thinking of cool new stuff.`
-      let brandingText = await answer(brandingPrompt)
+      let brandingText = await answer2(brandingPrompt)
       text['brandingText'] = brandingText
       setPercent(prevPercent => prevPercent + 9);
       console.log("login " + percent)
