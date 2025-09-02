@@ -165,7 +165,7 @@ const DivlayoutAuthPage = () => {
                       Fill your details to get started
                     </div>
                   </div>
-                  <div className="divor-box">
+                  {/* <div className="divor-box">
                     <button className="button1">
                       <img className="svg-icon" alt="" src="/svg.svg" />
                       <div className="span1">
@@ -182,7 +182,7 @@ const DivlayoutAuthPage = () => {
                         <div className="or">OR</div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="form">
                     <input
                       className="input"
