@@ -44,8 +44,9 @@ const DivlayoutAuthPage = () => {
 
   const PostData = async (e) => {
     e.preventDefault();
+    setPercent(0)
     setSignup(true)
-    // setPercent(prevPercent => prevPercent + 20);
+    setPercent(prevPercent => prevPercent + 20);
 
     try {
       const { name, email, password } = user;

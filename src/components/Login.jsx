@@ -36,6 +36,7 @@ const DivlayoutAuthPage = () => {
 
   const loginUser = async (e) => {
     e.preventDefault();
+    setPercent(0)
     setLogin(true)
     setPercent(prevPercent => prevPercent + 20);
 
